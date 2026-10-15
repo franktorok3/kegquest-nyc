@@ -13,7 +13,8 @@
     "test:e2e": "playwright test",
     "sync:db": "tsx scripts/sync-database.ts",
     "test:unit": "vitest run",
-    "ingest:browser": "node scripts/crawl-browser.mjs --all && node scripts/apply-browser-content.mjs"
+    "ingest:browser": "node scripts/crawl-browser.mjs --all && node scripts/apply-browser-content.mjs && npm run ingest:drops",
+    "ingest:drops": "tsx scripts/update-drops.ts"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

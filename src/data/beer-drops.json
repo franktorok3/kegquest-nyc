@@ -1,0 +1,807 @@
+{
+  "other-half-centre": {
+    "source": "https://otherhalfbrewing.com/location/centre-street/",
+    "parser": "tapbound-2",
+    "checkedAt": "2026-10-15T23:29:40.131Z",
+    "beers": {
+      "double citra daydream": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "stacks on stacks: southern hemisphere": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "all fresh simcoe everything": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "greenest city": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "fresh broccoli": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "green dew": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "unspoilt beauty": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "ba snowbirds 9 - chocolate covered banana": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "leaf creepers": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "superdelic green nuggets": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "solo exhibition (citra)": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "trash panda": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "automated terp machine": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "snaps": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "dry": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "escapist: painkiller": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "ivy city festbier": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "sobra: tropic": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "green flowers": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      },
+      "tdh space ghost": {
+        "firstSeen": "2026-10-15T22:36:31.264Z",
+        "kind": "baseline"
+      }
+    }
+  },
+  "other-half-rockefeller": {
+    "source": "https://otherhalfbrewing.com/location/rockefeller-center/",
+    "parser": "tapbound-2",
+    "checkedAt": "2026-10-15T23:29:42.778Z",
+    "beers": {
+      "snaps": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "forever ever": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "greenest city": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "fresh broccoli": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "all citra everything": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "green flowers": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "bone dry": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "ivy city festbier": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "green dew": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "unspoilt beauty": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "trash panda": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "all fresh simcoe everything": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "superdelic green nuggets": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "beignets with cream": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "juice brawl": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "triple broccoli": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "ba bananaverse (2026)": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "daily serving: mixed berry": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "a beer, a dunkel beer": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      },
+      "pink guava passion fruit": {
+        "firstSeen": "2026-10-15T22:36:33.470Z",
+        "kind": "baseline"
+      }
+    }
+  },
+  "eckhartbeer": {
+    "source": "https://eckhartbeer.com/",
+    "parser": "tapbound-2",
+    "checkedAt": "2026-10-15T23:29:57.265Z",
+    "beers": {
+      "helles lager": {
+        "firstSeen": "2026-10-15T22:36:40.044Z",
+        "kind": "baseline"
+      },
+      "german-style pils": {
+        "firstSeen": "2026-10-15T22:36:40.044Z",
+        "kind": "baseline"
+      },
+      "czech-style pale lager": {
+        "firstSeen": "2026-10-15T22:36:40.044Z",
+        "kind": "baseline"
+      },
+      "czech-style amber lager": {
+        "firstSeen": "2026-10-15T22:36:40.044Z",
+        "kind": "baseline"
+      },
+      "czech-style dark lager": {
+        "firstSeen": "2026-10-15T22:36:40.044Z",
+        "kind": "baseline"
+      },
+      "haus ipa": {
+        "firstSeen": "2026-10-15T22:36:40.044Z",
+        "kind": "baseline"
+      },
+      "kölsch": {
+        "firstSeen": "2026-10-15T22:36:40.044Z",
+        "kind": "baseline"
+      },
+      "festbier": {
+        "firstSeen": "2026-10-15T22:36:40.044Z",
+        "kind": "baseline"
+      },
+      "marzen": {
+        "firstSeen": "2026-10-15T22:36:40.044Z",
+        "kind": "baseline"
+      },
+      "svetle no. 9": {
+        "firstSeen": "2026-10-15T22:36:40.044Z",
+        "kind": "baseline"
+      }
+    }
+  },
+  "threes-gowanus": {
+    "source": "https://www.beermenus.com/places/18430-threes-brewing-gowanus",
+    "parser": "tapbound-browser-3",
+    "checkedAt": "2026-10-15T23:34:37.010Z",
+    "beers": {
+      "threes + cellarmaker grey area": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes all or nothing": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes flash in the pan": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes forward motion": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes gowanus gold": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes hereafter": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes illogical conclusion": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes imagined reality": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes in the fold": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes logical conclusion": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes luger lager": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes nothing is forever (bourbon)": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes rivo": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes silent departure": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes unmitigated": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes vliet": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "threes within reach": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      },
+      "wayward lane merlin in berlin tart cherry lime": {
+        "firstSeen": "2026-10-15T23:16:51.643Z",
+        "kind": "baseline"
+      }
+    }
+  },
+  "flagship": {
+    "source": "https://flagshipbrewery.nyc/taproom-draft-list/",
+    "parser": "tapbound-browser-3",
+    "checkedAt": "2026-10-15T23:34:16.827Z",
+    "beers": {
+      "flagship + porterhouse wolf hound nitro": {
+        "firstSeen": "2026-10-15T23:14:05.463Z",
+        "kind": "baseline"
+      },
+      "brewing blood orange ipa": {
+        "firstSeen": "2026-10-15T23:14:05.463Z",
+        "kind": "baseline"
+      },
+      "metropolitan": {
+        "firstSeen": "2026-10-15T23:14:05.463Z",
+        "kind": "baseline"
+      },
+      "sally's pickle brine pilsner": {
+        "firstSeen": "2026-10-15T23:14:05.463Z",
+        "kind": "baseline"
+      },
+      "samuel fraunces": {
+        "firstSeen": "2026-10-15T23:14:05.463Z",
+        "kind": "baseline"
+      },
+      "tunnel to towers bravest light lager": {
+        "firstSeen": "2026-10-15T23:14:05.463Z",
+        "kind": "baseline"
+      },
+      "wolf hound irish red ale": {
+        "firstSeen": "2026-10-15T23:14:05.463Z",
+        "kind": "baseline"
+      },
+      "wolf hound nitro oyster stout": {
+        "firstSeen": "2026-10-15T23:14:05.463Z",
+        "kind": "baseline"
+      },
+      "kcbc venomous villains": {
+        "firstSeen": "2026-10-15T23:14:05.463Z",
+        "kind": "baseline"
+      },
+      "sloop juice bomb": {
+        "firstSeen": "2026-10-15T23:14:05.463Z",
+        "kind": "baseline"
+      }
+    }
+  },
+  "fifth-hammer": {
+    "source": "https://www.fifthhammerbrewing.com/beer-menu",
+    "parser": "tapbound-browser-3",
+    "checkedAt": "2026-10-15T23:34:20.590Z",
+    "beers": {
+      "paddy neverpat": {
+        "firstSeen": "2026-10-15T23:14:10.209Z",
+        "kind": "baseline"
+      },
+      "panda palooza": {
+        "firstSeen": "2026-10-15T23:14:10.209Z",
+        "kind": "baseline"
+      },
+      "suntrippin'": {
+        "firstSeen": "2026-10-15T23:14:10.209Z",
+        "kind": "baseline"
+      },
+      "sunny storms": {
+        "firstSeen": "2026-10-15T23:14:10.209Z",
+        "kind": "baseline"
+      },
+      "code pink": {
+        "firstSeen": "2026-10-15T23:14:10.209Z",
+        "kind": "baseline"
+      },
+      "neon flamingo": {
+        "firstSeen": "2026-10-15T23:14:10.209Z",
+        "kind": "baseline"
+      },
+      "poglodyte": {
+        "firstSeen": "2026-10-15T23:14:10.209Z",
+        "kind": "baseline"
+      },
+      "pentatonic pilsner": {
+        "firstSeen": "2026-10-15T23:14:10.209Z",
+        "kind": "baseline"
+      },
+      "hammerfest": {
+        "firstSeen": "2026-10-15T23:14:10.209Z",
+        "kind": "baseline"
+      },
+      "martillo superior": {
+        "firstSeen": "2026-10-15T23:14:10.209Z",
+        "kind": "baseline"
+      },
+      "snailblazer": {
+        "firstSeen": "2026-10-15T23:14:10.209Z",
+        "kind": "baseline"
+      },
+      "hammer lite": {
+        "firstSeen": "2026-10-15T23:14:10.209Z",
+        "kind": "baseline"
+      },
+      "nsfw (nitro stout for well-being)": {
+        "firstSeen": "2026-10-15T23:14:10.209Z",
+        "kind": "baseline"
+      },
+      "swords & gourds": {
+        "firstSeen": "2026-10-15T23:14:10.209Z",
+        "kind": "baseline"
+      }
+    }
+  },
+  "evil-twin": {
+    "source": "https://eviltwin.nyc/location/ridgewood-taproom/",
+    "parser": "tapbound-browser-3",
+    "checkedAt": "2026-10-15T23:31:28.343Z",
+    "beers": {
+      "tgi oktober ’26": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "even more hipsterish": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "it took me, like, three weeks to finish the dry-hopping on this ipa. it’s probably the best ipa i’ve ever done": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "a pale ale that refuses to be humble": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "don’t let mondays ruin your sundays": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "if you see something, sip something": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "thirst that doesn’t apologize": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "this is definitely our most ridiculous fruited sour of all time": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "tickets to the sunset": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "greenhouse kellerbier conditioned on american oak foudre": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "greenhouse west coast pils conditioned on american oak foudre": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "tell all your friends we brewed a black barleywine": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "spicy canary": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "tina, come get your kief": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "evil moon - tangerine": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "highly questionable berry behavior that shouldn’t have happened": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "make it fruity lychee, white peach, key lime": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "comrade marlon": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "i wish dumbo had more tourists, it’s way too quiet under the bridge": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      },
+      "greenhouse festbier leicht conditioned on american oak foudre": {
+        "firstSeen": "2026-10-15T23:14:36.944Z",
+        "kind": "baseline"
+      }
+    }
+  },
+  "grimm": {
+    "source": "https://grimmales.com/location/taproom/",
+    "parser": "tapbound-browser-3",
+    "checkedAt": "2026-10-15T23:31:32.640Z",
+    "beers": {
+      "grimm weisse": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "light cone": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "pásele joven": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "martian wildlife": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "bang": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "herringbone": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "day of radiance": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "canopy door": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "road dog": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "nothing but nelson": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "crown kolsch": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "today's special extra citra": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "tesseract": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "wild blueberry pop!": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "shiny side": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "gold standard": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "lumen": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "zero coast": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "color field": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "nothing marzen": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      },
+      "hoppy nothing": {
+        "firstSeen": "2026-10-15T23:14:42.903Z",
+        "kind": "baseline"
+      }
+    }
+  },
+  "kills-boro": {
+    "source": "https://killsboro.com/online-menu",
+    "parser": "tapbound-browser-3",
+    "checkedAt": "2026-10-15T23:34:24.662Z",
+    "beers": {
+      "protect ya' czech": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      },
+      "shadowboxin'": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      },
+      "c'est bon": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      },
+      "heavy handed": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      },
+      "524/0": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      },
+      "humm paradiso terrestre": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      },
+      "killsner": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      },
+      "antipasto!": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      },
+      "island vibes": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      },
+      "puddle jumper": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      },
+      "cheat to win": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      },
+      "märzen": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      },
+      "west coast at bernie's": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      },
+      "crown of care: wild thai banana": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      },
+      "bad woods": {
+        "firstSeen": "2026-10-15T23:14:45.429Z",
+        "kind": "baseline"
+      }
+    }
+  },
+  "gunhillbrewing": {
+    "source": "https://www.gunhillpublickhouse.com/drinks-menu",
+    "parser": "tapbound-browser-3",
+    "checkedAt": "2026-10-15T23:34:32.462Z",
+    "beers": {
+      "gun hill ipa": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "void of light": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "how lucky": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "oktoberfest": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "rice rice baby": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "spirit '76": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "cash & carry": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "mayhem": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "endless life batavian festbier": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "hopshot": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "schuyler's american wheat": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "benedict arnold palmer": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "fall of the crown": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "endless life nostalgia for things unknown": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "common sense": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      },
+      "endless life staves": {
+        "firstSeen": "2026-10-15T23:16:06.761Z",
+        "kind": "baseline"
+      }
+    }
+  },
+  "evil-twin-dumbo": {
+    "source": "https://eviltwin.nyc/location/dumbo-taproom/",
+    "parser": "tapbound-browser-3",
+    "checkedAt": "2026-10-15T23:33:40.497Z",
+    "beers": {
+      "greenhouse west coast pils conditioned on american oak foudre": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "greenhouse kellerbier conditioned on american oak foudre": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "a pale ale that refuses to be humble": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "if you see something, sip something": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "even more hipsterish": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "tiaodongwhobutnowit’sevenhazierthanyouremember": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "why don’t we just take the subway to jfk instead?": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "i wish dumbo had more tourists, it’s way too quiet under the bridge": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "tickets to the sunset": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "comrade marlon": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "make it fruity red grape, hawthorn, pomegranate": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "make it fruity halloween edition": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "make it fruity raspberry pomegranate": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "make it fruity piña colada": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "highly questionable berry behavior that shouldn’t have happened": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "spicy canary": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "tell all your friends we brewed a black barleywine": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      },
+      "sheridan's stout": {
+        "firstSeen": "2026-10-15T23:14:40.647Z",
+        "kind": "baseline"
+      }
+    }
+  }
+}

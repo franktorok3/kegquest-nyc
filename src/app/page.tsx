@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NewDrops from "../components/brewery/new-drops";
 import { ArrowUpRight, ArrowRight, MapPin } from "lucide-react";
 import { visitableLocations, currentMenu } from "../lib/catalog";
 import Photo from "../components/brewery/photo";
@@ -9,6 +10,7 @@ export default function Home() {
   const fresh = visitableLocations.filter((b) => currentMenu(b));
   return (
     <main>
+      <NewDrops />
       <section className="home-hero">
         <Photo
           src={hero}

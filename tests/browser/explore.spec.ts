@@ -113,3 +113,18 @@ test("map toggle and recommendation builder remain usable", async ({
   await expect(page.locator(".stop").first()).toBeVisible();
   expect(await page.locator(".stop").count()).toBeLessThanOrEqual(3);
 });
+
+test("new beer section leads the homepage with traceable discoveries", async ({page}) => {
+  await page.goto("/");
+  const section=page.getByRole("region",{name:"New beer drops."});
+  await expect(section.getByRole("heading",{name:"New beer drops."})).toBeVisible();
+  await expect(section.locator(".drop-card").first()).toBeVisible();
+  expect(await section.locator(".drop-card").count()).toBeLessThanOrEqual(6);
+  await expect(section.getByRole("link",{name:"Menu source"}).first()).toHaveAttribute("href",/^https:\/\//);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  const y=await section.evaluate(e=>e.getBoundingClientRect().top);
+  const hero=await page.locator(".home-hero").evaluate(e=>e.getBoundingClientRect().top);
+  expect(y).toBeLessThan(hero);
+  await section.locator("h3 a").first().click();
+  await expect(page).toHaveURL(/\/breweries\//);
+});
