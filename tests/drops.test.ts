@@ -35,3 +35,10 @@ describe("new beer observations", () => {
     expect(latestDrops([{...l,menuVerifiedAt:"2026-11-15T12:00:00Z"}],h,Date.parse("2026-11-15T12:00:00Z"))).toHaveLength(0);
   });
 });
+
+it("expires current discovery after 24 hours even if the last menu is retained", async () => {
+  const {currentMenu}=await import("../src/lib/catalog");
+  const location={...visitableLocations[0],tapStatus:"verified",menuVerifiedAt:day1};
+  expect(currentMenu(location,Date.parse(day1)+24*3600000)).toBe(true);
+  expect(currentMenu(location,Date.parse(day1)+24*3600000+1)).toBe(false);
+});

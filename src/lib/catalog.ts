@@ -1,3 +1,4 @@
+import venueImages from "../data/venue-images.json";
 import raw from "../data/breweries.json";
 import metaJson from "../data/location-meta.json";
 import geoJson from "../data/geocodes.json";
@@ -75,6 +76,7 @@ export const catalog: Location[] = raw.map((r) => {
     r.status === "verified" && !!r.hours && r.hours === m?.hoursEvidence;
   return {
     ...r,
+    image: (venueImages as Record<string,{url:string}>)[r.id]?.url || r.image,
     breweryId:
       m?.breweryId || (r.id.startsWith("other-half") ? "other-half" : r.id),
     menuSource: r.menuSource || r.source,
@@ -122,7 +124,7 @@ export function freshness(
       : "Stale";
 }
 export function currentMenu(b: Location, now = Date.now()) {
-  return ["Fresh", "Recently checked"].includes(freshness(b, now));
+  return freshness(b, now) === "Fresh";
 }
 export function directions(b: Location) {
   return (

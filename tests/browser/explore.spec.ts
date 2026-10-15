@@ -123,8 +123,19 @@ test("new beer section leads the homepage with traceable discoveries", async ({p
   await expect(section.getByRole("link",{name:"Menu source"}).first()).toHaveAttribute("href",/^https:\/\//);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   const y=await section.evaluate(e=>e.getBoundingClientRect().top);
-  const hero=await page.locator(".home-hero").evaluate(e=>e.getBoundingClientRect().top);
+  const hero=await page.locator(".home-venues").evaluate(e=>e.getBoundingClientRect().top);
   expect(y).toBeLessThan(hero);
   await section.locator("h3 a").first().click();
   await expect(page).toHaveURL(/\/breweries\//);
+});
+
+test("taste discovery opens a matching beer board with active navigation", async ({page}) => {
+  await page.goto("/");
+  await page.getByRole("link",{name:/Dark & roasty/}).click();
+  await expect(page).toHaveURL(/taste=dark/);
+  await expect(page.getByRole("heading",{level:1})).toHaveText("Dark & roasty");
+  const styles=await page.locator(".beer-card>p").allTextContents();
+  expect(styles.length).toBeGreaterThan(0);
+  expect(styles.every(s=>/stout|porter|schwarz|dark lager|dunkel/i.test(s))).toBe(true);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });

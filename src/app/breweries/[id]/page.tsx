@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
   locations,
-  freshness,
   currentMenu,
   directions,
 } from "../../../lib/catalog";
@@ -38,7 +37,7 @@ export default async function Brewery({
                 : b.visitStatus.replaceAll("_", " ")}
             </span>
             <span className={"badge " + (currentMenu(b) ? "green" : "")}>
-              {freshness(b)} menu
+              {currentMenu(b) ? `${b.beers.length} on tap` : "Menu unavailable"}
             </span>
           </div>
           <div className="actions">
@@ -69,17 +68,11 @@ export default async function Brewery({
           <div className="section-top">
             <h2>What’s on tap.</h2>
             <span className="badge">
-              {b.beers.length} observed draft listings
+              {currentMenu(b) ? b.beers.length : 0} beers
             </span>
           </div>
-          {!currentMenu(b) && b.beers.length > 0 && (
-            <p className="notice">
-              Historical menu. The latest verification is stale or unsuccessful.
-              These beers are not represented as currently available.
-            </p>
-          )}
-          <p className="fine">
-            Last successful menu extraction:{" "}
+          <details className="menu-disclosure"><summary>Menu updated & source</summary><p className="fine">
+            Updated:{" "}
             {b.menuVerifiedAt
               ? new Date(b.menuVerifiedAt).toLocaleString("en-US", {
                   timeZone: b.timeZone,
@@ -89,8 +82,8 @@ export default async function Brewery({
             <a href={b.menuSource} target="_blank" rel="noreferrer">
               Menu source ↗
             </a>
-          </p>
-          {b.beers.length ? (
+          </p></details>
+          {currentMenu(b) && b.beers.length ? (
             Object.entries(groups).map(([family, beers]) => (
               <div className="beer-group" key={family}>
                 <h3>{family}</h3>
@@ -113,8 +106,7 @@ export default async function Brewery({
             <div className="empty">
               <h3>Tap list unavailable.</h3>
               <p>
-                We couldn’t verify a supported draft menu. Check the brewery’s
-                own source for the latest.
+                The taproom’s current menu isn’t available here yet. See what’s pouring on its website.
               </p>
               <a
                 className="button secondary"
@@ -158,7 +150,7 @@ export default async function Brewery({
             <br />
             {b.amenities.accessibility || "Accessibility: unverified"}
           </p>
-          <h4>Source notes</h4>
+          <details className="menu-disclosure"><summary>More about this listing</summary>
           <p className="fine">
             Last attempted:{" "}
             {new Date(b.checkedAt).toLocaleString("en-US", {
@@ -178,7 +170,7 @@ export default async function Brewery({
             rel="noreferrer"
           >
             View exact source ↗
-          </a>
+          </a></details>
         </aside>
       </div>
     </main>

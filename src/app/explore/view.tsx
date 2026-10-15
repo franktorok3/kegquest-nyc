@@ -4,7 +4,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Search, LocateFixed, MapPin, ArrowUpRight } from "lucide-react";
-import { locations, markets, freshness, currentMenu } from "../../lib/catalog";
+import { locations, currentMenu } from "../../lib/catalog";
 import { styleFamilies, matchesStyle } from "../../lib/matching/styles";
 import { openingStatus } from "../../lib/hours";
 import { Coordinates, distanceKm } from "../../lib/geography";
@@ -55,7 +55,7 @@ export default function Explore() {
       locations
         .filter(
           (b) =>
-            b.cityId === city &&
+            b.visitable && b.cityId === city &&
             (!borough || b.borough === borough) &&
             (!neighborhood || b.neighborhood === neighborhood) &&
             (!params.get("open") || openingStatus(b, new Date()) === "Open") &&
@@ -90,7 +90,7 @@ export default function Explore() {
         <div>
           <span className="eyebrow muted">EXPLORE / NEW YORK CITY</span>
           <h1>Find your next stop.</h1>
-          <p>Real places. Sourced menus. A city worth wandering.</p>
+          <p>Find your corner of the city. We’ll bring the beer.</p>
         </div>
         <button className="button secondary" onClick={locate}>
           <LocateFixed size={17} /> Near me
@@ -116,21 +116,6 @@ export default function Explore() {
           </button>
         </form>
         <div className="filter-row">
-          <label>
-            City
-            <select
-              aria-label="City"
-              value={city}
-              onChange={(e) => update("city", e.target.value)}
-            >
-              {markets.map((m) => (
-                <option key={m.id} value={m.id} disabled={!m.active}>
-                  {m.name}
-                  {!m.active ? " · coming later" : ""}
-                </option>
-              ))}
-            </select>
-          </label>
           <label>
             Borough
             <select
@@ -204,9 +189,9 @@ export default function Explore() {
         <div className="check-row">
           {[
             ["open", "Open now"],
-            ["fresh", "Current tap list"],
-            ["food", "Verified food"],
-            ["outdoor", "Verified outdoor seating"],
+            ["fresh", "Tap list available"],
+            ["food", "Food"],
+            ["outdoor", "Outdoor seating"],
           ].map(([k, label]) => (
             <label key={k}>
               <input
@@ -229,8 +214,7 @@ export default function Explore() {
       </div>
       <div className="results-bar">
         <p>
-          {results.length} matching location{results.length === 1 ? "" : "s"} ·
-          unknown amenities and hours never count as confirmed
+          {results.length} taproom{results.length === 1 ? "" : "s"}
         </p>
         <div className="segmented">
           <button
@@ -276,7 +260,7 @@ export default function Explore() {
                 </p>
                 <div className="badges">
                   <span className={"badge " + (currentMenu(b) ? "green" : "")}>
-                    {freshness(b)} tap list
+                    {currentMenu(b) ? `${b.beers.length} beers on tap` : "Menu unavailable"}
                   </span>
                   <span className="badge">
                     {b.visitable
@@ -305,8 +289,7 @@ export default function Explore() {
             <div className="empty">
               <h3>No verified matches for these filters.</h3>
               <p>
-                Try a wider area or remove a filter. Unknown hours and amenities
-                are excluded from confirmed-only results.
+                Try another neighborhood or remove a filter.
               </p>
               <Link className="button" href="/explore">
                 Reset filters

@@ -1,0 +1,22 @@
+{
+  "threes-gowanus": {
+    "url": "https://threesbrewing.com/cdn/shop/files/Threes-Brewing_Space-Photos_Main-Bar_Melissa-Hom_2017__2.jpg?v=1642538615",
+    "source": "https://threesbrewing.com/pages/gowanus",
+    "checkedAt": "2026-10-15T23:13:19.824Z"
+  },
+  "flagship": {
+    "url": "https://flagshipbrewery.nyc/wp-content/uploads/2024/05/MG_9850_low.jpg",
+    "source": "https://flagshipbrewery.nyc/tap-room-2/",
+    "checkedAt": "2026-10-15T23:13:25.284Z"
+  },
+  "fifth-hammer": {
+    "url": "https://images.squarespace-cdn.com/content/v1/5d852ede68787e0988342d29/bb2e8d06-0fe5-4c4e-91fc-3b2d80de8e1f/taproom.jpg?format=1500w",
+    "source": "https://www.fifthhammerbrewing.com/",
+    "checkedAt": "2026-10-15T23:13:34.531Z"
+  },
+  "evil-twin": {
+    "url": "https://craftpeak-cooler-images.imgix.net/evil-twin-brewing-nyc/676958F2-D69E-4FA3-990A-45EF28FD3D9F-scaled.jpeg?auto=compress%2Cformat&fit=crop&h=600&ixlib=php-3.3.1&w=600&wpsize=tile_strict&s=89ff0bee3c247917607b16cff1e5169b",
+    "source": "https://eviltwin.nyc/location/ridgewood-taproom/",
+    "checkedAt": "2026-10-15T23:14:36.944Z"
+  }
+}

@@ -1,14 +1,16 @@
 "use client";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { locations, currentMenu, freshness } from "../../lib/catalog";
+import { locations, currentMenu } from "../../lib/catalog";
 import { styleFamilies, matchesStyle } from "../../lib/matching/styles";
+import { tastes, matchesTaste } from "../../lib/discovery";
 import AddToTrail from "../../components/planner/add-to-trail";
 export default function OnTap() {
   const p = useSearchParams(),
     router = useRouter(),
     q = p.get("q") || "",
-    style = p.get("style") || "";
+    style = p.get("style") || "",
+    taste = p.get("taste") || "";
   const beers = locations
     .filter((b) => b.visitable && currentMenu(b))
     .flatMap((b) => b.beers.map((beer) => ({ b, beer })))
@@ -24,21 +26,22 @@ export default function OnTap() {
                 .toLowerCase()
                 .includes(term),
             )) &&
-        matchesStyle(beer.style, style),
+        matchesStyle(beer.style, style) && matchesTaste(beer.style, taste),
     );
   return (
     <main className="page">
       <div className="page-heading">
         <div>
-          <span className="eyebrow muted">ON TAP / SOURCED, NOT GUESSED</span>
-          <h1>Find your kind of pour.</h1>
+          <span className="eyebrow muted">THE BEER BOARD</span>
+          <h1>{tastes.find(t=>t.id===taste)?.name || "Find your kind of pour."}</h1>
           <p>
-            Draft listings observed on official brewery menus within the past 72
-            hours.
+            Find a beer you’ll love. Then find your way to the taproom.
           </p>
         </div>
       </div>
+      <div className="taste-tabs">{tastes.map(t=><Link key={t.id} className={taste===t.id?"active":""} href={"/taplists?taste="+t.id}>{t.name}</Link>)}<Link href="/taplists">All beers</Link></div>
       <form className="filter-panel beer-search" action="/taplists">
+        {taste && <input type="hidden" name="taste" value={taste}/>}
         <label>
           Beer or style
           <input
@@ -70,8 +73,7 @@ export default function OnTap() {
         <button className="button">Find My Beer</button>
       </form>
       <p className="results-bar">
-        {beers.length} draft listings · source availability can change before
-        you arrive
+        {beers.length} beers to discover
       </p>
       <div className="beer-grid">
         {beers.map(({ b, beer }) => (
@@ -86,15 +88,15 @@ export default function OnTap() {
                 </strong>
               )}
               {beer.price && <strong>{beer.price}</strong>}
-              <span className="badge green">{freshness(b)}</span>
+              <span className="badge green">On tap</span>
             </div>
             <div className="beer-location">
               <Link href={"/breweries/" + b.id}>{b.name} ↗</Link>
               <p>
                 {b.neighborhood}, {b.borough}
               </p>
-              <p className="fine">
-                Menu verified{" "}
+              <details className="menu-disclosure"><summary>Menu details</summary><p className="fine">
+                Updated{" "}
                 {b.menuVerifiedAt &&
                   new Date(b.menuVerifiedAt).toLocaleString("en-US", {
                     timeZone: b.timeZone,
@@ -103,7 +105,7 @@ export default function OnTap() {
                 <a href={b.menuSource} target="_blank" rel="noreferrer">
                   Source ↗
                 </a>
-              </p>
+              </p></details>
             </div>
             <AddToTrail id={b.id} />
           </article>
@@ -111,10 +113,9 @@ export default function OnTap() {
       </div>
       {!beers.length && (
         <div className="empty">
-          <h3>No current sourced matches.</h3>
+          <h3>No beers match just yet.</h3>
           <p>
-            Try a broader style. We won’t fill the gap with historical or
-            invented beers.
+            Try another style or browse the full beer board.
           </p>
           <Link href="/taplists" className="button">
             See all current listings
