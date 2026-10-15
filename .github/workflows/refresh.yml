@@ -22,9 +22,14 @@ jobs:
       - run: npm run ingest
       - run: npm test
       - run: npm run build
+      - name: Preserve database snapshots
+        run: npm run sync:db
+        env:
+          TAPBOUND_DATA_URL: ${{ vars.TAPBOUND_DATA_URL }}
+          TAPBOUND_PRIVATE_KEY: ${{ secrets.TAPBOUND_PRIVATE_KEY }}
       - name: Commit checked snapshot
         run: |
-          git config user.name 'KegQuest source refresh'
+          git config user.name 'Tapbound source refresh'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add src/data/breweries.json
           if ! git diff --cached --quiet; then

@@ -1,0 +1,13 @@
+# Source and coverage policy
+
+The NYC Brewers Guild directory at https://www.nycbrewed.com/breweries supplies discovery candidates; official brewery location pages supply published details. `src/data/seeds.json` is a reviewed exact-URL allowlist. `location-meta.json` contains reviewed weekly schedules, visit status, nullable amenities and supplemental address evidence. `geocodes.json` records US Census geocoder URL, match, timestamp and street-interpolation precision.
+
+A directory listing is not a verified walk-in taproom. Candidates missing verified addresses remain outside the location browser. The source snapshot includes failures for diagnostics. Closed, event-only and retail classifications are explicit. Food, outdoor seating, accessibility and other amenities stay unknown unless evidence is recorded. An empty verified-amenity result is preferable to a fabricated amenity.
+
+The initial supported tap adapters parse Other Half's explicitly labeled draft panels and Eckhart's On Draft Now section. Required source fields are retained. Cans/bottles, store catalogues and unrelated products are excluded. JSON-LD and HTML-table helper parsers are available for opt-in tested adapters, not indiscriminate extraction. PDF/image/OCR and JavaScript-only menus are not yet ingested. Unsupported or blocked menus display unavailable.
+
+Every attempt records URL and checkedAt; verifiedAt is the last successful detail fetch and menuVerifiedAt is the last successful menu extraction. Fresh means within 24 hours, recently checked within 72 hours, stale beyond 72 hours. Failed refreshes preserve the previous menu for history but exclude it from current search and recommendations. Old data does not regain freshness merely because an attempt ran. Successful page fetch alone does not validate every field.
+
+The crawler checks robots.txt, fails closed on inaccessible robots policies, honors crawl-delay within its bounded budget, paces hosts, uses a named user agent, limits attempts/time/content size, blocks private DNS destinations and rejects unreviewed redirects. Transient server/network failures receive exponential backoff; 429 is not immediately retried. ETag/Last-Modified caching avoids retransmitting unchanged local pages. It does not bypass login, CAPTCHA or robots exclusions.
+
+Official-site Open Graph images are remote previews and may be venue photos, logos or product shots. They remain owned/hosted by their publishers, link to the source, and fall back to a typographic placeholder on failure. No invented venue photographs are used. Map data © OpenStreetMap contributors. Before commercial expansion, review image permissions and choose a production tile provider with appropriate capacity.

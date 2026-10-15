@@ -1,0 +1,416 @@
+{
+  "other-half-centre": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "schedule": [
+      [
+        660,
+        1260
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        600,
+        1440
+      ]
+    ],
+    "hoursEvidence": "Monday 12pm – 10pm Tuesday 12pm – 10pm Wednesday 12pm – 10pm Thursday 12pm – 10pm Friday 12pm – 12am Saturday 10am – 12am Sunday 11am – 9pm",
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    }
+  },
+  "threes-gowanus": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "schedule": [
+      [
+        720,
+        1380
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1440
+      ]
+    ],
+    "hoursEvidence": "Monday 12 - Midnight(Kitchen 5-10pm) Tuesday 12 - Midnight(Kitchen 5-10pm) Wednesday 12 - Midnight(Kitchen 5-10pm) Thursday 12 - Midnight(Kitchen 5-11pm) Friday 12 - Midnight(Kitchen 4-10pm) Saturday 12 - Midnight(Kitchen 12-11pm) Sunday 12 - 11pm(Kitchen 12-10pm)",
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    }
+  },
+  "finback": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "schedule": null,
+    "hoursEvidence": null,
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    }
+  },
+  "other-half-rockefeller": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "schedule": [
+      [
+        720,
+        1200
+      ],
+      [
+        720,
+        1200
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1320
+      ]
+    ],
+    "hoursEvidence": "Monday 12pm – 8pm Tuesday 12pm – 10pm Wednesday 12pm – 10pm Thursday 12pm – 10pm Friday 12pm – 10pm Saturday 12pm – 10pm Sunday 12pm – 8pm",
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    }
+  },
+  "fifth-hammer": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "schedule": [
+      [
+        720,
+        1320
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        840,
+        1380
+      ],
+      [
+        840,
+        1380
+      ],
+      [
+        840,
+        1440
+      ],
+      [
+        720,
+        1500
+      ],
+      [
+        720,
+        1500
+      ]
+    ],
+    "hoursEvidence": "Monday: 2pm -10pm Tuesday: 2pm -11pmWednesday 2pm -11pmThursday: 2pm - 12amFriday: 12pm - 1amSaturday: 12pm - 1amSunday: 12pm - 10pm",
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    }
+  },
+  "evil-twin": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "schedule": null,
+    "hoursEvidence": null,
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    }
+  },
+  "grimm": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "schedule": null,
+    "hoursEvidence": null,
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    }
+  },
+  "wild-east": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "schedule": null,
+    "hoursEvidence": null,
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    }
+  },
+  "kills-boro": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "schedule": [
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1380
+      ],
+      [
+        720,
+        1380
+      ]
+    ],
+    "hoursEvidence": "Mon12-10 p.m.TueClosedWed12-10 p.m.Thu12-10 p.m.Fri12-11 p.m.Sat12-11 p.m.Sun12-10 p.m.",
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    }
+  },
+  "bridgeandtunnelbrewery": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "schedule": [
+      [
+        780,
+        1320
+      ],
+      null,
+      null,
+      [
+        1020,
+        1380
+      ],
+      [
+        1020,
+        1380
+      ],
+      [
+        1020,
+        1380
+      ],
+      [
+        780,
+        1440
+      ]
+    ],
+    "hoursEvidence": "QUEENS: Wed.-Friday: 5pm-11pmSaturday: 1pm-12amSunday: 1pm-10pm",
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    }
+  },
+  "brooklynbrewery": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "visitable": false,
+    "visitStatus": "temporarily_closed",
+    "schedule": null,
+    "hoursEvidence": "Our Williamsburg home is temporarily closed while we get everything into place at 1 Wythe Ave.",
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    }
+  },
+  "eckhartbeer": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "schedule": [
+      [
+        720,
+        1320
+      ],
+      [],
+      [],
+      [
+        960,
+        1380
+      ],
+      [
+        960,
+        1380
+      ],
+      [
+        840,
+        1440
+      ],
+      [
+        720,
+        1440
+      ]
+    ],
+    "hoursEvidence": "Mon & Tue Closed Wed & Thu 4 - 11pm Friday 2pm - midnight Saturday 12pm - midnight Sunday 12pm -10pm",
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    }
+  },
+  "foreverhomebrewing": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "visitable": false,
+    "visitStatus": "retail_shop",
+    "schedule": null,
+    "hoursEvidence": "Mondays: ClosedTuesday-Thursday: 10am - 10pmFriday & Saturday: 12pm - 11pmSunday: 12pm - 8pm",
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    }
+  },
+  "bronx-brewery": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "visitable": false,
+    "visitStatus": "events_only",
+    "schedule": null,
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "address": "856 E. 136th Street, Bronx, NY 10454",
+    "addressSource": "https://thebronxbrewery.com/pages/contact",
+    "addressVerifiedAt": "2026-10-15T22:20:02.650Z"
+  }
+}

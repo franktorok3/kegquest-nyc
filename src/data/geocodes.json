@@ -1,0 +1,137 @@
+{
+  "other-half-centre": {
+    "address": "195 Centre Street, Brooklyn, NY 11231",
+    "lat": 40.673763416176,
+    "lng": -73.999235372741,
+    "matchedAddress": "195 CENTRE ST, BROOKLYN, NY, 11231",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=195+Centre+Street%2C+Brooklyn%2C+NY+11231&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:18:38.242Z",
+    "precision": "street-address interpolation"
+  },
+  "threes-gowanus": {
+    "address": "333 Douglass Street, Brooklyn, NY",
+    "lat": 40.679630152182,
+    "lng": -73.982393321109,
+    "matchedAddress": "333 DOUGLASS ST, BROOKLYN, NY, 11217",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=333+Douglass+Street%2C+Brooklyn%2C+NY&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:18:39.441Z",
+    "precision": "street-address interpolation"
+  },
+  "finback": {
+    "address": "78-01 77th Avenue, Glendale, NY",
+    "lat": 40.706590978026,
+    "lng": -73.873165858217,
+    "matchedAddress": "78-01 77TH AVE, GLENDALE, NY, 11385",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=78-01+77th+Avenue%2C+Glendale%2C+NY&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:18:40.653Z",
+    "precision": "street-address interpolation"
+  },
+  "other-half-rockefeller": {
+    "address": "600 5th Avenue, New York, NY 10020",
+    "lat": 40.757361930198,
+    "lng": -73.978145335149,
+    "matchedAddress": "600 5TH AVE, NEW YORK, NY, 10020",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=600+5th+Avenue%2C+New+York%2C+NY+10020&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:18:41.869Z",
+    "precision": "street-address interpolation"
+  },
+  "fifth-hammer": {
+    "address": "10-28 46th Avenue, Long Island City, NY",
+    "lat": 40.746681259237,
+    "lng": -73.952012172317,
+    "matchedAddress": "10-28 46TH AVE, LONG ISLAND CITY, NY, 11101",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10-28+46th+Avenue%2C+Long+Island+City%2C+NY&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:18:43.084Z",
+    "precision": "street-address interpolation"
+  },
+  "evil-twin": {
+    "address": "1616 George Street, Ridgewood, NY",
+    "lat": 40.696271838584,
+    "lng": -73.904247031501,
+    "matchedAddress": "1616 GEORGE ST, RIDGEWOOD, NY, 11385",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1616+George+Street%2C+Ridgewood%2C+NY&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:18:44.291Z",
+    "precision": "street-address interpolation"
+  },
+  "grimm": {
+    "address": "990 Metropolitan Avenue, Brooklyn, NY",
+    "lat": 40.714448315684,
+    "lng": -73.936509036821,
+    "matchedAddress": "990 METROPOLITAN AVE, BROOKLYN, NY, 11211",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=990+Metropolitan+Avenue%2C+Brooklyn%2C+NY&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:18:45.490Z",
+    "precision": "street-address interpolation"
+  },
+  "wild-east": {
+    "address": "623 Sackett Street, Brooklyn, NY",
+    "lat": 40.678382958949,
+    "lng": -73.983300865099,
+    "matchedAddress": "623 SACKETT ST, BROOKLYN, NY, 11217",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=623+Sackett+Street%2C+Brooklyn%2C+NY&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:18:46.687Z",
+    "precision": "street-address interpolation"
+  },
+  "kills-boro": {
+    "address": "814 Richmond Terrace, Staten Island, NY 10301",
+    "lat": 40.644629809809,
+    "lng": -74.098793196226,
+    "matchedAddress": "814 RICHMOND TER, STATEN ISLAND, NY, 10301",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=814+Richmond+Terrace%2C+Staten+Island%2C+NY+10301&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:18:47.907Z",
+    "precision": "street-address interpolation"
+  },
+  "bridgeandtunnelbrewery": {
+    "address": "1535 Decatur Street, Ridgewood, Queens, NY 11385",
+    "lat": 40.693710590436,
+    "lng": -73.902723382585,
+    "matchedAddress": "1535 DECATUR ST, RIDGEWOOD, NY, 11385",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1535+Decatur+Street%2C+Ridgewood%2C+Queens%2C+NY+11385&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:18:49.119Z",
+    "precision": "street-address interpolation"
+  },
+  "brooklynbrewery": {
+    "address": "1 Wythe Avenue, Brooklyn, NY 11249",
+    "lat": 40.723862378681,
+    "lng": -73.955668084937,
+    "matchedAddress": "1 WYTHE AVE, BROOKLYN, NY, 11249",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1+Wythe+Avenue%2C+Brooklyn%2C+NY+11249&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:18:50.322Z",
+    "precision": "street-address interpolation"
+  },
+  "eckhartbeer": {
+    "address": "545 Johnson Avenue, Brooklyn, NY 11237",
+    "lat": 40.708917260377,
+    "lng": -73.925434818072,
+    "matchedAddress": "545 JOHNSON AVE, BROOKLYN, NY, 11237",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=545+Johnson+Avenue%2C+Brooklyn%2C+NY+11237&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:18:51.518Z",
+    "precision": "street-address interpolation"
+  },
+  "foreverhomebrewing": {
+    "address": "574 President Street, Brooklyn, NY 11215",
+    "lat": 40.676843713581,
+    "lng": -73.983799070147,
+    "matchedAddress": "574 PRESIDENT ST, BROOKLYN, NY, 11215",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=574+President+Street%2C+Brooklyn%2C+NY+11215&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:18:52.723Z",
+    "precision": "street-address interpolation"
+  },
+  "flagship": {
+    "address": "40 Minthorne Street, Staten Island, NY 10301",
+    "lat": 40.637185204204,
+    "lng": -74.075523750915,
+    "matchedAddress": "40 MINTHORNE ST, STATEN ISLAND, NY, 10301",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=40+Minthorne+Street%2C+Staten+Island%2C+NY+10301&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:40:36.817Z",
+    "precision": "street-address interpolation"
+  },
+  "bronx-brewery": {
+    "address": "856 E. 136th Street, Bronx, NY 10454",
+    "lat": 40.802059561161,
+    "lng": -73.910488143555,
+    "matchedAddress": "856 E 136TH ST, BRONX, NY, 10454",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=856+E.+136th+Street%2C+Bronx%2C+NY+10454&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T22:40:38.024Z",
+    "precision": "street-address interpolation"
+  }
+}

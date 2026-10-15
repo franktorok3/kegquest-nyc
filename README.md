@@ -1,66 +1,57 @@
-# KegQuest NYC
+# Tapbound
 
-A mobile-first, independently sourced NYC brewery field guide. Next.js App Router, TypeScript, React, Tailwind CSS, Lucide icons. No database, API keys, paid integrations, or user account required.
+**Find the pour. Plan the crawl.** A mobile-first NYC brewery discovery and trail planner built with Next.js App Router, TypeScript, React, Tailwind, MapLibre and a dedicated Hatchable PostgreSQL service.
 
-## Features
+- Public frontend: https://kegquest-nyc.vercel.app
+- Repository: https://github.com/franktorok3/kegquest-nyc
+- Data service console: https://hatchable.com/console/projects/tapbound-data
 
-- 46 initial brewery/producer entries representing all five boroughs; growing coverage, not an exhaustive census or a list of guaranteed walk-in taprooms.
-- Search by brewery, neighborhood, borough, or observed beer name.
-- Borough filters, style discovery from sourced draft menus, browser-local saved places.
-- Individual detail routes with source URL, attempted/success timestamps, hours/visit notices, verified addresses and map links, source-provided image previews, menu availability and freshness.
-- Editorial cream/forest/orange responsive design with original CSS beer illustration, keyboard focus states, reduced-motion support, mobile horizontal borough filters.
+The original KegQuest repository and Vercel project are intentionally retained. Tapbound is the product name. No unrelated database or demo project is used.
 
-## Run
+## Experience
 
-Node 22+ and npm:
+Explore verified locations across all five NYC boroughs with synchronized map/list views, URL-based search and filters, optional location permission, source links and official-site image previews. Beer-first search finds sourced draft listings by name, original style and normalized family. Detail pages distinguish current, stale, historical and unavailable menus. The deterministic planner recommends stops, estimates travel allowances and arrival times, checks regular hours, and supports adding, removing, replacing and reordering stops. Drafts persist on-device; saved trails persist in PostgreSQL with unguessable public read-only links.
+
+Unknown hours and amenities are never treated as confirmed. Event-only or closed venues are excluded from automatic recommendations. Other US cities are represented structurally but disabled until local data is verified. Coverage is a reviewed starting set, not an exhaustive census of NYC breweries.
+
+## Development
+
+Requires Node 22+.
 
 ```sh
 npm ci
+cp .env.example .env.local
 npm run dev
 npm test
+npm run lint
 npm run build
 npm start
+BASE_URL=http://localhost:3000 npm run test:e2e
 ```
 
-`npm run lint` runs ESLint; `npm run typecheck` checks TypeScript (run build first to generate route types). `npm run ingest` performs a real network refresh. Tests use fixtures/mocked requests rather than hitting breweries.
+Discovery, filters, maps and local drafts work without backend credentials. Durable save returns an honest unavailable message until configured. To exercise real persistence against a configured reachable data service, run `E2E_SAVE=1 BASE_URL=https://kegquest-nyc.vercel.app npm run test:e2e`. This creates two test trails. Unit tests do not call brewery sites.
 
-## Source model
+## Data operations
 
-`src/data/seeds.json` is the reviewed source registry. `src/data/breweries.json` is the published snapshot. Seed names/boroughs come from the NYC Brewers Guild directory (https://www.nycbrewed.com/breweries) and official brewery location pages. The directory includes sake and other producers as listed by the Guild; it is not a promise of a public taproom. Multiple Other Half locations are separate entries.
+```sh
+npm run ingest
+node scripts/geocode.mjs
+node scripts/discover.mjs
+npm run sync:db
+```
 
-Each snapshot records `source`, `checkedAt`, `verifiedAt`, `status`, `note`, `address`, `hours`, `image`, `beers`, and `tapStatus`. HTTP success only means the page was fetched. It does not verify every field or imply the business is open. Addresses/hours require literal reviewed source evidence. Image previews use the official page's Open Graph image, may be logos/products, and stay hosted at their original URL. The UI uses illustrated placeholders when unavailable. Source content remains owned by its publisher.
-
-Only an explicitly labeled draft panel is parsed: `[data-tab="draft"] .list-item`, with required title, style, and ABV. This supports the Other Half location pages. Eckhart has a separate adapter scoped to its explicitly labeled On Draft Now section; the published style there is the source menu name, without a guessed style classification. Cans/bottles-to-go, general beer catalogues, hidden JavaScript menus, image/PDF menus, unsupported schemas and blocked sources do not become invented tap lists. Other menus remain unavailable until a tested adapter is added. A brewery site's listed beer is not a guarantee of current physical availability.
-
-The Bronx Brewery source currently states its backyard is not open for daily service; that is a visit notice, not normal weekly hours.
-
-## Respectful ingestion
-
-`scripts/ingest.mjs` identifies as KegQuestBot, reads robots.txt per origin, honors disallow and crawl delay, waits at least 1.5 seconds between same-origin content requests, has request timeouts, and stops on blocked robots, non-HTML, oversized content or redirects needing review. A robots 404 means no policy; other failure codes fail closed. No login, paywall, CAPTCHA, or browser restriction is bypassed. URLs are a maintainer-controlled allowlist; there is no public arbitrary-URL ingestion endpoint. Local text evidence is saved under ignored `work/evidence/` for review, not published wholesale.
-
-A fresh attempt replaces the snapshot. Failed sources become unavailable; previous snapshots are retained in Git history. Adding a seed does not mark its details verified. Avoid broad free-text beer extraction: add explicit location-aware adapters and fixture tests.
-
-## Freshness and scheduling
-
-- Recently checked: successful draft extraction within 36 hours.
-- Aging: 36 hours through 7 days.
-- Stale: older than 7 days; excluded from style discovery.
-- Unavailable: no successfully verified draft menu.
-
-Home and detail pages render dynamically so age is evaluated at request time, even if the scheduled job fails. Reload an already-open browser tab to update its freshness labels.
-
-GitHub Actions `Refresh brewery sources` runs daily at 10:17 UTC and supports manual dispatch. It crawls, tests and builds before committing a snapshot. GitHub scheduling may be delayed and inactive public repos may have schedules disabled by GitHub. Vercel's Git integration deploys the changed main branch. Git-backed snapshots are used rather than writing temporary Vercel function disk or adding a database solely for scheduling. Inspect both the refresh workflow and the Vercel deployment before claiming a refresh is live. Failed runs must be investigated in Actions; no separate alerting service is configured.
+The daily GitHub workflow fetches menus AND details, tests/builds the snapshot, preserves normalized history in PostgreSQL, then commits the publishable snapshot. A monthly workflow collects directory links for human review without adding them to the crawler. Actions requires `TAPBOUND_PRIVATE_KEY` as a secret and `TAPBOUND_DATA_URL` as a repository variable. Cached HTTP responses use conditional validators locally; hosted Actions starts cold unless cache is restored. Maps use OpenStreetMap raster tiles and visible attribution, with no bulk download or prefetch.
 
 ## Deployment
 
-The repository's main branch is the intended production branch. Create/link a Next.js project under the authorized Vercel account, connect the GitHub repository, build, and deploy. No app secrets are needed. Production must permit anonymous viewing; preview protection may remain enabled. Never report a preview, SSO redirect, or queued build as a live public deployment.
+Vercel is connected to main and needs `TAPBOUND_DATA_URL`, `TAPBOUND_PRIVATE_KEY`, and `RATE_LIMIT_SALT` in production. The private key stays server-side. Hatchable contains only its public verification key, database migration and signed API handlers. Deploy backend files from `hatchable/` through the Hatchable connector; migration files run once. The Hatchable project must have **Public** visibility for Vercel to call the API. Its admin page remains admin-only; all data endpoints require server signatures. This project visibility setting is a human action in the Hatchable console.
 
-Validate the public alias without authentication: homepage, a detail route, unknown slug 404, mobile layout, search/borough/style filters, favorites persistence, and source/map links. Recheck Actions and production after a manual ingestion dispatch.
+Do not put private keys in Git, browser bundles, screenshots or logs. Rotate the RSA pair by updating the backend verification key and both Vercel/GitHub private-key settings together.
 
-## Tests and limitations
+## Documentation
 
-Unit tests cover all boroughs, unique IDs, source lineage, freshness transitions, beer validation, style matching, draft/can separation, and robots denial/failure. Browser tests exercise responsive overflow, filters, empty results, persistence and detail navigation. Production dependency audit should remain clean.
-
-Coverage is intentionally incomplete where the source cannot be verified. Most directory entries do not yet have a supported draft adapter or verified hours/address. Remote image sources can change or block embedding. No live inventory guarantee, open-now calculation, user tracking, geolocation, booking, or payments. Confirm hours at the brewery before traveling.
-
-See `BUILD_PROMPT.md` for reusable Codex implementation instructions.
+- [Architecture](docs/ARCHITECTURE.md)
+- [Sources and verification](docs/DATA_SOURCES.md)
+- [Operations and recovery](docs/OPERATIONS.md)
+- [Remaining expansion work](docs/ROADMAP.md)
+- [Reusable Codex build instructions](BUILD_PROMPT.md)

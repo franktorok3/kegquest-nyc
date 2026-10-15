@@ -1,5 +1,5 @@
 {
-  "name": "kegquest",
+  "name": "tapbound",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,30 +7,35 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx --test tests/*.test.ts",
+    "test": "vitest run",
     "ingest": "node scripts/ingest.mjs",
     "typecheck": "tsc --noEmit",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "sync:db": "tsx scripts/sync-database.ts",
+    "test:unit": "vitest run"
   },
   "dependencies": {
     "cheerio": "^1.2.0",
     "lucide-react": "^1.57.0",
+    "maplibre-gl": "6.14.0",
     "next": "16.4.2",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "robots-parser": "^3.0.1"
+    "robots-parser": "^3.0.1",
+    "zod": "4.6.7"
   },
   "devDependencies": {
     "@playwright/test": "^1.64.1",
     "@tailwindcss/turbopack": "^4",
-    "@types/node": "^20",
+    "@types/node": "22.20.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "5.0.5"
   },
   "type": "module"
 }

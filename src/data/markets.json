@@ -1,0 +1,53 @@
+[
+  {
+    "id": "nyc",
+    "name": "New York City",
+    "state": "NY",
+    "timeZone": "America/New_York",
+    "lat": 40.7128,
+    "lng": -74.006,
+    "active": true
+  },
+  {
+    "id": "philadelphia",
+    "name": "Philadelphia",
+    "state": "PA",
+    "timeZone": "America/New_York",
+    "active": false
+  },
+  {
+    "id": "chicago",
+    "name": "Chicago",
+    "state": "IL",
+    "timeZone": "America/Chicago",
+    "active": false
+  },
+  {
+    "id": "denver",
+    "name": "Denver",
+    "state": "CO",
+    "timeZone": "America/Denver",
+    "active": false
+  },
+  {
+    "id": "boston",
+    "name": "Boston",
+    "state": "MA",
+    "timeZone": "America/New_York",
+    "active": false
+  },
+  {
+    "id": "portland",
+    "name": "Portland",
+    "state": "OR",
+    "timeZone": "America/Los_Angeles",
+    "active": false
+  },
+  {
+    "id": "san-diego",
+    "name": "San Diego",
+    "state": "CA",
+    "timeZone": "America/Los_Angeles",
+    "active": false
+  }
+]
