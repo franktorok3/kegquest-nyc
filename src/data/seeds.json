@@ -16,7 +16,8 @@
     "neighborhood": "Gowanus",
     "source": "https://threesbrewing.com/pages/gowanus",
     "addressEvidence": "333 Douglass",
-    "displayAddress": "333 Douglass Street, Brooklyn, NY"
+    "displayAddress": "333 Douglass Street, Brooklyn, NY",
+    "hoursEvidence": "Monday 12 - Midnight(Kitchen 5-10pm) Tuesday 12 - Midnight(Kitchen 5-10pm) Wednesday 12 - Midnight(Kitchen 5-10pm) Thursday 12 - Midnight(Kitchen 5-11pm) Friday 12 - Midnight(Kitchen 4-10pm) Saturday 12 - Midnight(Kitchen 12-11pm) Sunday 12 - 11pm(Kitchen 12-10pm)"
   },
   {
     "id": "finback",
@@ -156,7 +157,10 @@
     "borough": "Queens",
     "neighborhood": "Queens",
     "source": "https://www.bridgeandtunnelbrewery.com",
-    "directorySource": "https://www.nycbrewed.com/breweries"
+    "directorySource": "https://www.nycbrewed.com/breweries",
+    "addressEvidence": "1535 Decatur Street",
+    "displayAddress": "1535 Decatur Street, Ridgewood, Queens, NY 11385",
+    "hoursEvidence": "QUEENS: Wed.-Friday: 5pm-11pmSaturday: 1pm-12amSunday: 1pm-10pm"
   },
   {
     "id": "focalpoint",
@@ -204,7 +208,10 @@
     "borough": "Brooklyn",
     "neighborhood": "Brooklyn",
     "source": "https://brooklynbrewery.com",
-    "directorySource": "https://www.nycbrewed.com/breweries"
+    "directorySource": "https://www.nycbrewed.com/breweries",
+    "addressEvidence": "1 Wythe Ave",
+    "displayAddress": "1 Wythe Avenue, Brooklyn, NY 11249",
+    "hoursEvidence": "Our Williamsburg home is temporarily closed while we get everything into place at 1 Wythe Ave."
   },
   {
     "id": "brooklynkura",
@@ -228,7 +235,10 @@
     "borough": "Brooklyn",
     "neighborhood": "Brooklyn",
     "source": "https://eckhartbeer.com/",
-    "directorySource": "https://www.nycbrewed.com/breweries"
+    "directorySource": "https://www.nycbrewed.com/breweries",
+    "addressEvidence": "545 Johnson Ave",
+    "displayAddress": "545 Johnson Avenue, Brooklyn, NY 11237",
+    "hoursEvidence": "Mon & Tue Closed Wed & Thu 4 - 11pm Friday 2pm - midnight Saturday 12pm - midnight Sunday 12pm -10pm"
   },
   {
     "id": "endlesslifebrewing",
@@ -260,7 +270,10 @@
     "borough": "Brooklyn",
     "neighborhood": "Brooklyn",
     "source": "https://foreverhomebrewing.com/?srsltid=AfmBOopsFUD9BVtzrm1rdygAlnYIxvm4gsHI4QiLPjOcenjcOSSZSNWu",
-    "directorySource": "https://www.nycbrewed.com/breweries"
+    "directorySource": "https://www.nycbrewed.com/breweries",
+    "addressEvidence": "574 President Street",
+    "displayAddress": "574 President Street, Brooklyn, NY 11215",
+    "hoursEvidence": "Mondays: ClosedTuesday-Thursday: 10am - 10pmFriday & Saturday: 12pm - 11pmSunday: 12pm - 8pm"
   },
   {
     "id": "gunhillbrewing",

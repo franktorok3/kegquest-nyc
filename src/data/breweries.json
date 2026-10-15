@@ -133,7 +133,7 @@
     "image": null,
     "beers": [],
     "tapStatus": "unavailable",
-    "hours": null,
+    "hours": "Monday 12 - Midnight(Kitchen 5-10pm) Tuesday 12 - Midnight(Kitchen 5-10pm) Wednesday 12 - Midnight(Kitchen 5-10pm) Thursday 12 - Midnight(Kitchen 5-11pm) Friday 12 - Midnight(Kitchen 4-10pm) Saturday 12 - Midnight(Kitchen 12-11pm) Sunday 12 - 11pm(Kitchen 12-10pm)",
     "address": "333 Douglass Street, Brooklyn, NY",
     "note": "No supported, verifiable draft list found on this page."
   },
@@ -518,8 +518,8 @@
     "image": null,
     "beers": [],
     "tapStatus": "unavailable",
-    "hours": null,
-    "address": null,
+    "hours": "QUEENS: Wed.-Friday: 5pm-11pmSaturday: 1pm-12amSunday: 1pm-10pm",
+    "address": "1535 Decatur Street, Ridgewood, Queens, NY 11385",
     "note": "No supported, verifiable draft list found on this page."
   },
   {
@@ -620,8 +620,8 @@
     "image": "https://brooklynbrewery.com/wp-content/uploads/2019/12/bb_defender_launch_2904-scaled.jpg",
     "beers": [],
     "tapStatus": "unavailable",
-    "hours": null,
-    "address": null,
+    "hours": "Our Williamsburg home is temporarily closed while we get everything into place at 1 Wythe Ave.",
+    "address": "1 Wythe Avenue, Brooklyn, NY 11249",
     "note": "No supported, verifiable draft list found on this page."
   },
   {
@@ -665,15 +665,66 @@
     "neighborhood": "Brooklyn",
     "source": "https://eckhartbeer.com/",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-15T21:59:03.945Z",
-    "verifiedAt": "2026-10-15T21:59:03.945Z",
+    "checkedAt": "2026-10-15T22:06:32.336Z",
+    "verifiedAt": "2026-10-15T22:06:32.336Z",
     "status": "verified",
     "image": "https://eckhartbeer.com/wp-content/uploads/2025/12/eckhart_web-prev-1-scaled.jpg",
-    "beers": [],
-    "tapStatus": "unavailable",
-    "hours": null,
-    "address": null,
-    "note": "No supported, verifiable draft list found on this page."
+    "beers": [
+      {
+        "name": "Helles Lager",
+        "style": "Helles Lager",
+        "abv": 5.1
+      },
+      {
+        "name": "German-Style Pils",
+        "style": "German-Style Pils",
+        "abv": 4.4
+      },
+      {
+        "name": "Czech-Style Pale Lager",
+        "style": "Czech-Style Pale Lager",
+        "abv": 4.2
+      },
+      {
+        "name": "Czech-Style Amber Lager",
+        "style": "Czech-Style Amber Lager",
+        "abv": 5.4
+      },
+      {
+        "name": "Czech-Style Dark Lager",
+        "style": "Czech-Style Dark Lager",
+        "abv": 4.7
+      },
+      {
+        "name": "Haus IPA",
+        "style": "Haus IPA",
+        "abv": 5.6
+      },
+      {
+        "name": "Kölsch",
+        "style": "Kölsch",
+        "abv": 4.5
+      },
+      {
+        "name": "Festbier",
+        "style": "Festbier",
+        "abv": 5.8
+      },
+      {
+        "name": "Marzen",
+        "style": "Marzen",
+        "abv": 6.5
+      },
+      {
+        "name": "Svetle No. 9",
+        "style": "Svetle No. 9",
+        "abv": 3.3
+      }
+    ],
+    "tapStatus": "verified",
+    "hours": "Mon & Tue Closed Wed & Thu 4 - 11pm Friday 2pm - midnight Saturday 12pm - midnight Sunday 12pm -10pm",
+    "address": "545 Johnson Avenue, Brooklyn, NY 11237",
+    "note": "Extracted from the official On Draft Now section; style is the source menu name."
   },
   {
     "id": "endlesslifebrewing",
@@ -739,8 +790,8 @@
     "image": null,
     "beers": [],
     "tapStatus": "unavailable",
-    "hours": null,
-    "address": null,
+    "hours": "Mondays: ClosedTuesday-Thursday: 10am - 10pmFriday & Saturday: 12pm - 11pmSunday: 12pm - 8pm",
+    "address": "574 President Street, Brooklyn, NY 11215",
     "note": "No supported, verifiable draft list found on this page."
   },
   {

@@ -34,6 +34,13 @@ export function parseDraft(html){
   });
  });return beers;
 }
+export function parseEckhart(html){
+ const $=cheerio.load(html),beers=[];
+ $('section.menu-section').filter((_,el)=>$(el).find('h2').text().trim()==='On Draft Now').find('.draft-beer').each((_,el)=>{
+ const name=$(el).find('h3').text().trim(),abv=$(el).find('.ibu-abv').text().match(/(\d+(?:\.\d+)?)\s*%/);
+ if(name&&abv)beers.push({name,style:name,abv:Number(abv[1])});
+ });return beers;
+}
 async function run(){
  const seeds=JSON.parse(await fs.readFile(path.join(root,'src/data/seeds.json'),'utf8'));const result=[];
  for(const seed of seeds){
@@ -45,7 +52,7 @@ async function run(){
    // Reviewed literal evidence must still appear on each refresh.
    if(seed.addressEvidence&&text.toLowerCase().includes(seed.addressEvidence.toLowerCase()))record.address=seed.displayAddress;
    if(seed.hoursEvidence&&text.toLowerCase().includes(seed.hoursEvidence.toLowerCase()))record.hours=seed.hoursEvidence;
-   record.beers=parseDraft(html);record.tapStatus=record.beers.length?'verified':'unavailable';
+   record.beers=new URL(seed.source).hostname==='eckhartbeer.com'?parseEckhart(html):new URL(seed.source).hostname==='otherhalfbrewing.com'?parseDraft(html):[];record.tapStatus=record.beers.length?'verified':'unavailable';
    record.note=record.beers.length?'Extracted from an explicitly labeled draft section.':'No supported, verifiable draft list found on this page.';
    await fs.mkdir(path.join(root,'work/evidence'),{recursive:true});await fs.writeFile(path.join(root,'work/evidence',seed.id+'.txt'),text);
   }catch(e){record.note=e.message;}
