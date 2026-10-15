@@ -1,0 +1,385 @@
+[
+  {
+    "id": "other-half-centre",
+    "name": "Other Half",
+    "borough": "Brooklyn",
+    "neighborhood": "Carroll Gardens",
+    "source": "https://otherhalfbrewing.com/location/centre-street/",
+    "addressEvidence": "195 Centre Street",
+    "displayAddress": "195 Centre Street, Brooklyn, NY 11231",
+    "hoursEvidence": "Monday 12pm – 10pm Tuesday 12pm – 10pm Wednesday 12pm – 10pm Thursday 12pm – 10pm Friday 12pm – 12am Saturday 10am – 12am Sunday 11am – 9pm"
+  },
+  {
+    "id": "threes-gowanus",
+    "name": "Threes Brewing",
+    "borough": "Brooklyn",
+    "neighborhood": "Gowanus",
+    "source": "https://threesbrewing.com/pages/gowanus",
+    "addressEvidence": "333 Douglass",
+    "displayAddress": "333 Douglass Street, Brooklyn, NY"
+  },
+  {
+    "id": "finback",
+    "name": "Finback Brewery",
+    "borough": "Queens",
+    "neighborhood": "Glendale",
+    "source": "https://finbackbrewery.com/spaces",
+    "addressEvidence": "7801 77th",
+    "displayAddress": "78-01 77th Avenue, Glendale, NY"
+  },
+  {
+    "id": "flagship",
+    "name": "Flagship Brewing Co.",
+    "borough": "Staten Island",
+    "neighborhood": "Tompkinsville",
+    "source": "https://flagshipbrewery.nyc/tap-room-2/",
+    "addressEvidence": "40 Minthorne",
+    "displayAddress": "40 Minthorne Street, Staten Island, NY 10301"
+  },
+  {
+    "id": "bronx-brewery",
+    "name": "The Bronx Brewery",
+    "borough": "Bronx",
+    "neighborhood": "South Bronx",
+    "source": "https://thebronxbrewery.com/pages/bronx-location",
+    "addressEvidence": "856 East",
+    "displayAddress": "856 East 136th Street, Bronx, NY",
+    "hoursEvidence": "At this time, The Bronx Brewery Backyard will not be open for daily service."
+  },
+  {
+    "id": "other-half-rockefeller",
+    "name": "Other Half Rockefeller Center",
+    "borough": "Manhattan",
+    "neighborhood": "Midtown",
+    "source": "https://otherhalfbrewing.com/location/rockefeller-center/",
+    "addressEvidence": "600 5th Avenue",
+    "displayAddress": "600 5th Avenue, New York, NY 10020",
+    "hoursEvidence": "Monday 12pm – 8pm Tuesday 12pm – 10pm Wednesday 12pm – 10pm Thursday 12pm – 10pm Friday 12pm – 10pm Saturday 12pm – 10pm Sunday 12pm – 8pm"
+  },
+  {
+    "id": "fifth-hammer",
+    "name": "Fifth Hammer Brewing",
+    "borough": "Queens",
+    "neighborhood": "Long Island City",
+    "source": "https://www.fifthhammerbrewing.com/",
+    "addressEvidence": "10-28",
+    "displayAddress": "10-28 46th Avenue, Long Island City, NY",
+    "hoursEvidence": "Monday: 2pm -10pm Tuesday: 2pm -11pmWednesday 2pm -11pmThursday: 2pm - 12amFriday: 12pm - 1amSaturday: 12pm - 1amSunday: 12pm - 10pm"
+  },
+  {
+    "id": "evil-twin",
+    "name": "Evil Twin Brewing NYC",
+    "borough": "Queens",
+    "neighborhood": "Ridgewood",
+    "source": "https://eviltwin.nyc/",
+    "addressEvidence": "1616 George",
+    "displayAddress": "1616 George Street, Ridgewood, NY"
+  },
+  {
+    "id": "grimm",
+    "name": "Grimm Artisanal Ales",
+    "borough": "Brooklyn",
+    "neighborhood": "East Williamsburg",
+    "source": "https://grimmales.com/",
+    "addressEvidence": "990 Metropolitan",
+    "displayAddress": "990 Metropolitan Avenue, Brooklyn, NY"
+  },
+  {
+    "id": "wild-east",
+    "name": "Wild East Brewing",
+    "borough": "Brooklyn",
+    "neighborhood": "Gowanus",
+    "source": "https://www.wildeastbrewing.com/",
+    "addressEvidence": "623 Sackett",
+    "displayAddress": "623 Sackett Street, Brooklyn, NY"
+  },
+  {
+    "id": "kills-boro",
+    "name": "Kills Boro Brewing",
+    "borough": "Staten Island",
+    "neighborhood": "Staten Island",
+    "source": "https://killsboro.com/",
+    "addressEvidence": "814 Richmond Terrace",
+    "displayAddress": "814 Richmond Terrace, Staten Island, NY 10301",
+    "hoursEvidence": "Mon12-10 p.m.TueClosedWed12-10 p.m.Thu12-10 p.m.Fri12-11 p.m.Sat12-11 p.m.Sun12-10 p.m."
+  },
+  {
+    "id": "harlem",
+    "name": "Harlem Brewing Company",
+    "borough": "Manhattan",
+    "neighborhood": "Harlem",
+    "source": "https://www.harlembrewing.com/"
+  },
+  {
+    "id": "browngirlsbrew",
+    "name": "Brown Girls Brew",
+    "borough": "Manhattan",
+    "neighborhood": "Manhattan",
+    "source": "https://www.browngirlsbrew.com/",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "simplebrewingcompany",
+    "name": "Simple Brewing Company",
+    "borough": "Manhattan",
+    "neighborhood": "Manhattan",
+    "source": "https://www.simplebrewingcompany.org/",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "spicymoonnyc",
+    "name": "Spicy Moon Bowery",
+    "borough": "Manhattan",
+    "neighborhood": "Manhattan",
+    "source": "https://www.spicymoonnyc.com/locations",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "madlovebeer",
+    "name": "Mad Love Beer",
+    "borough": "Staten Island",
+    "neighborhood": "Staten Island",
+    "source": "https://madlovebeer.com/",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "adaptbeerco",
+    "name": "Adapt Beer Project",
+    "borough": "Queens",
+    "neighborhood": "Queens",
+    "source": "https://www.adaptbeerco.com/meet-the-founders",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "bridgeandtunnelbrewery",
+    "name": "Bridge & Tunnel Brewing Company",
+    "borough": "Queens",
+    "neighborhood": "Queens",
+    "source": "https://www.bridgeandtunnelbrewery.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "focalpoint",
+    "name": "Focal Point Brewing Company",
+    "borough": "Queens",
+    "neighborhood": "Queens",
+    "source": "https://www.focalpoint.beer",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "rockawaybrewco",
+    "name": "Rockaway Brewing",
+    "borough": "Queens",
+    "neighborhood": "Queens",
+    "source": "https://rockawaybrewco.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "singlecut",
+    "name": "Singlecut Brewing",
+    "borough": "Queens",
+    "neighborhood": "Queens",
+    "source": "https://singlecut.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "18thwardbrewing",
+    "name": "18th Ward Brewing",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://www.18thwardbrewing.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "backhomebeer",
+    "name": "Back Home Beer",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://www.backhomebeer.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "brooklynbrewery",
+    "name": "Brooklyn Brewery",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://brooklynbrewery.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "brooklynkura",
+    "name": "Brooklyn Kura",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://www.brooklynkura.com?gclid=CjwKCAjw5MOlBhBTEiwAAJ8e1tFTQS3SlSWYo_ocVkFdWTc8RHDg60sJFysbiRqKJPfcW116IcLa5xoCMSwQAvD_BwE",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "lovedykebeer",
+    "name": "Dyke Beer",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://lovedykebeer.com#",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "eckhartbeer",
+    "name": "Eckhart Beer",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://eckhartbeer.com/",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "endlesslifebrewing",
+    "name": "Endless Life Brewing",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://www.endlesslifebrewing.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "farm",
+    "name": "Farm One",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://www.farm.one/brew-lab",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "fiveboroughs",
+    "name": "Five Boroughs Brewing Company",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://fiveboroughs.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "foreverhomebrewing",
+    "name": "Forever Brewing",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://foreverhomebrewing.com/?srsltid=AfmBOopsFUD9BVtzrm1rdygAlnYIxvm4gsHI4QiLPjOcenjcOSSZSNWu",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "gunhillbrewing",
+    "name": "Gun Hill Brewing Company",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://www.gunhillbrewing.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "katosakeworks",
+    "name": "Kato Sake Works",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://www.katosakeworks.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "kegandlanternbrooklyn",
+    "name": "Keg & Lantern Brewing",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://www.kegandlanternbrooklyn.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "kcbcbeer",
+    "name": "King County Brewer’S Collective (Kcbc)",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://www.kcbcbeer.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "momentumbrew",
+    "name": "Momentum Brewery",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://momentumbrew.com/",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "niteglowbeer",
+    "name": "Niteglowbeer",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://niteglowbeer.com/blogs/news/we-re-opening-in-brooklyn",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "noirbrewing",
+    "name": "Noir Brewing",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://noirbrewing.com/",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "randolphbeer",
+    "name": "Randolph Beer",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://www.randolphbeer.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "roundtablebrewery",
+    "name": "Round Table Brewery",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://www.roundtablebrewery.com/brooklyn",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "saltfieldsbrewing",
+    "name": "Saltfields Brewing",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://saltfieldsbrewing.com/",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "sixpoint",
+    "name": "Sixpoint Brewery",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://sixpoint.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "circabrewing",
+    "name": "Sound + Fury Brewery & Kitchen",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://www.circabrewing.co",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "strongropebrewery",
+    "name": "Strong Rope Brewery",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://strongropebrewery.com/home",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "taleabeer",
+    "name": "Talea Beer Company",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://www.taleabeer.com",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "thetestbrewery",
+    "name": "The Test Brewery",
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn",
+    "source": "https://www.thetestbrewery.com/",
+    "directorySource": "https://www.nycbrewed.com/breweries"
+  }
+]
