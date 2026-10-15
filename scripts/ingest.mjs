@@ -9,7 +9,9 @@ import { createHash } from "node:crypto";
 const seedRegistry = JSON.parse(
   await fs.readFile(new URL("../src/data/seeds.json", import.meta.url), "utf8"),
 );
+const browserSources=JSON.parse(await fs.readFile(new URL("../src/data/browser-sources.json",import.meta.url),"utf8"));
 const allowed = new Set([
+ ...browserSources.map(s=>s.source),
   ...seedRegistry.map((s) => s.source),
   "https://www.nycbrewed.com/breweries",
 ]);

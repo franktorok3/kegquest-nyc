@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit",
     "test:e2e": "playwright test",
     "sync:db": "tsx scripts/sync-database.ts",
-    "test:unit": "vitest run"
+    "test:unit": "vitest run",
+    "ingest:browser": "node scripts/crawl-browser.mjs --all && node scripts/apply-browser-content.mjs"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

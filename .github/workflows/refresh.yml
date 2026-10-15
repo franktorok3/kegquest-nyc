@@ -20,6 +20,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run ingest
+      - run: npx playwright install --with-deps chromium
+      - run: npm run ingest:browser
+      - run: node scripts/geocode.mjs
       - run: npm test
       - run: npm run build
       - name: Preserve database snapshots
@@ -31,7 +34,7 @@ jobs:
         run: |
           git config user.name 'Tapbound source refresh'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add src/data/breweries.json
+          git add src/data/breweries.json src/data/seeds.json src/data/location-meta.json src/data/geocodes.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh brewery source snapshots'
             git push

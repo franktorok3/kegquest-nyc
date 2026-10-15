@@ -191,7 +191,7 @@ describe("crawler boundaries", () => {
       );
     try {
       await expect(
-        respectfulFetch("https://eviltwin.nyc/", async () => [
+        respectfulFetch("https://eviltwin.nyc/location/ridgewood-taproom/", async () => [
           { address: "8.8.8.8" },
         ]),
       ).rejects.toThrow("Disallowed");

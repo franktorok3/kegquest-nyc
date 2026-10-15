@@ -9,12 +9,12 @@
     "precision": "street-address interpolation"
   },
   "threes-gowanus": {
-    "address": "333 Douglass Street, Brooklyn, NY",
+    "address": "333 Douglass Street, Brooklyn, NY 11217",
     "lat": 40.679630152182,
     "lng": -73.982393321109,
     "matchedAddress": "333 DOUGLASS ST, BROOKLYN, NY, 11217",
-    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=333+Douglass+Street%2C+Brooklyn%2C+NY&benchmark=Public_AR_Current&format=json",
-    "checkedAt": "2026-10-15T22:18:39.441Z",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=333+Douglass+Street%2C+Brooklyn%2C+NY+11217&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:21:02.313Z",
     "precision": "street-address interpolation"
   },
   "finback": {
@@ -36,39 +36,39 @@
     "precision": "street-address interpolation"
   },
   "fifth-hammer": {
-    "address": "10-28 46th Avenue, Long Island City, NY",
+    "address": "10-28 46th Avenue, Long Island City, NY 11101",
     "lat": 40.746681259237,
     "lng": -73.952012172317,
     "matchedAddress": "10-28 46TH AVE, LONG ISLAND CITY, NY, 11101",
-    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10-28+46th+Avenue%2C+Long+Island+City%2C+NY&benchmark=Public_AR_Current&format=json",
-    "checkedAt": "2026-10-15T22:18:43.084Z",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10-28+46th+Avenue%2C+Long+Island+City%2C+NY+11101&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:22.361Z",
     "precision": "street-address interpolation"
   },
   "evil-twin": {
-    "address": "1616 George Street, Ridgewood, NY",
+    "address": "1616 George Street, Ridgewood, NY 11385",
     "lat": 40.696271838584,
     "lng": -73.904247031501,
     "matchedAddress": "1616 GEORGE ST, RIDGEWOOD, NY, 11385",
-    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1616+George+Street%2C+Ridgewood%2C+NY&benchmark=Public_AR_Current&format=json",
-    "checkedAt": "2026-10-15T22:18:44.291Z",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1616+George+Street%2C+Ridgewood%2C+NY+11385&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:23.572Z",
     "precision": "street-address interpolation"
   },
   "grimm": {
-    "address": "990 Metropolitan Avenue, Brooklyn, NY",
+    "address": "990 Metropolitan Avenue, Brooklyn, NY 11211",
     "lat": 40.714448315684,
     "lng": -73.936509036821,
     "matchedAddress": "990 METROPOLITAN AVE, BROOKLYN, NY, 11211",
-    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=990+Metropolitan+Avenue%2C+Brooklyn%2C+NY&benchmark=Public_AR_Current&format=json",
-    "checkedAt": "2026-10-15T22:18:45.490Z",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=990+Metropolitan+Avenue%2C+Brooklyn%2C+NY+11211&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:24.793Z",
     "precision": "street-address interpolation"
   },
   "wild-east": {
-    "address": "623 Sackett Street, Brooklyn, NY",
+    "address": "623 Sackett Street, Brooklyn, NY 11217",
     "lat": 40.678382958949,
     "lng": -73.983300865099,
     "matchedAddress": "623 SACKETT ST, BROOKLYN, NY, 11217",
-    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=623+Sackett+Street%2C+Brooklyn%2C+NY&benchmark=Public_AR_Current&format=json",
-    "checkedAt": "2026-10-15T22:18:46.687Z",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=623+Sackett+Street%2C+Brooklyn%2C+NY+11217&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:26.004Z",
     "precision": "street-address interpolation"
   },
   "kills-boro": {
@@ -132,6 +132,177 @@
     "matchedAddress": "856 E 136TH ST, BRONX, NY, 10454",
     "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=856+E.+136th+Street%2C+Bronx%2C+NY+10454&benchmark=Public_AR_Current&format=json",
     "checkedAt": "2026-10-15T22:40:38.024Z",
+    "precision": "street-address interpolation"
+  },
+  "simplebrewingcompany": {
+    "address": "424-426 West 54th Street, New York, NY 10019",
+    "lat": 40.766270125004,
+    "lng": -73.987943831466,
+    "matchedAddress": "426 W 54TH ST, NEW YORK, NY, 10019",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=424-426+West+54th+Street%2C+New+York%2C+NY+10019&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:27.250Z",
+    "precision": "street-address interpolation"
+  },
+  "endlesslifebrewing": {
+    "address": "52 34th Street, Brooklyn, NY 11232",
+    "lat": 40.657449555488,
+    "lng": -74.006712631368,
+    "matchedAddress": "52 34TH ST, BROOKLYN, NY, 11232",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=52+34th+Street%2C+Brooklyn%2C+NY+11232&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:28.459Z",
+    "precision": "street-address interpolation"
+  },
+  "gunhillbrewing": {
+    "address": "52 34th Street, Brooklyn, NY 11232",
+    "lat": 40.657449555488,
+    "lng": -74.006712631368,
+    "matchedAddress": "52 34TH ST, BROOKLYN, NY, 11232",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=52+34th+Street%2C+Brooklyn%2C+NY+11232&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:29.662Z",
+    "precision": "street-address interpolation"
+  },
+  "niteglowbeer": {
+    "address": "8 Wilson Avenue, Brooklyn, NY 11237",
+    "lat": 40.703552777822,
+    "lng": -73.930874285771,
+    "matchedAddress": "8 WILSON AVE, BROOKLYN, NY, 11237",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=8+Wilson+Avenue%2C+Brooklyn%2C+NY+11237&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:30.864Z",
+    "precision": "street-address interpolation"
+  },
+  "roundtablebrewery": {
+    "address": "245 South 1st Street, Brooklyn, NY 11211",
+    "lat": 40.712605921518,
+    "lng": -73.95796722155,
+    "matchedAddress": "245 S 1ST ST, BROOKLYN, NY, 11211",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=245+South+1st+Street%2C+Brooklyn%2C+NY+11211&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:32.074Z",
+    "precision": "street-address interpolation"
+  },
+  "finback-brooklyn": {
+    "address": "545 President Street, Brooklyn, NY",
+    "lat": 40.677295993296,
+    "lng": -73.984631577533,
+    "matchedAddress": "545 PRESIDENT ST, BROOKLYN, NY, 11215",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=545+President+Street%2C+Brooklyn%2C+NY&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:33.271Z",
+    "precision": "street-address interpolation"
+  },
+  "finback-lic": {
+    "address": "29-37 41st Avenue, Long Island City, NY",
+    "lat": 40.750902663294,
+    "lng": -73.936627947205,
+    "matchedAddress": "29-37 41ST AVE, LONG ISLAND CITY, NY, 11101",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=29-37+41st+Avenue%2C+Long+Island+City%2C+NY&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:34.483Z",
+    "precision": "street-address interpolation"
+  },
+  "evil-twin-dumbo": {
+    "address": "43 Main Street, Brooklyn, NY 11201",
+    "lat": 40.702825282948,
+    "lng": -73.990613662679,
+    "matchedAddress": "43 MAIN ST, BROOKLYN, NY, 11201",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=43+Main+Street%2C+Brooklyn%2C+NY+11201&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:35.957Z",
+    "precision": "street-address interpolation"
+  },
+  "keg-the-keg-and-lantern-greenpoint": {
+    "address": "97 Nassau Avenue, Brooklyn, NY 11222",
+    "lat": 40.724017658386,
+    "lng": -73.950230640003,
+    "matchedAddress": "97 NASSAU AVE, BROOKLYN, NY, 11222",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=97+Nassau+Avenue%2C+Brooklyn%2C+NY+11222&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:37.288Z",
+    "precision": "street-address interpolation"
+  },
+  "keg-southside-williamsburg": {
+    "address": "104 South 4th Street, Brooklyn, NY 11249",
+    "lat": 40.712186384819,
+    "lng": -73.963888477256,
+    "matchedAddress": "104 S 4TH ST, BROOKLYN, NY, 11249",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=104+South+4th+Street%2C+Brooklyn%2C+NY+11249&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:38.496Z",
+    "precision": "street-address interpolation"
+  },
+  "keg-west-village": {
+    "address": "29 7th Avenue South, New York, NY 10014",
+    "lat": 40.730786437909,
+    "lng": -74.004338322035,
+    "matchedAddress": "29 7TH AVE S, NEW YORK, NY, 10014",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=29+7th+Avenue+South%2C+New+York%2C+NY+10014&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:39.708Z",
+    "precision": "street-address interpolation"
+  },
+  "keg-the-keg-and-lantern-red-hook": {
+    "address": "158 Beard Street, Brooklyn, NY 11231",
+    "lat": 40.675637370923,
+    "lng": -74.015958877186,
+    "matchedAddress": "158 BEARD ST, BROOKLYN, NY, 11231",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=158+Beard+Street%2C+Brooklyn%2C+NY+11231&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:40.904Z",
+    "precision": "street-address interpolation"
+  },
+  "talea-williamsburg": {
+    "address": "87 Richardson Street, Brooklyn, NY 11211",
+    "lat": 40.718518546626,
+    "lng": -73.948349623493,
+    "matchedAddress": "87 RICHARDSON ST, BROOKLYN, NY, 11211",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=87+Richardson+Street%2C+Brooklyn%2C+NY+11211&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:42.100Z",
+    "precision": "street-address interpolation"
+  },
+  "talea-upper-west-side": {
+    "address": "441 Amsterdam Avenue, New York, NY 10024",
+    "lat": 40.784486423204,
+    "lng": -73.977262133017,
+    "matchedAddress": "441 AMSTERDAM AVE, NEW YORK, NY, 10024",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=441+Amsterdam+Avenue%2C+New+York%2C+NY+10024&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:19:43.299Z",
+    "precision": "street-address interpolation"
+  },
+  "talea-west-village": {
+    "address": "102 Christopher Street, New York, NY 10014",
+    "lat": 40.73324536435,
+    "lng": -74.004844608848,
+    "matchedAddress": "102 CHRISTOPHER ST, NEW YORK, NY, 10014",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=102+Christopher+Street%2C+New+York%2C+NY+10014&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:20:15.666Z",
+    "precision": "street-address interpolation"
+  },
+  "talea-bryant-park": {
+    "address": "22 West 40th Street, New York, NY 10018",
+    "lat": 40.752445869478,
+    "lng": -73.982568323021,
+    "matchedAddress": "22 W 40TH ST, NEW YORK, NY, 10018",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=22+West+40th+Street%2C+New+York%2C+NY+10018&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:20:16.878Z",
+    "precision": "street-address interpolation"
+  },
+  "talea-penn-district": {
+    "address": "160 West 32nd Street, New York, NY 10001",
+    "lat": 40.749246310818,
+    "lng": -73.990622673111,
+    "matchedAddress": "160 W 32ND ST, NEW YORK, NY, 10001",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=160+West+32nd+Street%2C+New+York%2C+NY+10001&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:20:18.083Z",
+    "precision": "street-address interpolation"
+  },
+  "strongropebrewery": {
+    "address": "185 Van Dyke Street, Brooklyn, NY 11231",
+    "lat": 40.677587075086,
+    "lng": -74.017641433773,
+    "matchedAddress": "185 VAN DYKE ST, BROOKLYN, NY, 11231",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=185+Van+Dyke+Street%2C+Brooklyn%2C+NY+11231&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:21:03.515Z",
+    "precision": "street-address interpolation"
+  },
+  "talea-cobble-hill": {
+    "address": "61 Bergen Street, Brooklyn, NY 11201",
+    "lat": 40.686984125767,
+    "lng": -73.99094890208,
+    "matchedAddress": "61 BERGEN ST, BROOKLYN, NY, 11201",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=61+Bergen+Street%2C+Brooklyn%2C+NY+11201&benchmark=Public_AR_Current&format=json",
+    "checkedAt": "2026-10-15T23:21:04.720Z",
     "precision": "street-address interpolation"
   }
 }

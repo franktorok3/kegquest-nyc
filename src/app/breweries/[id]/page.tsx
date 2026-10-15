@@ -63,6 +63,7 @@ export default async function Brewery({
         </div>
         <Photo src={b.image} name={b.name} />
       </div>
+      {b.description && <p className="notice">{b.description}</p>}
       <div className="detail-grid">
         <section>
           <div className="section-top">
@@ -85,8 +86,8 @@ export default async function Brewery({
                 }) + " ET"
               : "Unavailable"}{" "}
             ·{" "}
-            <a href={b.source} target="_blank" rel="noreferrer">
-              Official source ↗
+            <a href={b.menuSource} target="_blank" rel="noreferrer">
+              Menu source ↗
             </a>
           </p>
           {b.beers.length ? (
@@ -117,7 +118,7 @@ export default async function Brewery({
               </p>
               <a
                 className="button secondary"
-                href={b.source}
+                href={b.menuSource}
                 target="_blank"
                 rel="noreferrer"
               >

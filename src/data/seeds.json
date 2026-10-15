@@ -11,22 +11,23 @@
   },
   {
     "id": "threes-gowanus",
-    "name": "Threes Brewing",
+    "name": "Threes Brewing — Gowanus",
     "borough": "Brooklyn",
     "neighborhood": "Gowanus",
     "source": "https://threesbrewing.com/pages/gowanus",
-    "addressEvidence": "333 Douglass",
-    "displayAddress": "333 Douglass Street, Brooklyn, NY",
-    "hoursEvidence": "Monday 12 - Midnight(Kitchen 5-10pm) Tuesday 12 - Midnight(Kitchen 5-10pm) Wednesday 12 - Midnight(Kitchen 5-10pm) Thursday 12 - Midnight(Kitchen 5-11pm) Friday 12 - Midnight(Kitchen 4-10pm) Saturday 12 - Midnight(Kitchen 12-11pm) Sunday 12 - 11pm(Kitchen 12-10pm)"
+    "addressEvidence": "333 Douglass Street",
+    "displayAddress": "333 Douglass Street, Brooklyn, NY 11217",
+    "hoursEvidence": "MONDAY\n\n12 - Midnight\n(Kitchen 5-10pm)\n\nTUESDAY\n\n12 - Midnight\n(Kitchen 5-10pm)\n\nWEDNESDAY\n\n12 - Midnight\n(Kitchen 5-10pm)\n\nTHURSDAY\n\n12 - Midnight\n(Kitchen 5-11pm)\n\nFRIDAY\n\n12 - Midnight\n(Kitchen 4-10pm)\n\nSATURDAY\n\n12 - Midnight\n(Kitchen 12-11pm)\n\nSUNDAY\n\n12 - 11pm\n(Kitchen 12-10pm)"
   },
   {
     "id": "finback",
-    "name": "Finback Brewery",
+    "name": "Finback Brewery — Glendale",
     "borough": "Queens",
     "neighborhood": "Glendale",
     "source": "https://finbackbrewery.com/spaces",
-    "addressEvidence": "7801 77th",
-    "displayAddress": "78-01 77th Avenue, Glendale, NY"
+    "addressEvidence": "7801 77th ave",
+    "displayAddress": "78-01 77th Avenue, Glendale, NY",
+    "hoursEvidence": "mon: closed tue-thu: 5pm-10pm fri: 5pm-11pm sat: 12pm-11pm sun: 12pm-8pm"
   },
   {
     "id": "flagship",
@@ -34,8 +35,9 @@
     "borough": "Staten Island",
     "neighborhood": "Tompkinsville",
     "source": "https://flagshipbrewery.nyc/tap-room-2/",
-    "addressEvidence": "40 Minthorne",
-    "displayAddress": "40 Minthorne Street, Staten Island, NY 10301"
+    "addressEvidence": "40 Minthorne St",
+    "displayAddress": "40 Minthorne Street, Staten Island, NY 10301",
+    "hoursEvidence": "Monday: Closed Tuesday: Closed Wednesday: 5PM - 11PM Thursday: 12PM – 12AM Friday: 12PM – 12AM Saturday: 12PM – 12AM Sunday: 12PM – 8 PM"
   },
   {
     "id": "bronx-brewery",
@@ -63,27 +65,29 @@
     "borough": "Queens",
     "neighborhood": "Long Island City",
     "source": "https://www.fifthhammerbrewing.com/",
-    "addressEvidence": "10-28",
-    "displayAddress": "10-28 46th Avenue, Long Island City, NY",
-    "hoursEvidence": "Monday: 2pm -10pm Tuesday: 2pm -11pmWednesday 2pm -11pmThursday: 2pm - 12amFriday: 12pm - 1amSaturday: 12pm - 1amSunday: 12pm - 10pm"
+    "addressEvidence": "10-28 46th Ave",
+    "displayAddress": "10-28 46th Avenue, Long Island City, NY 11101",
+    "hoursEvidence": "Monday: 2pm -10pm Tuesday: 2pm -11pm Wednesday 2pm -11pm Thursday: 2pm - 12am Friday: 12pm - 1am Saturday: 12pm - 1am Sunday: 12pm - 10pm"
   },
   {
     "id": "evil-twin",
-    "name": "Evil Twin Brewing NYC",
+    "name": "Evil Twin Brewing NYC — Ridgewood",
     "borough": "Queens",
     "neighborhood": "Ridgewood",
-    "source": "https://eviltwin.nyc/",
-    "addressEvidence": "1616 George",
-    "displayAddress": "1616 George Street, Ridgewood, NY"
+    "source": "https://eviltwin.nyc/location/ridgewood-taproom/",
+    "addressEvidence": "1616 George St",
+    "displayAddress": "1616 George Street, Ridgewood, NY 11385",
+    "hoursEvidence": "Monday 4pm – 9pm Tuesday 4pm – 9pm Wednesday 4pm – 9pm Thursday 4pm – 9pm Friday 12pm – 12am Saturday 12pm – 12am Sunday 12pm – 10pm"
   },
   {
     "id": "grimm",
     "name": "Grimm Artisanal Ales",
     "borough": "Brooklyn",
     "neighborhood": "East Williamsburg",
-    "source": "https://grimmales.com/",
-    "addressEvidence": "990 Metropolitan",
-    "displayAddress": "990 Metropolitan Avenue, Brooklyn, NY"
+    "source": "https://grimmales.com/location/taproom/",
+    "addressEvidence": "990 Metropolitan Ave",
+    "displayAddress": "990 Metropolitan Avenue, Brooklyn, NY 11211",
+    "hoursEvidence": "Monday 2pm – 10pm Tuesday 2pm – 10pm Wednesday 2pm – 10pm Thursday 2pm – 10pm Friday 12pm – 12am Saturday 12pm – 12am Sunday 12pm – 8pm"
   },
   {
     "id": "wild-east",
@@ -91,18 +95,19 @@
     "borough": "Brooklyn",
     "neighborhood": "Gowanus",
     "source": "https://www.wildeastbrewing.com/",
-    "addressEvidence": "623 Sackett",
-    "displayAddress": "623 Sackett Street, Brooklyn, NY"
+    "addressEvidence": "623 Sackett St.",
+    "displayAddress": "623 Sackett Street, Brooklyn, NY 11217",
+    "hoursEvidence": "Mon-Thurs: 2-10pm Friday: 2pm-midnight Saturday: 12-midnight Sunday: 12-9pm"
   },
   {
     "id": "kills-boro",
     "name": "Kills Boro Brewing",
     "borough": "Staten Island",
-    "neighborhood": "Staten Island",
+    "neighborhood": "West New Brighton",
     "source": "https://killsboro.com/",
     "addressEvidence": "814 Richmond Terrace",
     "displayAddress": "814 Richmond Terrace, Staten Island, NY 10301",
-    "hoursEvidence": "Mon12-10 p.m.TueClosedWed12-10 p.m.Thu12-10 p.m.Fri12-11 p.m.Sat12-11 p.m.Sun12-10 p.m."
+    "hoursEvidence": "Mon 12-10 p.m. Tue Closed Wed 12-10 p.m. Thu 12-10 p.m. Fri 12-11 p.m. Sat 12-11 p.m. Sun 12-10 p.m."
   },
   {
     "id": "harlem",
@@ -123,9 +128,12 @@
     "id": "simplebrewingcompany",
     "name": "Simple Brewing Company",
     "borough": "Manhattan",
-    "neighborhood": "Manhattan",
+    "neighborhood": "Hell’s Kitchen",
     "source": "https://www.simplebrewingcompany.org/",
-    "directorySource": "https://www.nycbrewed.com/breweries"
+    "directorySource": "https://www.nycbrewed.com/breweries",
+    "addressEvidence": "424-426 W 54th St",
+    "displayAddress": "424-426 West 54th Street, New York, NY 10019",
+    "hoursEvidence": "Monday Closed Tuesday Closed Wednesday Closed Thursday 4:00pm - 10:00pm Friday 4:00pm - 10:00pm Saturday 2:00pm - 8:00pm Sunday 2:00pm - 8:00pm"
   },
   {
     "id": "spicymoonnyc",
@@ -242,11 +250,14 @@
   },
   {
     "id": "endlesslifebrewing",
-    "name": "Endless Life Brewing",
+    "name": "Endless Life Brewing at Gun Hill Publick House",
     "borough": "Brooklyn",
-    "neighborhood": "Brooklyn",
-    "source": "https://www.endlesslifebrewing.com",
-    "directorySource": "https://www.nycbrewed.com/breweries"
+    "neighborhood": "Sunset Park",
+    "source": "https://www.endlesslifebrewing.com/",
+    "directorySource": "https://www.nycbrewed.com/breweries",
+    "addressEvidence": "52 34th St",
+    "displayAddress": "52 34th Street, Brooklyn, NY 11232",
+    "hoursEvidence": "Tue-Thur 1pm-9pm Fri 1pm-10pm Sat noon-10pm Sun noon-9pm Monday closed except for holidays"
   },
   {
     "id": "farm",
@@ -268,20 +279,22 @@
     "id": "foreverhomebrewing",
     "name": "Forever Brewing",
     "borough": "Brooklyn",
-    "neighborhood": "Brooklyn",
+    "neighborhood": "Gowanus",
     "source": "https://foreverhomebrewing.com/?srsltid=AfmBOopsFUD9BVtzrm1rdygAlnYIxvm4gsHI4QiLPjOcenjcOSSZSNWu",
     "directorySource": "https://www.nycbrewed.com/breweries",
     "addressEvidence": "574 President Street",
     "displayAddress": "574 President Street, Brooklyn, NY 11215",
-    "hoursEvidence": "Mondays: ClosedTuesday-Thursday: 10am - 10pmFriday & Saturday: 12pm - 11pmSunday: 12pm - 8pm"
+    "hoursEvidence": "Mondays: Closed Tuesday-Thursday: 10am - 10pm Friday & Saturday: 12pm - 11pm Sunday: 12pm - 8pm"
   },
   {
     "id": "gunhillbrewing",
-    "name": "Gun Hill Brewing Company",
+    "name": "Gun Hill Publick House",
     "borough": "Brooklyn",
-    "neighborhood": "Brooklyn",
-    "source": "https://www.gunhillbrewing.com",
-    "directorySource": "https://www.nycbrewed.com/breweries"
+    "neighborhood": "Sunset Park",
+    "source": "https://www.gunhillbrewing.com/",
+    "directorySource": "https://www.nycbrewed.com/breweries",
+    "addressEvidence": "52 34th Street",
+    "displayAddress": "52 34th Street, Brooklyn, NY 11232"
   },
   {
     "id": "katosakeworks",
@@ -317,11 +330,14 @@
   },
   {
     "id": "niteglowbeer",
-    "name": "Niteglowbeer",
+    "name": "Niteglow",
     "borough": "Brooklyn",
-    "neighborhood": "Brooklyn",
-    "source": "https://niteglowbeer.com/blogs/news/we-re-opening-in-brooklyn",
-    "directorySource": "https://www.nycbrewed.com/breweries"
+    "neighborhood": "Bushwick",
+    "source": "https://niteglowbeer.com/pages/locations",
+    "directorySource": "https://www.nycbrewed.com/breweries",
+    "addressEvidence": "8 WILSON AVE",
+    "displayAddress": "8 Wilson Avenue, Brooklyn, NY 11237",
+    "hoursEvidence": "HOURS: 11 -11 DAILY"
   },
   {
     "id": "noirbrewing",
@@ -341,11 +357,14 @@
   },
   {
     "id": "roundtablebrewery",
-    "name": "Round Table Brewery",
+    "name": "Round Table Brewery — Brooklyn",
     "borough": "Brooklyn",
-    "neighborhood": "Brooklyn",
+    "neighborhood": "Williamsburg",
     "source": "https://www.roundtablebrewery.com/brooklyn",
-    "directorySource": "https://www.nycbrewed.com/breweries"
+    "directorySource": "https://www.nycbrewed.com/breweries",
+    "addressEvidence": "245 S 1st St",
+    "displayAddress": "245 South 1st Street, Brooklyn, NY 11211",
+    "hoursEvidence": "Monday | 3–11 PM Tuesday | 3–11 PM Wednesday | 3–11 PM Thursday | 3–11 PM Friday | 3 PM–12 AM Saturday | 1 PM–12 AM Sunday | 1–9 PM"
   },
   {
     "id": "saltfieldsbrewing",
@@ -373,11 +392,14 @@
   },
   {
     "id": "strongropebrewery",
-    "name": "Strong Rope Brewery",
+    "name": "Strong Rope Brewery — Red Hook",
     "borough": "Brooklyn",
-    "neighborhood": "Brooklyn",
-    "source": "https://strongropebrewery.com/home",
-    "directorySource": "https://www.nycbrewed.com/breweries"
+    "neighborhood": "Red Hook",
+    "source": "https://www.strongropebrewery.com/taproom",
+    "directorySource": "https://www.nycbrewed.com/breweries",
+    "addressEvidence": "185 VAN DYKE STREET",
+    "displayAddress": "185 Van Dyke Street, Brooklyn, NY 11231",
+    "hoursEvidence": "Monday-Thursday 2-10 pm Friday-Saturday 12-11 pm Sunday 12-9 pm"
   },
   {
     "id": "taleabeer",
@@ -394,5 +416,134 @@
     "neighborhood": "Brooklyn",
     "source": "https://www.thetestbrewery.com/",
     "directorySource": "https://www.nycbrewed.com/breweries"
+  },
+  {
+    "id": "finback-brooklyn",
+    "name": "Finback Brewery — Brooklyn",
+    "borough": "Brooklyn",
+    "neighborhood": "Gowanus",
+    "source": "https://finbackbrewery.com/spaces",
+    "addressEvidence": "545 President St",
+    "displayAddress": "545 President Street, Brooklyn, NY",
+    "hoursEvidence": "mon-tue: 2pm-10pm wed-thu: 12pm-10pm fri-sat: 12pm-12am sun: 12pm-8pm"
+  },
+  {
+    "id": "finback-lic",
+    "name": "Finback Brewery — Long Island City",
+    "borough": "Queens",
+    "neighborhood": "Long Island City",
+    "source": "https://finbackbrewery.com/spaces",
+    "addressEvidence": "29-37 41st Ave",
+    "displayAddress": "29-37 41st Avenue, Long Island City, NY",
+    "hoursEvidence": "mon-wed: 3pm-10pm thu: 12pm-10pm fri-sat: 12pm-12am sun: 12pm-8pm"
+  },
+  {
+    "id": "evil-twin-dumbo",
+    "name": "Evil Twin Brewing NYC — DUMBO",
+    "borough": "Brooklyn",
+    "neighborhood": "DUMBO",
+    "source": "https://eviltwin.nyc/location/dumbo-taproom/",
+    "addressEvidence": "43 Main St",
+    "displayAddress": "43 Main Street, Brooklyn, NY 11201",
+    "hoursEvidence": "Monday 12pm – 11pm Tuesday 12pm – 11pm Wednesday 12pm – 11pm Thursday 12pm – 11pm Friday 12pm – 1am Saturday 12pm – 1am Sunday 12pm – 10pm"
+  },
+  {
+    "id": "keg-the-keg-and-lantern-greenpoint",
+    "name": "Keg & Lantern — Greenpoint",
+    "borough": "Brooklyn",
+    "neighborhood": "Greenpoint",
+    "source": "https://www.kegandlanternbrooklyn.com/location/the-keg-and-lantern-greenpoint/",
+    "addressEvidence": "97 Nassau Ave",
+    "displayAddress": "97 Nassau Avenue, Brooklyn, NY 11222",
+    "hoursEvidence": "Sunday: 11:00 AM – 2:00 AM Monday: 11:00 AM – 2:00 AM Tuesday: 11:00 AM – 2:00 AM Wednesday: 11:00 AM – 2:00 AM Thursday: 11:00 AM – 2:00 AM Friday: 11:00 AM – 4:00 AM Saturday: 11:00 AM – 4:00 AM"
+  },
+  {
+    "id": "keg-southside-williamsburg",
+    "name": "Keg & Lantern — Southside",
+    "borough": "Brooklyn",
+    "neighborhood": "Williamsburg",
+    "source": "https://www.kegandlanternbrooklyn.com/location/southside-williamsburg/",
+    "addressEvidence": "104 South 4th St",
+    "displayAddress": "104 South 4th Street, Brooklyn, NY 11249",
+    "hoursEvidence": "Sunday: 11:00 AM – 12:00 AM Monday: 12:00 PM – 12:00 AM Tuesday: 3:00 PM – 12:00 AM Wednesday: 3:00 PM – 12:00 AM Thursday: 3:00 PM – 12:00 AM Friday: 12:00 PM – 2:00 AM Saturday: 11:00 AM – 2:00 AM"
+  },
+  {
+    "id": "keg-west-village",
+    "name": "Keg & Lantern — West Village",
+    "borough": "Manhattan",
+    "neighborhood": "West Village",
+    "source": "https://www.kegandlanternbrooklyn.com/location/west-village/",
+    "addressEvidence": "29 7th Ave S",
+    "displayAddress": "29 7th Avenue South, New York, NY 10014",
+    "hoursEvidence": "Monday: CLOSED Tuesday through Thursday 12:00 PM – 12:00 AM Friday & Saturday 12:00 PM – 1:00 AM Sunday: 12:00 PM – 10:00 PM"
+  },
+  {
+    "id": "keg-the-keg-and-lantern-red-hook",
+    "name": "Keg & Lantern — Red Hook",
+    "borough": "Brooklyn",
+    "neighborhood": "Red Hook",
+    "source": "https://www.kegandlanternbrooklyn.com/location/the-keg-and-lantern-red-hook/",
+    "addressEvidence": "158 Beard St",
+    "displayAddress": "158 Beard Street, Brooklyn, NY 11231"
+  },
+  {
+    "id": "talea-williamsburg",
+    "name": "TALEA — Williamsburg",
+    "borough": "Brooklyn",
+    "neighborhood": "Williamsburg",
+    "source": "https://www.taleabeer.com/pages/visit-us",
+    "addressEvidence": "87 RICHARDSON STREET",
+    "displayAddress": "87 Richardson Street, Brooklyn, NY 11211",
+    "hoursEvidence": "MONDAY-WEDNESDAY 10AM-9PM THURSDAY-SATURDAY 10AM-10PM SUNDAY: 11AM - 9PM"
+  },
+  {
+    "id": "talea-upper-west-side",
+    "name": "TALEA — Upper West Side",
+    "borough": "Manhattan",
+    "neighborhood": "Upper West Side",
+    "source": "https://www.taleabeer.com/pages/visit-us",
+    "addressEvidence": "441 AMSTERDAM AVENUE",
+    "displayAddress": "441 Amsterdam Avenue, New York, NY 10024",
+    "hoursEvidence": "MONDAY- WEDNESDAY: 10AM-10PM THURSDAY: 10AM-11PM FIRDAY-SATURDAY: 10AM-12AM"
+  },
+  {
+    "id": "talea-cobble-hill",
+    "name": "TALEA — Cobble Hill",
+    "borough": "Brooklyn",
+    "neighborhood": "Cobble Hill",
+    "source": "https://www.taleabeer.com/pages/visit-us",
+    "addressEvidence": "61 BERGEN STREET",
+    "displayAddress": "61 Bergen Street, Brooklyn, NY 11201",
+    "hoursEvidence": "MONDAY- THURSDAY 10AM-10PM FRIDAY 10AM-11PM SATURDAY: 11AM - 11PM SUNDAY: 11AM - 9PM"
+  },
+  {
+    "id": "talea-west-village",
+    "name": "TALEA — West Village",
+    "borough": "Manhattan",
+    "neighborhood": "West Village",
+    "source": "https://www.taleabeer.com/pages/visit-us",
+    "addressEvidence": "102 CHRISTOPHER STREET",
+    "displayAddress": "102 Christopher Street, New York, NY 10014",
+    "hoursEvidence": "MONDAY - THURSDAY: 12PM - 10PM FRIDAY & SATURDAY: 12PM - 12AM SUNDAY: 12PM - 10PM"
+  },
+  {
+    "id": "talea-bryant-park",
+    "name": "TALEA — Bryant Park",
+    "borough": "Manhattan",
+    "neighborhood": "Bryant Park",
+    "source": "https://www.taleabeer.com/pages/visit-us",
+    "addressEvidence": "22 WEST 40TH STREET",
+    "displayAddress": "22 West 40th Street, New York, NY 10018",
+    "hoursEvidence": "MONDAY & TUESDAY: 7:30AM - 9PM WEDNESDAY & THURSDAY: 7:30AM - 10PM FRIDAY: 7:30AM - 9PM SATURDAY: 7:30AM - 9PM SUNDAY: 7:30AM - 8PM"
+  },
+  {
+    "id": "talea-penn-district",
+    "name": "TALEA — Penn District",
+    "borough": "Manhattan",
+    "neighborhood": "Penn District",
+    "source": "https://www.taleabeer.com/pages/visit-us",
+    "addressEvidence": "160 W 32ND STREET",
+    "displayAddress": "160 West 32nd Street, New York, NY 10001",
+    "hoursEvidence": "MONDAY - SATURDAY: 3PM - 9PM"
   }
 ]

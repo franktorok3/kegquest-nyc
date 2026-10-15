@@ -1,3 +1,5 @@
+import legacySources from "../src/data/legacy-source-ids.json";
+import reviews from "../src/data/browser-review.json";
 import { createHash } from "node:crypto";
 import { locations, markets, catalog } from "../src/lib/catalog";
 const hash = (s: string) => createHash("sha256").update(s).digest("hex");
@@ -62,7 +64,7 @@ export function databasePayload() {
         slug: l.breweryId,
         website: new URL(l.source).origin,
         logo_url: null,
-        description: null,
+        description: l.description,
         classification: "brewery",
         verification_status: "official_location_verified",
         source_url: l.source,
@@ -100,17 +102,24 @@ export function databasePayload() {
       source_url: l.source,
       record: l,
     });
-    const sourceId = l.id + "-official";
+    const sourceId =
+      (legacySources as Record<string, string>)[l.id] === l.menuSource
+        ? l.id + "-official"
+        : l.id + "-menu-" + hash(l.menuSource).slice(0, 12);
     tables.sources.push({
       id: sourceId,
       location_id: l.id,
-      url: l.source,
-      reliability: "official_brewery_menu",
-      adapter: l.id.startsWith("other-half")
-        ? "other-half-v2"
-        : l.id === "eckhartbeer"
-          ? "eckhart-v1"
-          : "unsupported",
+      url: l.menuSource,
+      reliability: l.menuSource.includes("beermenus.com")
+        ? "brewery_linked_menu"
+        : "official_brewery_menu",
+      adapter:
+        reviews.find((r) => r.id === l.id)?.adapter ||
+        (l.id.startsWith("other-half")
+          ? "other-half-v2"
+          : l.id === "eckhartbeer"
+            ? "eckhart-v1"
+            : "unsupported"),
     });
     const snapshotId = hash(sourceId + l.checkedAt);
     tables.tap_snapshots.push({
@@ -119,7 +128,9 @@ export function databasePayload() {
       source_id: sourceId,
       collected_at: l.checkedAt,
       last_successful_verification: l.menuVerifiedAt,
-      parser_version: "tapbound-2",
+      parser_version: reviews.some((r) => r.id === l.id)
+        ? "tapbound-browser-3"
+        : "tapbound-2",
       checksum: hash(JSON.stringify(l.beers)),
       status: l.tapStatus,
       entry_count: l.beers.length,
@@ -136,7 +147,7 @@ export function databasePayload() {
         abv: b.abv ?? null,
         ibu: null,
         description: null,
-        source_url: l.source,
+        source_url: l.menuSource,
       });
       tables.tap_entries.push({
         id: hash(snapshotId + id),
@@ -146,7 +157,7 @@ export function databasePayload() {
         pour_size: null,
         price: b.price || null,
         availability: l.tapStatus === "verified" ? "listed" : "historical",
-        source_url: l.source,
+        source_url: l.menuSource,
         observed_at: l.menuVerifiedAt || l.checkedAt,
         snapshot_id: snapshotId,
       });

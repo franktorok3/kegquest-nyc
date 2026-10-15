@@ -79,23 +79,52 @@
         1440
       ]
     ],
-    "hoursEvidence": "Monday 12 - Midnight(Kitchen 5-10pm) Tuesday 12 - Midnight(Kitchen 5-10pm) Wednesday 12 - Midnight(Kitchen 5-10pm) Thursday 12 - Midnight(Kitchen 5-11pm) Friday 12 - Midnight(Kitchen 4-10pm) Saturday 12 - Midnight(Kitchen 12-11pm) Sunday 12 - 11pm(Kitchen 12-10pm)",
+    "hoursEvidence": "MONDAY\n\n12 - Midnight\n(Kitchen 5-10pm)\n\nTUESDAY\n\n12 - Midnight\n(Kitchen 5-10pm)\n\nWEDNESDAY\n\n12 - Midnight\n(Kitchen 5-10pm)\n\nTHURSDAY\n\n12 - Midnight\n(Kitchen 5-11pm)\n\nFRIDAY\n\n12 - Midnight\n(Kitchen 4-10pm)\n\nSATURDAY\n\n12 - Midnight\n(Kitchen 12-11pm)\n\nSUNDAY\n\n12 - 11pm\n(Kitchen 12-10pm)",
     "exceptions": [],
     "amenities": {
-      "food": null,
-      "outdoor": null,
+      "food": true,
+      "outdoor": true,
       "indoor": null,
       "pets": null,
       "accessibility": null
-    }
+    },
+    "amenitiesCheckedAt": "2026-10-15T23:13:19.824Z",
+    "amenitiesSource": "https://threesbrewing.com/pages/gowanus",
+    "breweryId": "threes"
   },
   "finback": {
     "cityId": "nyc",
     "timeZone": "America/New_York",
     "visitable": true,
     "visitStatus": "taproom",
-    "schedule": null,
-    "hoursEvidence": null,
+    "schedule": [
+      [
+        720,
+        1200
+      ],
+      [],
+      [
+        1020,
+        1320
+      ],
+      [
+        1020,
+        1320
+      ],
+      [
+        1020,
+        1320
+      ],
+      [
+        1020,
+        1380
+      ],
+      [
+        720,
+        1380
+      ]
+    ],
+    "hoursEvidence": "mon: closed tue-thu: 5pm-10pm fri: 5pm-11pm sat: 12pm-11pm sun: 12pm-8pm",
     "exceptions": [],
     "amenities": {
       "food": null,
@@ -103,7 +132,10 @@
       "indoor": null,
       "pets": null,
       "accessibility": null
-    }
+    },
+    "breweryId": "finback",
+    "amenitiesCheckedAt": "2026-10-15T23:13:22.920Z",
+    "amenitiesSource": "https://finbackbrewery.com/spaces"
   },
   "other-half-rockefeller": {
     "cityId": "nyc",
@@ -185,7 +217,7 @@
         1500
       ]
     ],
-    "hoursEvidence": "Monday: 2pm -10pm Tuesday: 2pm -11pmWednesday 2pm -11pmThursday: 2pm - 12amFriday: 12pm - 1amSaturday: 12pm - 1amSunday: 12pm - 10pm",
+    "hoursEvidence": "Monday: 2pm -10pm Tuesday: 2pm -11pm Wednesday 2pm -11pm Thursday: 2pm - 12am Friday: 12pm - 1am Saturday: 12pm - 1am Sunday: 12pm - 10pm",
     "exceptions": [],
     "amenities": {
       "food": null,
@@ -193,15 +225,47 @@
       "indoor": null,
       "pets": null,
       "accessibility": null
-    }
+    },
+    "breweryId": "fifth-hammer",
+    "amenitiesCheckedAt": "2026-10-15T23:13:34.531Z",
+    "amenitiesSource": "https://www.fifthhammerbrewing.com/"
   },
   "evil-twin": {
     "cityId": "nyc",
     "timeZone": "America/New_York",
     "visitable": true,
     "visitStatus": "taproom",
-    "schedule": null,
-    "hoursEvidence": null,
+    "schedule": [
+      [
+        720,
+        1320
+      ],
+      [
+        960,
+        1260
+      ],
+      [
+        960,
+        1260
+      ],
+      [
+        960,
+        1260
+      ],
+      [
+        960,
+        1260
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1440
+      ]
+    ],
+    "hoursEvidence": "Monday 4pm – 9pm Tuesday 4pm – 9pm Wednesday 4pm – 9pm Thursday 4pm – 9pm Friday 12pm – 12am Saturday 12pm – 12am Sunday 12pm – 10pm",
     "exceptions": [],
     "amenities": {
       "food": null,
@@ -209,39 +273,106 @@
       "indoor": null,
       "pets": null,
       "accessibility": null
-    }
+    },
+    "breweryId": "evil-twin",
+    "amenitiesCheckedAt": "2026-10-15T23:14:36.944Z",
+    "amenitiesSource": "https://eviltwin.nyc/location/ridgewood-taproom/"
   },
   "grimm": {
     "cityId": "nyc",
     "timeZone": "America/New_York",
     "visitable": true,
     "visitStatus": "taproom",
-    "schedule": null,
-    "hoursEvidence": null,
+    "schedule": [
+      [
+        720,
+        1200
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1440
+      ]
+    ],
+    "hoursEvidence": "Monday 2pm – 10pm Tuesday 2pm – 10pm Wednesday 2pm – 10pm Thursday 2pm – 10pm Friday 12pm – 12am Saturday 12pm – 12am Sunday 12pm – 8pm",
     "exceptions": [],
     "amenities": {
-      "food": null,
-      "outdoor": null,
+      "food": true,
+      "outdoor": true,
       "indoor": null,
       "pets": null,
       "accessibility": null
-    }
+    },
+    "breweryId": "grimm",
+    "amenitiesCheckedAt": "2026-10-15T23:14:42.903Z",
+    "amenitiesSource": "https://grimmales.com/location/taproom/"
   },
   "wild-east": {
     "cityId": "nyc",
     "timeZone": "America/New_York",
     "visitable": true,
     "visitStatus": "taproom",
-    "schedule": null,
-    "hoursEvidence": null,
+    "schedule": [
+      [
+        720,
+        1260
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        840,
+        1440
+      ],
+      [
+        720,
+        1440
+      ]
+    ],
+    "hoursEvidence": "Mon-Thurs: 2-10pm Friday: 2pm-midnight Saturday: 12-midnight Sunday: 12-9pm",
     "exceptions": [],
     "amenities": {
       "food": null,
-      "outdoor": null,
+      "outdoor": true,
       "indoor": null,
-      "pets": null,
+      "pets": true,
       "accessibility": null
-    }
+    },
+    "breweryId": "wild-east",
+    "amenitiesCheckedAt": "2026-10-15T23:13:42.040Z",
+    "amenitiesSource": "https://www.wildeastbrewing.com/"
   },
   "kills-boro": {
     "cityId": "nyc",
@@ -275,15 +406,18 @@
         1380
       ]
     ],
-    "hoursEvidence": "Mon12-10 p.m.TueClosedWed12-10 p.m.Thu12-10 p.m.Fri12-11 p.m.Sat12-11 p.m.Sun12-10 p.m.",
+    "hoursEvidence": "Mon 12-10 p.m. Tue Closed Wed 12-10 p.m. Thu 12-10 p.m. Fri 12-11 p.m. Sat 12-11 p.m. Sun 12-10 p.m.",
     "exceptions": [],
     "amenities": {
-      "food": null,
+      "food": true,
       "outdoor": null,
       "indoor": null,
       "pets": null,
       "accessibility": null
-    }
+    },
+    "breweryId": "kills-boro",
+    "amenitiesCheckedAt": "2026-10-15T23:13:44.539Z",
+    "amenitiesSource": "https://killsboro.com/"
   },
   "bridgeandtunnelbrewery": {
     "cityId": "nyc",
@@ -382,10 +516,10 @@
   "foreverhomebrewing": {
     "cityId": "nyc",
     "timeZone": "America/New_York",
-    "visitable": false,
-    "visitStatus": "retail_shop",
+    "visitable": true,
+    "visitStatus": "taproom",
     "schedule": null,
-    "hoursEvidence": "Mondays: ClosedTuesday-Thursday: 10am - 10pmFriday & Saturday: 12pm - 11pmSunday: 12pm - 8pm",
+    "hoursEvidence": "Mondays: Closed Tuesday-Thursday: 10am - 10pm Friday & Saturday: 12pm - 11pm Sunday: 12pm - 8pm",
     "exceptions": [],
     "amenities": {
       "food": null,
@@ -393,7 +527,10 @@
       "indoor": null,
       "pets": null,
       "accessibility": null
-    }
+    },
+    "breweryId": "foreverhomebrewing",
+    "amenitiesCheckedAt": "2026-10-15T23:14:42.949Z",
+    "amenitiesSource": "https://foreverhomebrewing.com/?srsltid=AfmBOopsFUD9BVtzrm1rdygAlnYIxvm4gsHI4QiLPjOcenjcOSSZSNWu"
   },
   "bronx-brewery": {
     "cityId": "nyc",
@@ -412,5 +549,883 @@
     "address": "856 E. 136th Street, Bronx, NY 10454",
     "addressSource": "https://thebronxbrewery.com/pages/contact",
     "addressVerifiedAt": "2026-10-15T22:20:02.650Z"
+  },
+  "flagship": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        720,
+        1200
+      ],
+      [],
+      [],
+      [
+        1020,
+        1380
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1440
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": true,
+      "outdoor": true,
+      "indoor": null,
+      "pets": true,
+      "accessibility": null
+    },
+    "breweryId": "flagship",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "Monday: Closed Tuesday: Closed Wednesday: 5PM - 11PM Thursday: 12PM – 12AM Friday: 12PM – 12AM Saturday: 12PM – 12AM Sunday: 12PM – 8 PM",
+    "amenitiesCheckedAt": "2026-10-15T23:13:25.284Z",
+    "amenitiesSource": "https://flagshipbrewery.nyc/tap-room-2/"
+  },
+  "finback-brooklyn": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        720,
+        1200
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1440
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": true,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "finback",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "mon-tue: 2pm-10pm wed-thu: 12pm-10pm fri-sat: 12pm-12am sun: 12pm-8pm",
+    "amenitiesCheckedAt": "2026-10-15T23:13:22.920Z",
+    "amenitiesSource": "https://finbackbrewery.com/spaces"
+  },
+  "finback-lic": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        720,
+        1200
+      ],
+      [
+        900,
+        1320
+      ],
+      [
+        900,
+        1320
+      ],
+      [
+        900,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1440
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": true,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "finback",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "mon-wed: 3pm-10pm thu: 12pm-10pm fri-sat: 12pm-12am sun: 12pm-8pm",
+    "amenitiesCheckedAt": "2026-10-15T23:13:22.920Z",
+    "amenitiesSource": "https://finbackbrewery.com/spaces"
+  },
+  "evil-twin-dumbo": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1380
+      ],
+      [
+        720,
+        1380
+      ],
+      [
+        720,
+        1380
+      ],
+      [
+        720,
+        1380
+      ],
+      [
+        720,
+        1500
+      ],
+      [
+        720,
+        1500
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "evil-twin",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "Monday 12pm – 11pm Tuesday 12pm – 11pm Wednesday 12pm – 11pm Thursday 12pm – 11pm Friday 12pm – 1am Saturday 12pm – 1am Sunday 12pm – 10pm",
+    "amenitiesCheckedAt": "2026-10-15T23:14:40.647Z",
+    "amenitiesSource": "https://eviltwin.nyc/location/dumbo-taproom/"
+  },
+  "simplebrewingcompany": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        840,
+        1200
+      ],
+      [],
+      [],
+      [],
+      [
+        960,
+        1320
+      ],
+      [
+        960,
+        1320
+      ],
+      [
+        840,
+        1200
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "simplebrewingcompany",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "Monday Closed Tuesday Closed Wednesday Closed Thursday 4:00pm - 10:00pm Friday 4:00pm - 10:00pm Saturday 2:00pm - 8:00pm Sunday 2:00pm - 8:00pm",
+    "amenitiesCheckedAt": "2026-10-15T23:13:52.394Z",
+    "amenitiesSource": "https://www.simplebrewingcompany.org/"
+  },
+  "endlesslifebrewing": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        720,
+        1260
+      ],
+      [],
+      [
+        780,
+        1260
+      ],
+      [
+        780,
+        1260
+      ],
+      [
+        780,
+        1260
+      ],
+      [
+        780,
+        1320
+      ],
+      [
+        720,
+        1320
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "endlesslifebrewing",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "Tue-Thur 1pm-9pm Fri 1pm-10pm Sat noon-10pm Sun noon-9pm Monday closed except for holidays",
+    "amenitiesCheckedAt": "2026-10-15T23:14:32.279Z",
+    "amenitiesSource": "https://www.endlesslifebrewing.com/"
+  },
+  "gunhillbrewing": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": null,
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "gunhillbrewing",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "amenitiesCheckedAt": "2026-10-15T23:14:45.568Z",
+    "amenitiesSource": "https://www.gunhillbrewing.com/"
+  },
+  "niteglowbeer": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        660,
+        1380
+      ],
+      [
+        660,
+        1380
+      ],
+      [
+        660,
+        1380
+      ],
+      [
+        660,
+        1380
+      ],
+      [
+        660,
+        1380
+      ],
+      [
+        660,
+        1380
+      ],
+      [
+        660,
+        1380
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "niteglowbeer",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "HOURS: 11 -11 DAILY",
+    "amenitiesCheckedAt": "2026-10-15T23:16:09.876Z",
+    "amenitiesSource": "https://niteglowbeer.com/pages/locations"
+  },
+  "roundtablebrewery": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        780,
+        1260
+      ],
+      [
+        900,
+        1380
+      ],
+      [
+        900,
+        1380
+      ],
+      [
+        900,
+        1380
+      ],
+      [
+        900,
+        1380
+      ],
+      [
+        900,
+        1440
+      ],
+      [
+        780,
+        1440
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": null,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "roundtablebrewery",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "Monday | 3–11 PM Tuesday | 3–11 PM Wednesday | 3–11 PM Thursday | 3–11 PM Friday | 3 PM–12 AM Saturday | 1 PM–12 AM Sunday | 1–9 PM",
+    "amenitiesCheckedAt": "2026-10-15T23:15:15.761Z",
+    "amenitiesSource": "https://www.roundtablebrewery.com/brooklyn"
+  },
+  "keg-the-keg-and-lantern-greenpoint": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        660,
+        1560
+      ],
+      [
+        660,
+        1560
+      ],
+      [
+        660,
+        1560
+      ],
+      [
+        660,
+        1560
+      ],
+      [
+        660,
+        1560
+      ],
+      [
+        660,
+        1680
+      ],
+      [
+        660,
+        1680
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": true,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "keg-and-lantern",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "Sunday: 11:00 AM – 2:00 AM Monday: 11:00 AM – 2:00 AM Tuesday: 11:00 AM – 2:00 AM Wednesday: 11:00 AM – 2:00 AM Thursday: 11:00 AM – 2:00 AM Friday: 11:00 AM – 4:00 AM Saturday: 11:00 AM – 4:00 AM",
+    "amenitiesCheckedAt": "2026-10-15T23:16:12.556Z",
+    "amenitiesSource": "https://www.kegandlanternbrooklyn.com/location/the-keg-and-lantern-greenpoint/"
+  },
+  "keg-southside-williamsburg": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        660,
+        1440
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        900,
+        1440
+      ],
+      [
+        900,
+        1440
+      ],
+      [
+        900,
+        1440
+      ],
+      [
+        720,
+        1560
+      ],
+      [
+        660,
+        1560
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": true,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "keg-and-lantern",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "Sunday: 11:00 AM – 12:00 AM Monday: 12:00 PM – 12:00 AM Tuesday: 3:00 PM – 12:00 AM Wednesday: 3:00 PM – 12:00 AM Thursday: 3:00 PM – 12:00 AM Friday: 12:00 PM – 2:00 AM Saturday: 11:00 AM – 2:00 AM",
+    "amenitiesCheckedAt": "2026-10-15T23:16:16.839Z",
+    "amenitiesSource": "https://www.kegandlanternbrooklyn.com/location/southside-williamsburg/"
+  },
+  "keg-west-village": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        720,
+        1320
+      ],
+      [],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1500
+      ],
+      [
+        720,
+        1500
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": true,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "keg-and-lantern",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "Monday: CLOSED Tuesday through Thursday 12:00 PM – 12:00 AM Friday & Saturday 12:00 PM – 1:00 AM Sunday: 12:00 PM – 10:00 PM",
+    "amenitiesCheckedAt": "2026-10-15T23:16:18.903Z",
+    "amenitiesSource": "https://www.kegandlanternbrooklyn.com/location/west-village/"
+  },
+  "keg-the-keg-and-lantern-red-hook": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": null,
+    "exceptions": [],
+    "amenities": {
+      "food": true,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "keg-and-lantern",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "amenitiesCheckedAt": "2026-10-15T23:16:14.713Z",
+    "amenitiesSource": "https://www.kegandlanternbrooklyn.com/location/the-keg-and-lantern-red-hook/"
+  },
+  "talea-williamsburg": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        660,
+        1260
+      ],
+      [
+        600,
+        1260
+      ],
+      [
+        600,
+        1260
+      ],
+      [
+        600,
+        1260
+      ],
+      [
+        600,
+        1320
+      ],
+      [
+        600,
+        1320
+      ],
+      [
+        600,
+        1320
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": true,
+      "outdoor": true,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "talea",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "MONDAY-WEDNESDAY 10AM-9PM THURSDAY-SATURDAY 10AM-10PM SUNDAY: 11AM - 9PM",
+    "amenitiesCheckedAt": "2026-10-15T23:16:01.719Z",
+    "amenitiesSource": "https://www.taleabeer.com/pages/visit-us"
+  },
+  "talea-upper-west-side": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      null,
+      [
+        600,
+        1320
+      ],
+      [
+        600,
+        1320
+      ],
+      [
+        600,
+        1320
+      ],
+      [
+        600,
+        1380
+      ],
+      [
+        600,
+        1440
+      ],
+      [
+        600,
+        1440
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": true,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "talea",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "MONDAY- WEDNESDAY: 10AM-10PM THURSDAY: 10AM-11PM FIRDAY-SATURDAY: 10AM-12AM",
+    "amenitiesCheckedAt": "2026-10-15T23:16:01.719Z",
+    "amenitiesSource": "https://www.taleabeer.com/pages/visit-us"
+  },
+  "talea-cobble-hill": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        660,
+        1260
+      ],
+      [
+        600,
+        1320
+      ],
+      [
+        600,
+        1320
+      ],
+      [
+        600,
+        1320
+      ],
+      [
+        600,
+        1320
+      ],
+      [
+        600,
+        1380
+      ],
+      [
+        660,
+        1380
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": true,
+      "outdoor": true,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "talea",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "MONDAY- THURSDAY 10AM-10PM FRIDAY 10AM-11PM SATURDAY: 11AM - 11PM SUNDAY: 11AM - 9PM",
+    "amenitiesCheckedAt": "2026-10-15T23:16:01.719Z",
+    "amenitiesSource": "https://www.taleabeer.com/pages/visit-us"
+  },
+  "talea-west-village": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1320
+      ],
+      [
+        720,
+        1440
+      ],
+      [
+        720,
+        1440
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": true,
+      "outdoor": true,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "talea",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "MONDAY - THURSDAY: 12PM - 10PM FRIDAY & SATURDAY: 12PM - 12AM SUNDAY: 12PM - 10PM",
+    "amenitiesCheckedAt": "2026-10-15T23:16:01.719Z",
+    "amenitiesSource": "https://www.taleabeer.com/pages/visit-us"
+  },
+  "talea-bryant-park": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        450,
+        1200
+      ],
+      [
+        450,
+        1260
+      ],
+      [
+        450,
+        1260
+      ],
+      [
+        450,
+        1320
+      ],
+      [
+        450,
+        1320
+      ],
+      [
+        450,
+        1260
+      ],
+      [
+        450,
+        1260
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": true,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "talea",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "MONDAY & TUESDAY: 7:30AM - 9PM WEDNESDAY & THURSDAY: 7:30AM - 10PM FRIDAY: 7:30AM - 9PM SATURDAY: 7:30AM - 9PM SUNDAY: 7:30AM - 8PM",
+    "amenitiesCheckedAt": "2026-10-15T23:16:01.719Z",
+    "amenitiesSource": "https://www.taleabeer.com/pages/visit-us"
+  },
+  "talea-penn-district": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      null,
+      [
+        900,
+        1260
+      ],
+      [
+        900,
+        1260
+      ],
+      [
+        900,
+        1260
+      ],
+      [
+        900,
+        1260
+      ],
+      [
+        900,
+        1260
+      ],
+      [
+        900,
+        1260
+      ]
+    ],
+    "exceptions": [],
+    "amenities": {
+      "food": true,
+      "outdoor": null,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "talea",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "MONDAY - SATURDAY: 3PM - 9PM",
+    "amenitiesCheckedAt": "2026-10-15T23:16:01.719Z",
+    "amenitiesSource": "https://www.taleabeer.com/pages/visit-us"
+  },
+  "strongropebrewery": {
+    "cityId": "nyc",
+    "timeZone": "America/New_York",
+    "schedule": [
+      [
+        720,
+        1260
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        840,
+        1320
+      ],
+      [
+        720,
+        1380
+      ],
+      [
+        720,
+        1380
+      ]
+    ],
+    "exceptions": [
+      {
+        "date": "2026-10-16",
+        "interval": []
+      }
+    ],
+    "amenities": {
+      "food": null,
+      "outdoor": true,
+      "indoor": null,
+      "pets": null,
+      "accessibility": null
+    },
+    "breweryId": "strong-rope",
+    "visitable": true,
+    "visitStatus": "taproom",
+    "hoursEvidence": "Monday-Thursday 2-10 pm Friday-Saturday 12-11 pm Sunday 12-9 pm",
+    "amenitiesCheckedAt": "2026-10-15T23:19:47.817Z",
+    "amenitiesSource": "https://www.strongropebrewery.com/taproom"
   }
 }

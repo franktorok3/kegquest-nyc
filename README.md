@@ -35,12 +35,14 @@ Discovery, filters, maps and local drafts work without backend credentials. Dura
 
 ```sh
 npm run ingest
+npx playwright install chromium
+npm run ingest:browser
 node scripts/geocode.mjs
 node scripts/discover.mjs
 npm run sync:db
 ```
 
-The daily GitHub workflow fetches menus AND details, tests/builds the snapshot, preserves normalized history in PostgreSQL, then commits the publishable snapshot. A monthly workflow collects directory links for human review without adding them to the crawler. Actions requires `TAPBOUND_PRIVATE_KEY` as a secret and `TAPBOUND_DATA_URL` as a repository variable. Cached HTTP responses use conditional validators locally; hosted Actions starts cold unless cache is restored. Maps use OpenStreetMap raster tiles and visible attribution, with no bulk download or prefetch.
+The daily GitHub workflow fetches menus AND details, renders reviewed source pages in Playwright Chromium, tests/builds the snapshot, preserves normalized history in PostgreSQL, then commits the publishable snapshot. A monthly workflow collects directory links for human review without adding them to the crawler. Actions requires `TAPBOUND_PRIVATE_KEY` as a secret and `TAPBOUND_DATA_URL` as a repository variable. Cached HTTP responses use conditional validators locally; hosted Actions starts cold unless cache is restored. Maps use OpenStreetMap raster tiles and visible attribution, with no bulk download or prefetch.
 
 ## Deployment
 

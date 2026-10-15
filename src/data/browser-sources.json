@@ -1,0 +1,94 @@
+[
+  {
+    "id": "finback-menu",
+    "source": "https://finbackbrewery.com/glendale-beer-menu"
+  },
+  {
+    "id": "finback-brooklyn-menu",
+    "source": "https://finbackbrewery.com/bk-beer-menu"
+  },
+  {
+    "id": "finback-lic-menu",
+    "source": "https://finbackbrewery.com/lic-beer-menu"
+  },
+  {
+    "id": "flagship-menu",
+    "source": "https://flagshipbrewery.nyc/taproom-draft-list/"
+  },
+  {
+    "id": "fifth-hammer-menu",
+    "source": "https://www.fifthhammerbrewing.com/beer-menu"
+  },
+  {
+    "id": "threes-menu",
+    "source": "https://www.beermenus.com/places/18430-threes-brewing"
+  },
+  {
+    "id": "evil-twin-menu",
+    "source": "https://eviltwin.nyc/location/ridgewood-taproom/"
+  },
+  {
+    "id": "evil-twin-dumbo",
+    "source": "https://eviltwin.nyc/location/dumbo-taproom/"
+  },
+  {
+    "id": "grimm-menu",
+    "source": "https://grimmales.com/location/taproom/"
+  },
+  {
+    "id": "kills-boro-menu",
+    "source": "https://killsboro.com/online-menu"
+  },
+  {
+    "id": "talea-locations",
+    "source": "https://www.taleabeer.com/pages/visit-us"
+  },
+  {
+    "id": "forever-brewery",
+    "source": "https://www.foreverbrewing.com/"
+  },
+  {
+    "id": "gunhill-menu",
+    "source": "https://www.gunhillpublickhouse.com/drinks-menu"
+  },
+  {
+    "id": "niteglow-locations",
+    "source": "https://niteglowbeer.com/pages/locations"
+  },
+  {
+    "id": "keg-the-keg-and-lantern-greenpoint",
+    "source": "https://www.kegandlanternbrooklyn.com/location/the-keg-and-lantern-greenpoint/"
+  },
+  {
+    "id": "keg-the-keg-and-lantern-red-hook",
+    "source": "https://www.kegandlanternbrooklyn.com/location/the-keg-and-lantern-red-hook/"
+  },
+  {
+    "id": "keg-southside-williamsburg",
+    "source": "https://www.kegandlanternbrooklyn.com/location/southside-williamsburg/"
+  },
+  {
+    "id": "keg-west-village",
+    "source": "https://www.kegandlanternbrooklyn.com/location/west-village/"
+  },
+  {
+    "id": "threes-menu-canonical",
+    "source": "https://www.beermenus.com/places/18430-threes-brewing-gowanus"
+  },
+  {
+    "id": "singlecut-canonical",
+    "source": "https://www.singlecut.com/"
+  },
+  {
+    "id": "strongrope-canonical",
+    "source": "https://www.strongropebrewery.com/home"
+  },
+  {
+    "id": "strongrope-taproom",
+    "source": "https://www.strongropebrewery.com/taproom"
+  },
+  {
+    "id": "singlecut-taproom",
+    "source": "https://www.singlecut.com/tap-rooms#qns"
+  }
+]

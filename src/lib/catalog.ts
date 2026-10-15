@@ -22,6 +22,8 @@ export type Location = {
   borough: string;
   neighborhood: string;
   source: string;
+  menuSource: string;
+  description: string | null;
   checkedAt: string;
   verifiedAt: string | null;
   menuVerifiedAt: string | null;
@@ -49,6 +51,7 @@ export type Location = {
   };
 };
 type Meta = {
+  breweryId?: string;
   cityId: string;
   timeZone: string;
   visitable: boolean;
@@ -72,7 +75,10 @@ export const catalog: Location[] = raw.map((r) => {
     r.status === "verified" && !!r.hours && r.hours === m?.hoursEvidence;
   return {
     ...r,
-    breweryId: r.id.startsWith("other-half") ? "other-half" : r.id,
+    breweryId:
+      m?.breweryId || (r.id.startsWith("other-half") ? "other-half" : r.id),
+    menuSource: r.menuSource || r.source,
+    description: r.description || null,
     cityId: m?.cityId || "nyc",
     timeZone: m?.timeZone || "America/New_York",
     menuVerifiedAt: r.menuVerifiedAt as string | null,

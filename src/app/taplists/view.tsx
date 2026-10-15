@@ -100,7 +100,7 @@ export default function OnTap() {
                     timeZone: b.timeZone,
                   })}{" "}
                 ET ·{" "}
-                <a href={b.source} target="_blank" rel="noreferrer">
+                <a href={b.menuSource} target="_blank" rel="noreferrer">
                   Source ↗
                 </a>
               </p>
