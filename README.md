@@ -57,3 +57,7 @@ Do not put private keys in Git, browser bundles, screenshots or logs. Rotate the
 - [Operations and recovery](docs/OPERATIONS.md)
 - [Remaining expansion work](docs/ROADMAP.md)
 - [Reusable Codex build instructions](BUILD_PROMPT.md)
+
+## UI kit
+
+The compact app shell and interactive primitives adapt [Sat Naing’s shadcn-admin](https://github.com/satnaing/shadcn-admin), with its MIT license preserved. See [component provenance and adaptations](docs/UI_KIT.md).
