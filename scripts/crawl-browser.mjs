@@ -1,6 +1,6 @@
 import { chromium } from "@playwright/test";
 import fs from "node:fs/promises";
-import { respectfulFetch } from "./ingest.mjs";
+import { respectfulFetch, waitForBrowserNavigation } from "./ingest.mjs";
 let seeds = JSON.parse(
   await fs.readFile(
     process.argv.includes("--extra")
@@ -47,7 +47,7 @@ for (const seed of seeds) {
       continue;
     }
     await respectfulFetch(seed.source);
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await waitForBrowserNavigation(seed.source);
     context = await browser.newContext({
       userAgent: "TapboundBot/3.0 (+https://kegquest-nyc.vercel.app/about)",
       viewport: { width: 1280, height: 1000 },

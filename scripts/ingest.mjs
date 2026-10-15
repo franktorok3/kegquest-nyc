@@ -53,6 +53,16 @@ async function fetchWithRetry(url, options) {
   }
 }
 
+// Browser navigation follows preflight and must honor the same host crawl delay.
+export async function waitForBrowserNavigation(url) {
+  const origin = new URL(url).origin;
+  const policy = policies.get(origin);
+  if (!policy) throw Error("Robots preflight required");
+  const delay = Math.max(1500, (policy.getCrawlDelay(agent) || 0) * 1000);
+  await pause(Math.max(0, delay - (Date.now() - (last.get(origin) || 0))));
+  last.set(origin, Date.now());
+}
+
 /** @param {string} url @param {(hostname: string, options: {all: true}) => Promise<Array<{address: string}>>} resolve */
 export async function respectfulFetch(url, resolve = lookup) {
   const u = assertAllowedUrl(url);
