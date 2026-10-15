@@ -60,4 +60,4 @@ Do not put private keys in Git, browser bundles, screenshots or logs. Rotate the
 
 ## UI kit
 
-The compact app shell and interactive primitives adapt [Sat Naing’s shadcn-admin](https://github.com/satnaing/shadcn-admin), with its MIT license preserved. See [component provenance and adaptations](docs/UI_KIT.md).
+The photo-led brewery guide is the active experience. The evaluated [shadcn-admin](https://github.com/satnaing/shadcn-admin) components remain in source with their MIT attribution, but its dashboard shell is not used. See [component provenance](docs/UI_KIT.md).

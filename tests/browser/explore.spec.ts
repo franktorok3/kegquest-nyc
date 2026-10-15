@@ -122,7 +122,7 @@ test("new beer section leads the homepage with traceable discoveries", async ({p
   expect(await section.locator(".drop-card").count()).toBeLessThanOrEqual(6);
   await expect(section.getByRole("link",{name:"Menu source"}).first()).toHaveAttribute("href",/^https:\/\//);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
-  await expect(page.getByRole("tab",{name:"New drops",exact:true})).toHaveAttribute("data-state","active");
+  await expect(page.locator(".home-hero img")).toBeVisible();
   await section.locator("h3 a").first().click();
   await expect(page).toHaveURL(/\/breweries\//);
 });
@@ -138,24 +138,19 @@ test("taste discovery opens a matching beer board with active navigation", async
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
 
-test("compact kit tabs and responsive navigation are wired", async ({page},info) => {
+test("restored guide exposes photography, boroughs, beer styles and mobile navigation", async ({page},info) => {
   await page.goto("/");
-  await page.getByRole("tab",{name:"Taprooms",exact:true}).click();
-  await expect(page.locator(".venue-card").first()).toBeVisible();
-  await expect(page.locator(".drop-card")).toHaveCount(0);
-  await page.getByRole("tab",{name:"Local picks",exact:true}).click();
-  await expect(page.getByText("A little funk. A little pizza.")).toBeVisible();
-  await page.getByRole("tab",{name:"New drops",exact:true}).click();
-  await expect(page.locator(".drop-card").first()).toBeVisible();
+  await expect(page.locator(".home-hero img")).toBeVisible();
+  await expect(page.locator(".borough-grid")).toBeVisible();
+  await expect(page.locator(".flavor-paths")).toBeVisible();
+  await expect(page.locator(".feature-card").first()).toBeVisible();
+  await expect(page.locator(".guide-picks")).toBeVisible();
   if(info.project.name==="mobile"){
-    await page.getByRole("button",{name:"Toggle Sidebar"}).click();
-    await expect(page.getByRole("dialog")).toBeVisible();
-    await page.getByRole("dialog").getByRole("link",{name:"On tap",exact:true}).click();
-    await expect(page.getByRole("dialog")).toHaveCount(0);
-    await expect(page).toHaveURL(/\/taplists/);
-  }else{
-    await page.getByRole("link",{name:"On tap",exact:true}).click();
-    await expect(page).toHaveURL(/\/taplists/);
+    await page.getByRole("navigation",{name:"Mobile navigation"}).getByRole("link",{name:"On Tap",exact:true}).click();
+  } else {
+    await page.getByRole("navigation",{name:"Main navigation"}).getByRole("link",{name:"On Tap",exact:true}).click();
   }
+  await expect(page).toHaveURL(/\/taplists/);
+  await expect.poll(()=>page.locator(".beer-card").count()).toBeGreaterThan(100);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });

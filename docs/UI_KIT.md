@@ -1,3 +1,7 @@
+# Current status
+
+The dashboard shell was removed from the active experience after user review. The photo-led brewery guide, direct discovery sections, and mobile bottom navigation are restored. Vendored components and attribution remain available for targeted reuse; the notes below describe their provenance, not the active page layout.
+
 # UI foundation
 
 Tapbound adapts Sat Naing's shadcn-admin, https://github.com/satnaing/shadcn-admin, revision e16c87f213a5ba5e45964e9b67c792105ec74d26 (15,756 GitHub stars at selection, October 15, 2026).
