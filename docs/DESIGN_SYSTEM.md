@@ -1,12 +1,23 @@
-# Tapbound interface contract
+# Tapbound: a place-first beer guide
 
-Tapbound is a photo-led NYC brewery guide. Preserve sourced beer depth and the cream, dark-olive and copper identity.
+The first screen must give people a reason to go out: a real venue, its photograph, and real beers. Utility supports that experience.
 
-- Discovery has three peer views: Taprooms, Near me, Beers. Use the shared discovery navigation and indicate the active view.
-- Near me always offers real NYC taprooms before permission. Location refines the list; it must never gate the guide behind an empty utility screen.
-- Site navigation uses a shared component for desktop and mobile, with visible active states. The logo uses an SVG arrow. Text arrows explicitly request text presentation to avoid iOS emoji substitutions.
-- `interface.css` owns shared interface tokens, type sizes, control geometry, spacing and responsive card treatment. `globals.css` retains the underlying page layouts. Add new shared decisions to the interface layer rather than route-specific competing patches.
-- Mobile page titles use the same 32px scale. Primary actions have 44px targets. Cards use a shared 12px radius. Supporting data must remain readable.
-- Taproom photographs use wide crops, not tall narrow strips. Missing imagery stays an honest branded fallback.
-- Permission and source details stay secondary. Never remove their substance or invent proximity, freshness, menus or beer descriptions.
-- Verify home, both taproom views, beers, brewery detail, saved beers and planner at mobile widths before publishing. Browser tests supplement visual review; they do not replace it or constitute customer usability testing.
+## Composition
+
+- Taproom and nearby discovery open directly on real venue cards. No introduction, permission landing page or second navigation bar sits above the content.
+- A single compact toolbar contains location, search and filters. Search and filters open a native dialog with keyboard focus containment, Escape dismissal and an explicit results action.
+- Mobile must show the first brewery name and first actual beer within 600 CSS pixels when the first venue has a current menu. Automated checks enforce this content hierarchy.
+- Site navigation is shared between desktop and mobile. The bottom navigation already provides Explore, On Tap, Plan and My Trails; do not duplicate those destinations above each view.
+- Before location is granted, show the NYC catalog without claiming proximity. After permission, sort by straight-line distance and respect the chosen radius.
+
+## Character
+
+Use real brewery photography, warm paper, deep green, copper accents and an editorial serif display face. Brewery names sit on a darkened photo with sufficient contrast. Current menu previews supply the personality: exact beer names, original styles and ABV.
+
+Beer cards make the beer name prominent and retain venue identity, source details, saving and trail actions. Do not fabricate packaging art or tasting descriptions to decorate them. Missing photography and unknown menus remain explicit.
+
+`interface.css` owns the shared interface decisions. `globals.css` retains underlying page layout rules. New features must follow the composition above rather than add another block of controls to the first screen.
+
+## Verification
+
+Review actual browser screenshots at phone sizes. Test search, filters, permission denial, geolocation, saved beers and trail persistence. Use WebKit as well as Chromium for mobile behavior; this is browser verification, not customer research or a physical iPhone test. Never call a deployment complete without checking the public site.

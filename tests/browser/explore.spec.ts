@@ -49,13 +49,20 @@ test("filters survive navigation, empty states and unavailable sources are hones
   page,
 }) => {
   await page.goto("/explore");
-  await page.locator(".explore-filters summary").click();
+  await page.getByRole("button", { name: "Filter taprooms" }).click();
+  await expect(page.getByRole("dialog")).toBeVisible();
   await page.getByRole("combobox", { name: "Borough", exact: true }).selectOption("Queens");
   await expect(page).toHaveURL(/borough=Queens/);
+  await page.getByRole("button", { name: /Show \d+ taprooms/ }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
   await expect(page.locator(".location-card").first()).toBeVisible();
+  await expect(page.locator(".place-caption .eyebrow").first()).toContainText("Queens");
+  await page.getByRole("button", { name: "Filter taprooms" }).click();
   await page.getByRole("combobox", { name: "Borough", exact: true }).selectOption("Manhattan");
   await expect(page).toHaveURL(/borough=Manhattan/);
+  await page.getByRole("button", { name: "Close filters" }).click();
   await page.goBack();
+  await page.getByRole("button", { name: "Filter taprooms" }).click();
   await expect(page.getByRole("combobox", { name: "Borough", exact: true })).toHaveValue(
     "Queens",
   );
@@ -158,14 +165,17 @@ test("restored guide exposes photography, boroughs, beer styles and mobile navig
 
 test("beer shortlist persists and combined practical filters survive reload",async({page})=>{
  await page.goto("/taplists");
- await page.locator(".explore-filters summary").click();
+ await page.getByRole("button",{name:"Filter beers"}).click();
  await page.getByRole("combobox",{name:"Beer borough"}).selectOption("Brooklyn");
+ await expect(page).toHaveURL(/borough=Brooklyn/);
  await page.getByRole("combobox",{name:"Maximum ABV"}).selectOption("5");
  await expect(page).toHaveURL(/maxAbv=5/);
  await page.reload();
- await page.locator(".explore-filters summary").click();
+ await page.getByRole("button",{name:"Filter beers"}).click();
  await expect(page.getByRole("combobox",{name:"Beer borough"})).toHaveValue("Brooklyn");
  await expect(page.getByRole("combobox",{name:"Maximum ABV"})).toHaveValue("5");
+ await page.getByRole("button",{name:"Close filters"}).click();
+ await expect(page.getByRole("dialog")).not.toBeVisible();
  const card=page.locator(".beer-card").first();await expect(card).toBeVisible();
  const name=await card.locator("h3").innerText();
  await card.getByRole("button",{name:/Save .* to want to try/}).click();
@@ -187,7 +197,7 @@ test("nearby discovery requests permission, sorts by distance and handles covera
  await context.grantPermissions(["geolocation"]);
  await context.setGeolocation({latitude:40.673,longitude:-73.990});
  await page.goto("/");await page.getByRole("link",{name:"Near me",exact:true}).click();
- await expect(page.getByRole("heading",{name:"Good beer, near you."})).toBeVisible();
+ await expect(page.getByRole("heading",{level:1})).toHaveText("Good beer, near you.");
  await expect(page.locator(".location-card").first()).toBeVisible();
  await page.getByRole("button",{name:"Use my location",exact:true}).click();
  await expect(page.getByRole("combobox",{name:"Nearby radius"})).toHaveValue("5");
@@ -196,14 +206,19 @@ test("nearby discovery requests permission, sorts by distance and handles covera
  const miles=distances.filter(x=>x.includes("mi away")).map(parseFloat);
  expect(miles.length).toBeGreaterThan(0);expect(miles).toEqual([...miles].sort((a,b)=>a-b));expect(miles.every(x=>x<=5)).toBe(true);
  await expect(page.locator(".location-card").first().getByRole("link",{name:"Directions"})).toHaveAttribute("href",/maps/);
+ await page.getByRole("button",{name:"Search taprooms"}).click();
+ await expect(page.getByRole("textbox",{name:"Search breweries"})).toBeFocused();
  await page.getByRole("textbox",{name:"Search breweries"}).fill("Threes");
  await page.getByRole("button",{name:"Search",exact:true}).click();
+ await expect(page.getByRole("dialog")).not.toBeVisible();
  await expect(page.getByRole("combobox",{name:"Nearby radius"})).toBeVisible();
  await expect(page.locator(".location-card").first()).toContainText("Threes");
  await context.setGeolocation({latitude:34.05,longitude:-118.24});
  await page.getByRole("button",{name:"Update location"}).click();
  await expect(page.getByText("Widen the distance or remove a filter.",{exact:false})).toBeVisible();
+ await page.getByRole("button",{name:"Filter taprooms"}).click();
  await page.getByRole("button",{name:"Stop using my location"}).click();
+ await expect(page.getByRole("dialog")).not.toBeVisible();
  await expect(page.getByRole("button",{name:"Use my location"})).toBeVisible();
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
@@ -213,20 +228,41 @@ test("denied location keeps borough browsing available",async({page})=>{
  await page.goto("/nearby");await page.getByRole("button",{name:"Use my location"}).click();
  await expect(page.getByRole("status")).toContainText("Location access is blocked");
  await page.getByRole("link",{name:"Browse by borough instead"}).click();
- await expect(page.getByRole("heading",{level:1,name:"Find your next stop."})).toBeVisible();
- await page.locator(".explore-filters summary").click();
+ await expect(page.getByRole("heading",{level:1})).toHaveText("Find your next stop.");
+ await page.getByRole("button",{name:"Filter taprooms"}).click();
  await expect(page.getByRole("combobox",{name:"Borough",exact:true})).toBeVisible();
+ await page.getByRole("button",{name:"Close filters"}).click();
  await expect(page.locator(".location-card").first()).toBeVisible();
 });
 
-test("discovery uses consistent navigation and offers content before location permission",async({page},info)=>{
- for(const [path,active,card] of [["/explore","Taprooms",".location-card"],["/nearby","Near me",".location-card"],["/taplists","Beers",".beer-card"]]){
+test("discovery puts real places and beers before setup, with one active navigation item",async({page},info)=>{
+ for(const [path,active,card] of [["/explore","Explore",".location-card"],["/nearby","Explore",".location-card"],["/taplists","On Tap",".beer-card"]]){
   await page.goto(path);
-  await expect(page.getByRole("navigation",{name:"Discover NYC"}).getByRole("link",{name:active,exact:true})).toHaveAttribute("aria-current","page");
-  await expect(page.locator(card).first()).toBeVisible();
-  await expect(page.locator(".explore-filters")).not.toHaveAttribute("open","");
+  const firstCard=page.locator(card).first();
+  await expect(firstCard).toBeVisible();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
   const nav=page.getByRole("navigation",{name:info.project.name==="mobile"?"Mobile navigation":"Main navigation"});
   await expect(nav.locator('[aria-current="page"]')).toHaveCount(1);
-  if(info.project.name==="mobile")expect((await page.locator(card).first().boundingBox())!.y).toBeLessThan(700);
+  await expect(nav.getByRole("link",{name:active,exact:true})).toHaveAttribute("aria-current","page");
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  if(path!=="/taplists"){
+   const name=firstCard.locator(".place-cover h3");
+   const beer=firstCard.locator(".pour-preview strong").first();
+   await expect(firstCard.locator(".place-cover img")).toBeVisible();
+   await expect(name).toBeVisible();
+   await expect(beer).toBeVisible();
+   if(info.project.name==="mobile"){
+    for(const content of [name,beer]){
+     const box=await content.boundingBox();
+     expect(box).not.toBeNull();
+     expect(box!.y+box!.height).toBeLessThanOrEqual(600);
+    }
+   }
+   await page.getByRole("button",{name:"Filter taprooms"}).click();
+   await expect(page.getByRole("dialog")).toBeVisible();
+   await page.keyboard.press("Escape");
+   await expect(page.getByRole("dialog")).not.toBeVisible();
+   await expect(page.getByRole("button",{name:"Filter taprooms"})).toBeFocused();
+  }
  }
 });

@@ -5,10 +5,12 @@ export default function Photo({
   src,
   name,
   className = "",
+  priority = false,
 }: {
   src: string | null;
   name: string;
   className?: string;
+  priority?: boolean;
 }) {
   const [failed, setFailed] = useState(false);
   return (
@@ -17,7 +19,8 @@ export default function Photo({
         <img
           src={src}
           alt={`${name} — image from official website`}
-          loading={className === "hero-photo" ? "eager" : "lazy"}
+          loading={priority || className === "hero-photo" ? "eager" : "lazy"}
+          fetchPriority={priority || className === "hero-photo" ? "high" : "auto"}
           onError={() => setFailed(true)}
         />
       ) : (

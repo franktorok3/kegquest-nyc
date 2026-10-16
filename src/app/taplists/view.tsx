@@ -1,14 +1,17 @@
 "use client";
+import {useRef} from "react";
+import {SlidersHorizontal,X} from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { locations, directions } from "../../lib/catalog";
 import { styleFamilies } from "../../lib/matching/styles";
 import { tastes } from "../../lib/discovery";
 import {searchBeers} from "../../lib/beer-search";
-import DiscoveryNav from "../../components/navigation/discovery-nav";
+import Photo from "../../components/brewery/photo";
 import SaveBeer from "../../components/brewery/save-beer";
 import AddToTrail from "../../components/planner/add-to-trail";
 export default function OnTap() {
+  const filtersRef=useRef<HTMLDialogElement>(null);
   const p = useSearchParams(),
     q = p.get("q") || "",
     style = p.get("style") || "",
@@ -19,19 +22,9 @@ export default function OnTap() {
   function tasteHref(value:string){const n=new URLSearchParams(p);n.delete("style");if(value)n.set("taste",value);else n.delete("taste");return "/taplists?"+n;}
   return (
     <main className="page beer-board">
-      <div className="page-heading">
-        <div>
-          <span className="eyebrow muted">THE BEER BOARD</span>
-          <h1>{tastes.find(t=>t.id===taste)?.name || "Find your kind of pour."}</h1>
-          <p>
-            Find a beer you’ll love. Then find your way to the taproom.
-          </p>
-        </div>
-
-      </div>
-      <DiscoveryNav active="beers"/>
+      <div className="beer-board-heading"><span className="eyebrow">FRESH FROM THE TAPROOMS</span><h1>{tastes.find(t=>t.id===taste)?.name || "What’s pouring."}</h1></div>
       <div className="taste-tabs">{tastes.map(t=><Link key={t.id} className={taste===t.id?"active":""} href={tasteHref(t.id)}>{t.name}</Link>)}<Link href={tasteHref("")}>All tastes</Link></div>
-      <form className="search discovery-search beer-search" action="/taplists">
+      <div className="beer-tool-row"><form className="search discovery-search beer-search" action="/taplists">
         {style&&<input type="hidden" name="style" value={style}/> }
         {taste && <input type="hidden" name="taste" value={taste}/>}
         {borough && <input type="hidden" name="borough" value={borough}/>}
@@ -48,8 +41,8 @@ export default function OnTap() {
           />
         </label>
         <button className="button">Search</button>
-      </form>
-      <details className="explore-filters"><summary>Filters · borough, style & strength</summary><div className="filter-panel beer-refinements">        <label>
+      </form><button className="icon-control" aria-label="Filter beers" onClick={()=>filtersRef.current?.showModal()}><SlidersHorizontal size={20}/></button></div>
+      <dialog ref={filtersRef} className="filter-sheet"><div className="sheet-heading"><h2>Find your pour.</h2><button aria-label="Close filters" onClick={()=>filtersRef.current?.close()}><X size={22}/></button></div><div className="filter-panel beer-refinements">        <label>
           Style
           <select
             name="style"
@@ -63,7 +56,7 @@ export default function OnTap() {
             ))}
           </select>
         </label>
-<label>Borough<select aria-label="Beer borough" value={borough} onChange={e=>filter("borough",e.target.value)}><option value="">All five boroughs</option>{["Brooklyn","Queens","Manhattan","Bronx","Staten Island"].map(b=><option key={b}>{b}</option>)}</select></label><label>Strength<select aria-label="Maximum ABV" value={maxAbv} onChange={e=>filter("maxAbv",e.target.value)}><option value="">Any ABV</option><option value="5">5% ABV or less</option><option value="6">6% ABV or less</option><option value="8">8% ABV or less</option></select></label><label className="open-filter"><input type="checkbox" checked={open} onChange={e=>filter("open",e.target.checked?"1":"")}/> Taproom open now</label><Link href="/taplists" className="text-link">Reset filters</Link></div></details>
+<label>Borough<select aria-label="Beer borough" value={borough} onChange={e=>filter("borough",e.target.value)}><option value="">All five boroughs</option>{["Brooklyn","Queens","Manhattan","Bronx","Staten Island"].map(b=><option key={b}>{b}</option>)}</select></label><label>Strength<select aria-label="Maximum ABV" value={maxAbv} onChange={e=>filter("maxAbv",e.target.value)}><option value="">Any ABV</option><option value="5">5% ABV or less</option><option value="6">6% ABV or less</option><option value="8">8% ABV or less</option></select></label><label className="open-filter"><input type="checkbox" checked={open} onChange={e=>filter("open",e.target.checked?"1":"")}/> Taproom open now</label><Link href="/taplists" className="text-link">Reset filters</Link></div><button className="button full" onClick={()=>filtersRef.current?.close()}>Show {beers.length} beers</button></dialog>
       <p className="results-bar" aria-live="polite">
         <span>{beers.length} beers to discover</span><Link href="/saved-beers" className="text-link">My want-to-try list ↗︎</Link>
       </p>
@@ -83,6 +76,7 @@ export default function OnTap() {
               <span className="badge green">On tap</span>
             </div>
             <div className="beer-location">
+              <Photo src={b.image} name={b.name} className="beer-venue-photo"/>
               <Link href={"/breweries/" + b.id}>{b.name} ↗︎</Link>
               <p>
                 {b.neighborhood}, {b.borough}

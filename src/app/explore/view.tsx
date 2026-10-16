@@ -1,14 +1,13 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { Search, LocateFixed, MapPin, ArrowUpRight } from "lucide-react";
+import { Search, LocateFixed, MapPin, ArrowUpRight, SlidersHorizontal, X } from "lucide-react";
 import { locations, currentMenu, directions } from "../../lib/catalog";
 import { styleFamilies, matchesStyle } from "../../lib/matching/styles";
 import { openingStatus } from "../../lib/hours";
 import { Coordinates, distanceKm } from "../../lib/geography";
-import DiscoveryNav from "../../components/navigation/discovery-nav";
 import Photo from "../../components/brewery/photo";
 import AddToTrail from "../../components/planner/add-to-trail";
 const Map = dynamic(() => import("../../components/map/brewery-map"), {
@@ -17,6 +16,7 @@ const Map = dynamic(() => import("../../components/map/brewery-map"), {
 });
 export default function Explore({nearby=false}:{nearby?:boolean}) {
   const params = useSearchParams();
+  const filtersRef=useRef<HTMLDialogElement>(null);
   const basePath=nearby?"/nearby":"/explore";
   const [locating,setLocating]=useState(false), [radius,setRadius]=useState("5");
   const [selected, setSelected] = useState(""),
@@ -91,14 +91,16 @@ export default function Explore({nearby=false}:{nearby?:boolean}) {
 
   return (
     <main className={"page explore-page"+(nearby?" nearby-page":"")}>
-      <div className="page-heading"><div><span className="eyebrow muted">YOUR NYC BEER GUIDE</span><h1>{nearby?"Good beer, near you.":"Find your next stop."}</h1><p>Neighborhood taprooms. Fresh pours. A day worth planning.</p></div></div>
-      <DiscoveryNav active={nearby?"nearby":"taprooms"}/>
-      <div className="location-toolbar">
-        <button className={"button "+(coords?"secondary":"")} onClick={locate} disabled={locating}><LocateFixed size={17}/>{locating?"Finding you…":coords?"Update location":nearby?"Use my location":"Near me"}</button>
-        {coords?<><label className="nearby-radius"><span className="sr-only">Show taprooms</span><select aria-label="Nearby radius" value={radius} onChange={e=>setRadius(e.target.value)}><option value="">All NYC taprooms</option>{[1,3,5,10,25].map(n=><option key={n} value={n}>Within {n} miles</option>)}</select></label><button className="text-link" onClick={()=>{setCoords(null);setGeoNote("");}}>Stop using my location</button></>:<span className="fine">{nearby?"See what’s close. Location stays on your device.":"Find taprooms around you."}</span>}
+      <h1 className="sr-only">{nearby?"Good beer, near you.":"Find your next stop."}</h1>
+      <div className="discovery-tools">
+        <button className="locate-pill" onClick={locate} disabled={locating}><LocateFixed size={16}/>{locating?"Finding you…":coords?"Update location":nearby?"Use my location":"Near me"}</button>
+        {coords?<label className="nearby-radius"><span className="sr-only">Show taprooms</span><select aria-label="Nearby radius" value={radius} onChange={e=>setRadius(e.target.value)}><option value="">All NYC</option>{[1,3,5,10,25].map(n=><option key={n} value={n}>{n} miles</option>)}</select></label>:<span className="city-label">NEW YORK CITY</span>}
+        <button className="icon-control" aria-label="Search taprooms" onClick={()=>{filtersRef.current?.showModal();filtersRef.current?.querySelector<HTMLInputElement>('input[name="q"]')?.focus();}}><Search size={20}/></button>
+        <button className="icon-control" aria-label="Filter taprooms" onClick={()=>filtersRef.current?.showModal()}><SlidersHorizontal size={20}/>{[borough,neighborhood,style,params.get("open"),params.get("fresh"),params.get("food"),params.get("outdoor")].filter(Boolean).length>0&&<span className="filter-dot"/>}</button>
       </div>
       {geoNote&&<p className="fine nearby-status" role="status">{geoNote} {!coords&&<Link href="/explore" className="text-link">Browse by borough instead</Link>}</p>}
-        <form className="search discovery-search" action={basePath} onSubmit={e=>{e.preventDefault();const data=new FormData(e.currentTarget);update("q",String(data.get("q")||""));}}>
+      <dialog ref={filtersRef} className="filter-sheet"><div className="sheet-heading"><h2>Find your place.</h2><button aria-label="Close filters" onClick={()=>filtersRef.current?.close()}><X size={22}/></button></div>
+        <form className="search discovery-search" action={basePath} onSubmit={e=>{e.preventDefault();const data=new FormData(e.currentTarget);update("q",String(data.get("q")||""));filtersRef.current?.close();}}>
           {Array.from(params.entries())
             .filter(([k]) => k !== "q")
             .map(([k, v]) => (
@@ -116,7 +118,7 @@ export default function Explore({nearby=false}:{nearby?:boolean}) {
             Search
           </button>
         </form>
-      <details className="explore-filters"><summary>Filters · borough, style & hours</summary><div className="filter-panel">
+      <div className="filter-panel">
         <div className="filter-row">
           <label>
             Borough
@@ -194,11 +196,12 @@ export default function Explore({nearby=false}:{nearby?:boolean}) {
           </Link>
         </div>
       </div>
-      </details>
+      <button className="button full" onClick={()=>filtersRef.current?.close()}>Show {results.length} taprooms</button><p className="fine">Location stays on your device. Distances are straight-line estimates.</p>{coords&&<button className="text-link" onClick={()=>{setCoords(null);setGeoNote("");filtersRef.current?.close();}}>Stop using my location</button>}
+      </dialog>
       <>
-      <div className="results-bar">
+      <div className="results-bar place-results">
         <p>
-          {nearby&&!coords?"Explore NYC · ":""}{results.length} taproom{results.length === 1 ? "" : "s"}{coords?radius?` within ${radius} miles · nearest first`:" · nearest first":""}
+          {nearby&&!coords?"THE CITY IS YOURS · ":""}{results.length} taproom{results.length === 1 ? "" : "s"}{coords?radius?` within ${radius} miles · nearest first`:" · nearest first":""}
         </p>
         <div className="segmented">
           <button
@@ -217,7 +220,7 @@ export default function Explore({nearby=false}:{nearby?:boolean}) {
       </div>
       <div className={"explore-grid view-" + view}>
         <section className="location-list">
-          {results.map((b) => (
+          {results.map((b,index) => (
             <article
               id={"location-" + b.id}
               className={
@@ -226,31 +229,19 @@ export default function Explore({nearby=false}:{nearby?:boolean}) {
               key={b.id}
               onMouseEnter={() => setSelected(b.id)}
             >
-              <Link href={"/breweries/" + b.id}>
-                <Photo src={b.image} name={b.name} />
-              </Link>
+              <div className="place-cover">
+                <Link className="place-photo-link" href={"/breweries/"+b.id}><Photo src={b.image} name={b.name} priority={index===0}/></Link>
+                <div className="place-caption"><span className="eyebrow">{b.neighborhood} / {b.borough}</span><h3><Link href={"/breweries/"+b.id}>{b.name}<ArrowUpRight size={24}/></Link></h3></div>
+                <span className="place-status">{openingStatus(b,new Date())}</span>
+              </div>
               <div className="location-content">
-                <span className="eyebrow muted">
-                  {b.neighborhood} / {b.borough}
-                </span>
-                <h3>
-                  <Link href={"/breweries/" + b.id}>
-                    {b.name} <ArrowUpRight size={17} />
-                  </Link>
-                </h3>
+                {currentMenu(b)?<div className="pour-preview"><span className="eyebrow">ON THE BOARD · {b.beers.length} BEERS</span>{b.beers.slice(0,2).map(beer=><Link href={"/breweries/"+b.id} key={beer.name}><strong>{beer.name}</strong><span>{beer.style}{beer.abv!==undefined?` · ${beer.abv}%`:""}</span></Link>)}</div>:<p className="place-hook">{b.id==="grimm"?"Brewery downstairs. Apizza upstairs.":b.id==="threes-gowanus"?"A beer garden. A little music. Stay awhile.":b.description||`${b.neighborhood}, ${b.borough}`}</p>}
                 <p className="address">
                   <MapPin size={13} />
                   {b.address}
                 </p>
                 <div className="badges">
-                  <span className={"badge " + (currentMenu(b) ? "green" : "")}>
-                    {currentMenu(b) ? `${b.beers.length} beers on tap` : "Menu unavailable"}
-                  </span>
-                  <span className="badge">
-                    {b.visitable
-                      ? openingStatus(b, new Date())
-                      : b.visitStatus.replaceAll("_", " ")}
-                  </span>
+                  {!currentMenu(b)&&<span className="badge">Menu unavailable</span>}
                   {coords && b.lat !== null && b.lng !== null && (
                     <span className="badge">
                       {(distanceKm(coords, { lat: b.lat, lng: b.lng })/1.609344).toFixed(
