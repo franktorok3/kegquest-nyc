@@ -14,6 +14,8 @@ Explore verified locations across all five NYC boroughs with synchronized map/li
 
 Unknown hours and amenities are never treated as confirmed. Event-only or closed venues are excluded from automatic recommendations. Other US cities are represented structurally but disabled until local data is verified. Coverage is a reviewed starting set, not an exhaustive census of NYC breweries.
 
+Beer discovery includes combined borough, ABV and open-now filters, plus a browser-local **Want to try** list. Saved beers are rechecked against the current catalog before showing availability. See [customer research and decisions](docs/CUSTOMER_RESEARCH.md) for the evidence, limitations and proposed user testing.
+
 ## Development
 
 Requires Node 22+.

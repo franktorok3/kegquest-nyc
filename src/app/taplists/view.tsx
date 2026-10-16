@@ -1,35 +1,23 @@
 "use client";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { locations, currentMenu } from "../../lib/catalog";
-import { styleFamilies, matchesStyle } from "../../lib/matching/styles";
-import { tastes, matchesTaste } from "../../lib/discovery";
+import { locations, directions } from "../../lib/catalog";
+import { styleFamilies } from "../../lib/matching/styles";
+import { tastes } from "../../lib/discovery";
+import {searchBeers} from "../../lib/beer-search";
+import SaveBeer from "../../components/brewery/save-beer";
 import AddToTrail from "../../components/planner/add-to-trail";
 export default function OnTap() {
   const p = useSearchParams(),
-    router = useRouter(),
     q = p.get("q") || "",
     style = p.get("style") || "",
     taste = p.get("taste") || "";
-  const beers = locations
-    .filter((b) => b.visitable && currentMenu(b))
-    .flatMap((b) => b.beers.map((beer) => ({ b, beer })))
-    .filter(
-      ({ beer }) =>
-        (!q ||
-          q
-            .toLowerCase()
-            .split(/\s+/)
-            .filter(Boolean)
-            .every((term) =>
-              `${beer.name} ${beer.style} ${beer.family}`
-                .toLowerCase()
-                .includes(term),
-            )) &&
-        matchesStyle(beer.style, style) && matchesTaste(beer.style, taste),
-    );
+  const borough=p.get("borough")||"", maxAbv=p.get("maxAbv")||"", open=p.get("open")==="1";
+  const beers=searchBeers(locations,{q,style,taste,borough,maxAbv,open});
+  function filter(key:string,value:string){const n=new URLSearchParams(window.location.search);if(value)n.set(key,value);else n.delete(key);window.history.pushState(null,"","/taplists?"+n);}
+  function tasteHref(value:string){const n=new URLSearchParams(p);n.delete("style");if(value)n.set("taste",value);else n.delete("taste");return "/taplists?"+n;}
   return (
-    <main className="page">
+    <main className="page beer-board">
       <div className="page-heading">
         <div>
           <span className="eyebrow muted">THE BEER BOARD</span>
@@ -38,10 +26,14 @@ export default function OnTap() {
             Find a beer you’ll love. Then find your way to the taproom.
           </p>
         </div>
+        <Link href="/saved-beers" className="button secondary">My want-to-try list ↗</Link>
       </div>
-      <div className="taste-tabs">{tastes.map(t=><Link key={t.id} className={taste===t.id?"active":""} href={"/taplists?taste="+t.id}>{t.name}</Link>)}<Link href="/taplists">All beers</Link></div>
+      <div className="taste-tabs">{tastes.map(t=><Link key={t.id} className={taste===t.id?"active":""} href={tasteHref(t.id)}>{t.name}</Link>)}<Link href={tasteHref("")}>All tastes</Link></div>
       <form className="filter-panel beer-search" action="/taplists">
         {taste && <input type="hidden" name="taste" value={taste}/>}
+        {borough && <input type="hidden" name="borough" value={borough}/>}
+        {maxAbv && <input type="hidden" name="maxAbv" value={maxAbv}/>}
+        {open && <input type="hidden" name="open" value="1"/>}
         <label>
           Beer or style
           <input
@@ -49,6 +41,7 @@ export default function OnTap() {
             defaultValue={q}
             placeholder="Try Czech pilsner, hazy IPA…"
             aria-label="Search beer names and styles"
+            key={q}
           />
         </label>
         <label>
@@ -57,12 +50,7 @@ export default function OnTap() {
             name="style"
             value={style}
             aria-label="Beer family"
-            onChange={(e) => {
-              const n = new URLSearchParams(p);
-              if (e.target.value) n.set("style", e.target.value);
-              else n.delete("style");
-              router.push("/taplists?" + n);
-            }}
+            onChange={(e) => filter("style",e.target.value)}
           >
             <option value="">All styles</option>
             {styleFamilies.map((s) => (
@@ -72,7 +60,8 @@ export default function OnTap() {
         </label>
         <button className="button">Find My Beer</button>
       </form>
-      <p className="results-bar">
+      <div className="beer-refinements"><label>Borough<select aria-label="Beer borough" value={borough} onChange={e=>filter("borough",e.target.value)}><option value="">All five boroughs</option>{["Brooklyn","Queens","Manhattan","Bronx","Staten Island"].map(b=><option key={b}>{b}</option>)}</select></label><label>Strength<select aria-label="Maximum ABV" value={maxAbv} onChange={e=>filter("maxAbv",e.target.value)}><option value="">Any ABV</option><option value="5">5% ABV or less</option><option value="6">6% ABV or less</option><option value="8">8% ABV or less</option></select></label><label className="open-filter"><input type="checkbox" checked={open} onChange={e=>filter("open",e.target.checked?"1":"")}/> Taproom open now</label><Link href="/taplists" className="text-link">Reset filters</Link></div>
+      <p className="results-bar" aria-live="polite">
         {beers.length} beers to discover
       </p>
       <div className="beer-grid">
@@ -107,7 +96,7 @@ export default function OnTap() {
                 </a>
               </p></details>
             </div>
-            <AddToTrail id={b.id} />
+            <div className="beer-actions"><SaveBeer locationId={b.id} {...beer}/><AddToTrail id={b.id} /><a href={directions(b)} target="_blank" rel="noreferrer" className="text-link">Directions ↗</a></div>
           </article>
         ))}
       </div>

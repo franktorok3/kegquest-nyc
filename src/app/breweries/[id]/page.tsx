@@ -7,6 +7,7 @@ import {
 } from "../../../lib/catalog";
 import { openingStatus } from "../../../lib/hours";
 import Photo from "../../../components/brewery/photo";
+import SaveBeer from "../../../components/brewery/save-beer";
 import AddToTrail from "../../../components/planner/add-to-trail";
 export const dynamic = "force-dynamic";
 export default async function Brewery({
@@ -91,7 +92,8 @@ export default async function Brewery({
                   <article className="tap" key={beer.name}>
                     <div>
                       <h4>{beer.name}</h4>
-                      <p>{beer.style} · Draft</p>
+                      <p>{beer.style} · Draft{beer.price ? ` · ${beer.price}` : ""}</p>
+                      <SaveBeer locationId={b.id} {...beer}/>
                     </div>
                     {beer.abv !== undefined && (
                       <strong>

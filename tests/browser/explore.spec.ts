@@ -154,3 +154,27 @@ test("restored guide exposes photography, boroughs, beer styles and mobile navig
   await expect.poll(()=>page.locator(".beer-card").count()).toBeGreaterThan(100);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
+
+test("beer shortlist persists and combined practical filters survive reload",async({page})=>{
+ await page.goto("/taplists");
+ await page.getByRole("combobox",{name:"Beer borough"}).selectOption("Brooklyn");
+ await page.getByRole("combobox",{name:"Maximum ABV"}).selectOption("5");
+ await expect(page).toHaveURL(/maxAbv=5/);
+ await page.reload();
+ await expect(page.getByRole("combobox",{name:"Beer borough"})).toHaveValue("Brooklyn");
+ await expect(page.getByRole("combobox",{name:"Maximum ABV"})).toHaveValue("5");
+ const card=page.locator(".beer-card").first();await expect(card).toBeVisible();
+ const name=await card.locator("h3").innerText();
+ await card.getByRole("button",{name:/Save .* to want to try/}).click();
+ await expect(card.getByRole("button",{name:/Remove .* from want to try/})).toHaveAttribute("aria-pressed","true");
+ await page.getByRole("link",{name:"My want-to-try list"}).click();
+ await expect(page.getByRole("heading",{level:1,name:"Want to try."})).toBeVisible();
+ await expect(page.locator(".beer-card h3")).toHaveText(name);
+ await page.reload();await expect(page.locator(".beer-card h3")).toHaveText(name);
+ await expect(page.getByText("On the current menu")).toBeVisible();
+ await page.getByRole("button",{name:/Add to Trail/}).click();
+ await page.getByRole("link",{name:/In your trail/}).click();
+ await expect(page.locator(".stop")).toHaveCount(1);
+ await page.goto("/saved-beers");await page.getByRole("button",{name:/Remove .* from want to try/}).click();
+ await expect(page.getByText("Your next favorite belongs here.")).toBeVisible();
+});
