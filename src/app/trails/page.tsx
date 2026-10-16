@@ -37,7 +37,7 @@ export default function Trails() {
           Plan a Crawl →
         </Link>
       </div>
-      <p className="saved-beer-entry"><Link href="/saved-beers" className="text-link">Your want-to-try beers ↗</Link></p>
+      <p className="saved-beer-entry"><Link href="/saved-beers" className="text-link">Your want-to-try beers ↗︎</Link></p>
       {draft.ids.length > 0 && (
         <Link className="draft-banner" href="/planner">
           <strong>Continue your draft</strong>
@@ -55,7 +55,7 @@ export default function Trails() {
           >
             <span className="eyebrow muted">{t.date}</span>
             <h3>{t.name}</h3>
-            <p>View shared itinerary ↗</p>
+            <p>View shared itinerary ↗︎</p>
           </Link>
         ))}
       </div>

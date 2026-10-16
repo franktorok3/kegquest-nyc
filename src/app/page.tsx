@@ -57,7 +57,7 @@ export default function Home() {
           className="photo-credit"
           href="https://otherhalfbrewing.com/location/centre-street/"
         >
-          Other Half · Photo: Apollo Fields ↗
+          Other Half · Photo: Apollo Fields ↗︎
         </a>
       </section>
       <NewDrops />
@@ -68,7 +68,7 @@ export default function Home() {
             <h2>Five boroughs. Make one yours.</h2>
           </div>
           <Link href="/explore" className="text-link">
-            Explore NYC ↗
+            Explore NYC ↗︎
           </Link>
         </div>
         <div className="borough-grid">
@@ -90,7 +90,7 @@ export default function Home() {
             <h2>Follow your taste.</h2>
           </div>
           <Link href="/taplists" className="text-link">
-            All beers ↗
+            All beers ↗︎
           </Link>
         </div>
         <div className="flavor-paths">{tastes.map(t=><Link href={"/taplists?taste="+t.id} key={t.id}><span style={{background:t.color}}/><div><h3>{t.name}</h3><p>{t.hint}</p></div><ArrowUpRight size={18}/></Link>)}</div>
@@ -125,7 +125,7 @@ export default function Home() {
             </Link>
           ))}
         </div>
-        <div className="guide-picks">{fieldNotes.map(n=><article key={n.id}><span className="eyebrow">{n.tag}</span><h3>{n.title}</h3><p>{n.text}</p><Link href={"/breweries/"+n.id} className="text-link">Explore the taproom ↗</Link><a href={n.source} className="fine">Brewery story ↗</a></article>)}</div>
+        <div className="guide-picks">{fieldNotes.map(n=><article key={n.id}><span className="eyebrow">{n.tag}</span><h3>{n.title}</h3><p>{n.text}</p><Link href={"/breweries/"+n.id} className="text-link">Explore the taproom ↗︎</Link><a href={n.source} className="fine">Brewery story ↗︎</a></article>)}</div>
         <div className="trail-promo">
           <span className="eyebrow">
             A LITTLE PLANNING. A BETTER AFTERNOON.

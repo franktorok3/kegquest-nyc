@@ -69,7 +69,7 @@ export default function TrailView({ trail }: { trail: Trail }) {
                     rel="noreferrer"
                     className="text-link"
                   >
-                    Directions ↗
+                    Directions ↗︎
                   </a>
                 </div>
               </article>

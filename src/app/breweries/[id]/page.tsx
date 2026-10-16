@@ -49,7 +49,7 @@ export default async function Brewery({
               target="_blank"
               rel="noreferrer"
             >
-              Get Directions ↗
+              Get Directions ↗︎
             </a>
             <a
               className="text-link"
@@ -57,7 +57,7 @@ export default async function Brewery({
               target="_blank"
               rel="noreferrer"
             >
-              Visit Website ↗
+              Visit Website ↗︎
             </a>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default async function Brewery({
               : "Unavailable"}{" "}
             ·{" "}
             <a href={b.menuSource} target="_blank" rel="noreferrer">
-              Menu source ↗
+              Menu source ↗︎
             </a>
           </p></details>
           {currentMenu(b) && b.beers.length ? (
@@ -116,7 +116,7 @@ export default async function Brewery({
                 target="_blank"
                 rel="noreferrer"
               >
-                Check official menu ↗
+                Check official menu ↗︎
               </a>
             </div>
           )}
@@ -171,7 +171,7 @@ export default async function Brewery({
             target="_blank"
             rel="noreferrer"
           >
-            View exact source ↗
+            View exact source ↗︎
           </a></details>
         </aside>
       </div>

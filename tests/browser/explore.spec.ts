@@ -49,6 +49,7 @@ test("filters survive navigation, empty states and unavailable sources are hones
   page,
 }) => {
   await page.goto("/explore");
+  await page.locator(".explore-filters summary").click();
   await page.getByRole("combobox", { name: "Borough", exact: true }).selectOption("Queens");
   await expect(page).toHaveURL(/borough=Queens/);
   await expect(page.locator(".location-card").first()).toBeVisible();
@@ -157,10 +158,12 @@ test("restored guide exposes photography, boroughs, beer styles and mobile navig
 
 test("beer shortlist persists and combined practical filters survive reload",async({page})=>{
  await page.goto("/taplists");
+ await page.locator(".explore-filters summary").click();
  await page.getByRole("combobox",{name:"Beer borough"}).selectOption("Brooklyn");
  await page.getByRole("combobox",{name:"Maximum ABV"}).selectOption("5");
  await expect(page).toHaveURL(/maxAbv=5/);
  await page.reload();
+ await page.locator(".explore-filters summary").click();
  await expect(page.getByRole("combobox",{name:"Beer borough"})).toHaveValue("Brooklyn");
  await expect(page.getByRole("combobox",{name:"Maximum ABV"})).toHaveValue("5");
  const card=page.locator(".beer-card").first();await expect(card).toBeVisible();
@@ -185,7 +188,7 @@ test("nearby discovery requests permission, sorts by distance and handles covera
  await context.setGeolocation({latitude:40.673,longitude:-73.990});
  await page.goto("/");await page.getByRole("link",{name:"Near me",exact:true}).click();
  await expect(page.getByRole("heading",{name:"Good beer, near you."})).toBeVisible();
- await expect(page.locator(".location-card")).toHaveCount(0);
+ await expect(page.locator(".location-card").first()).toBeVisible();
  await page.getByRole("button",{name:"Use my location",exact:true}).click();
  await expect(page.getByRole("combobox",{name:"Nearby radius"})).toHaveValue("5");
  await expect(page.locator(".location-card").first()).toBeVisible();
@@ -193,7 +196,6 @@ test("nearby discovery requests permission, sorts by distance and handles covera
  const miles=distances.filter(x=>x.includes("mi away")).map(parseFloat);
  expect(miles.length).toBeGreaterThan(0);expect(miles).toEqual([...miles].sort((a,b)=>a-b));expect(miles.every(x=>x<=5)).toBe(true);
  await expect(page.locator(".location-card").first().getByRole("link",{name:"Directions"})).toHaveAttribute("href",/maps/);
- await page.getByText("Refine results · style, hours & more").click();
  await page.getByRole("textbox",{name:"Search breweries"}).fill("Threes");
  await page.getByRole("button",{name:"Search",exact:true}).click();
  await expect(page.getByRole("combobox",{name:"Nearby radius"})).toBeVisible();
@@ -211,6 +213,19 @@ test("denied location keeps borough browsing available",async({page})=>{
  await page.goto("/nearby");await page.getByRole("button",{name:"Use my location"}).click();
  await expect(page.getByRole("status")).toContainText("Location access is blocked");
  await page.getByRole("link",{name:"Browse by borough instead"}).click();
+ await page.locator(".explore-filters summary").click();
  await expect(page.getByRole("combobox",{name:"Borough",exact:true})).toBeVisible();
  await expect(page.locator(".location-card").first()).toBeVisible();
+});
+
+test("discovery uses consistent navigation and offers content before location permission",async({page},info)=>{
+ for(const [path,active,card] of [["/explore","Taprooms",".location-card"],["/nearby","Near me",".location-card"],["/taplists","Beers",".beer-card"]]){
+  await page.goto(path);
+  await expect(page.getByRole("navigation",{name:"Discover NYC"}).getByRole("link",{name:active,exact:true})).toHaveAttribute("aria-current","page");
+  await expect(page.locator(card).first()).toBeVisible();
+  await expect(page.locator(".explore-filters")).not.toHaveAttribute("open","");
+  const nav=page.getByRole("navigation",{name:info.project.name==="mobile"?"Mobile navigation":"Main navigation"});
+  await expect(nav.locator('[aria-current="page"]')).toHaveCount(1);
+  if(info.project.name==="mobile")expect((await page.locator(card).first().boundingBox())!.y).toBeLessThan(700);
+ }
 });

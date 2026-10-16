@@ -8,6 +8,7 @@ import { locations, currentMenu, directions } from "../../lib/catalog";
 import { styleFamilies, matchesStyle } from "../../lib/matching/styles";
 import { openingStatus } from "../../lib/hours";
 import { Coordinates, distanceKm } from "../../lib/geography";
+import DiscoveryNav from "../../components/navigation/discovery-nav";
 import Photo from "../../components/brewery/photo";
 import AddToTrail from "../../components/planner/add-to-trail";
 const Map = dynamic(() => import("../../components/map/brewery-map"), {
@@ -90,22 +91,14 @@ export default function Explore({nearby=false}:{nearby?:boolean}) {
 
   return (
     <main className={"page explore-page"+(nearby?" nearby-page":"")}>
-      <div className="page-heading">
-        <div>
-          <span className="eyebrow muted">EXPLORE / NEW YORK CITY</span>
-          <h1>{nearby?"Good beer, near you.":"Find your next stop."}</h1>
-          <p>{nearby?"Find nearby NYC taprooms and see what’s pouring.":"Find your corner of the city. We’ll bring the beer."}</p>
-        </div>
-        <button className="button secondary" onClick={locate} disabled={locating}>
-          <LocateFixed size={17} /> {locating?"Finding you…":coords?"Update location":nearby?"Use my location":"Near me"}
-        </button>
+      <div className="page-heading"><div><span className="eyebrow muted">YOUR NYC BEER GUIDE</span><h1>{nearby?"Good beer, near you.":"Find your next stop."}</h1><p>Neighborhood taprooms. Fresh pours. A day worth planning.</p></div></div>
+      <DiscoveryNav active={nearby?"nearby":"taprooms"}/>
+      <div className="location-toolbar">
+        <button className={"button "+(coords?"secondary":"")} onClick={locate} disabled={locating}><LocateFixed size={17}/>{locating?"Finding you…":coords?"Update location":nearby?"Use my location":"Near me"}</button>
+        {coords?<><label className="nearby-radius"><span className="sr-only">Show taprooms</span><select aria-label="Nearby radius" value={radius} onChange={e=>setRadius(e.target.value)}><option value="">All NYC taprooms</option>{[1,3,5,10,25].map(n=><option key={n} value={n}>Within {n} miles</option>)}</select></label><button className="text-link" onClick={()=>{setCoords(null);setGeoNote("");}}>Stop using my location</button></>:<span className="fine">{nearby?"See what’s close. Location stays on your device.":"Find taprooms around you."}</span>}
       </div>
-      {(nearby||coords)&&<div className="nearby-note"><p>Your location is used in this browser to sort taprooms. We don’t save it to your profile or database.</p>{coords&&<button className="text-link" onClick={()=>{setCoords(null);setGeoNote("");}}>Stop using my location</button>}{nearby&&!coords&&<Link href="/explore" className="text-link">Browse by borough instead ↗</Link>}</div>}
-      {nearby&&coords&&<label className="nearby-radius">Show taprooms<select aria-label="Nearby radius" value={radius} onChange={e=>setRadius(e.target.value)}><option value="">All NYC taprooms</option>{[1,3,5,10,25].map(n=><option key={n} value={n}>Within {n} miles</option>)}</select></label>}
-      {geoNote&&<p className="fine nearby-status" role="status">{geoNote}</p>}
-      <details className="explore-filters" open={nearby?undefined:true}><summary hidden={!nearby}>Refine results · style, hours & more</summary>
-      <div className="filter-panel">
-        <form className="search" action={basePath} onSubmit={e=>{e.preventDefault();const data=new FormData(e.currentTarget);update("q",String(data.get("q")||""));}}>
+      {geoNote&&<p className="fine nearby-status" role="status">{geoNote} {!coords&&<Link href="/explore" className="text-link">Browse by borough instead</Link>}</p>}
+        <form className="search discovery-search" action={basePath} onSubmit={e=>{e.preventDefault();const data=new FormData(e.currentTarget);update("q",String(data.get("q")||""));}}>
           {Array.from(params.entries())
             .filter(([k]) => k !== "q")
             .map(([k, v]) => (
@@ -123,6 +116,7 @@ export default function Explore({nearby=false}:{nearby?:boolean}) {
             Search
           </button>
         </form>
+      <details className="explore-filters"><summary>Filters · borough, style & hours</summary><div className="filter-panel">
         <div className="filter-row">
           <label>
             Borough
@@ -177,23 +171,7 @@ export default function Explore({nearby=false}:{nearby?:boolean}) {
               ))}
             </select>
           </label>
-          {coords && !nearby && (
-            <label>
-              Distance
-              <select
-                aria-label="Nearby radius"
-                value={radius}
-                onChange={(e) => setRadius(e.target.value)}
-              >
-                <option value="">All NYC taprooms</option>
-                {[1, 3, 5, 10, 25].map((n) => (
-                  <option value={n} key={n}>
-                    Within {n} miles
-                  </option>
-                ))}
-              </select>
-            </label>
-          )}
+
         </div>
         <div className="check-row">
           {[
@@ -217,10 +195,10 @@ export default function Explore({nearby=false}:{nearby?:boolean}) {
         </div>
       </div>
       </details>
-      {(!nearby||coords)&&<>
+      <>
       <div className="results-bar">
         <p>
-          {results.length} taproom{results.length === 1 ? "" : "s"}{coords?radius?` within ${radius} miles · nearest first`:" · nearest first":""}
+          {nearby&&!coords?"Explore NYC · ":""}{results.length} taproom{results.length === 1 ? "" : "s"}{coords?radius?` within ${radius} miles · nearest first`:" · nearest first":""}
         </p>
         <div className="segmented">
           <button
@@ -286,7 +264,7 @@ export default function Explore({nearby=false}:{nearby?:boolean}) {
                   <Link href={"/breweries/" + b.id} className="text-link">
                     View details
                   </Link>
-                  <a href={directions(b)} target="_blank" rel="noreferrer" className="text-link">Directions ↗</a>
+                  <a href={directions(b)} target="_blank" rel="noreferrer" className="text-link">Directions ↗︎</a>
                   {b.visitable && <AddToTrail id={b.id} />}
                 </div>
               </div>
@@ -318,7 +296,7 @@ export default function Explore({nearby=false}:{nearby?:boolean}) {
           />
         </aside>
       </div>
-      </>}
+      </>
     </main>
   );
 }

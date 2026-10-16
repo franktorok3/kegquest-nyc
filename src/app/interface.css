@@ -1,0 +1,86 @@
+/* Shared interface rules: one type scale, control system and spacing rhythm. */
+:root{--radius-card:12px;--radius-control:8px;--space-page:24px;--muted:#64695f}
+body{line-height:1.5}
+.brand{display:inline-flex;align-items:center;gap:2px;letter-spacing:-1.6px}
+.brand-dot{color:var(--copper);margin:0}
+.nav{height:72px}
+.desktop-nav a{padding:10px 0;border-bottom:2px solid transparent}
+.desktop-nav a[aria-current=page]{border-color:var(--copper);color:var(--copper)}
+.page{padding-top:32px;min-height:65vh}
+.page-heading,.nearby-page .page-heading,.beer-board .page-heading{margin-bottom:24px;gap:16px}
+.page-heading h1,.nearby-page .page-heading h1,.beer-board .page-heading h1{font-size:42px;line-height:1.12;letter-spacing:-1.5px;margin:8px 0}
+.page-heading p{font-size:14px;max-width:580px;line-height:1.5}
+.eyebrow{font-size:10px;letter-spacing:1.5px}
+.button,.save-beer,.segmented,.preferences,.filter-panel,.saved-card,.visit,.empty{border-radius:var(--radius-control)}
+.button,.save-beer{min-height:44px;font-size:13px;padding:10px 16px}
+.text-link{font-size:13px}
+label:not(.checkbox){font-size:12px}
+label select,label input:not([type=checkbox]):not([type=hidden]){border-radius:var(--radius-control);font-size:14px;min-height:44px}
+.discovery-nav{display:flex;border-bottom:1px solid var(--line);gap:24px;margin:0 0 20px}
+.discovery-nav a{display:flex;align-items:center;gap:7px;padding:12px 2px;font-size:14px;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px}
+.discovery-nav a[aria-current=page]{color:var(--copper);border-bottom-color:var(--copper);font-weight:600}
+.location-toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.location-toolbar .fine{font-size:12px;max-width:220px;line-height:1.5}
+.nearby-radius{flex:0 1 auto}
+.nearby-radius select{margin:0;min-height:44px}
+.location-toolbar>.text-link{border:0;background:none;color:var(--muted);font-size:12px}
+.explore-filters>summary{font-size:13px;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--white);margin-bottom:12px;list-style:none;display:flex;align-items:center;gap:10px;color:var(--ink)}
+.explore-filters>summary:before{content:'+';font-size:20px;color:var(--copper)}
+.explore-filters[open]>summary:before{content:'−'}
+.explore-filters>summary[hidden]{display:none}
+.results-bar,.nearby-page .results-bar{margin:18px 0 14px;padding:0;align-items:center;font-size:12px}
+.feature-card,.location-card,.beer-card,.drop-card{border-radius:var(--radius-card);border-color:#dddfd4;background:var(--white)}
+.location-card{grid-template-columns:170px minmax(0,1fr)}
+.location-card .photo{min-height:230px}
+.location-content{padding:20px}
+.location-content h3{font-size:23px;line-height:1.2;margin:9px 0}
+.location-content .eyebrow{font-size:9px}
+.address{font-size:12px}
+.badge{font-size:11px;border-radius:5px;padding:5px 8px}
+.card-actions{flex-direction:row;align-items:center;flex-wrap:wrap;justify-content:flex-start;gap:16px}
+.card-actions .button{font-size:12px;min-height:40px}
+.beer-card{padding:20px}
+.beer-card h3{font-size:25px;margin:12px 0 8px}
+.beer-card>p{font-size:14px}
+.beer-attributes{margin:16px 0;gap:12px}
+.beer-location{padding-top:14px;margin-bottom:0}
+.beer-location>a{font-size:14px}
+.beer-location>p{font-size:12px}
+.beer-actions .button,.beer-actions .save-beer{min-height:40px}
+.taste-tabs{gap:8px;margin-bottom:16px}
+.taste-tabs a{padding:9px 13px;font-size:12px}
+.beer-search{margin-bottom:14px}
+.beer-refinements{padding-bottom:0}
+footer{padding:24px 5%;gap:16px}footer>div>p{display:none}
+@media(max-width:760px){
+ body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+ .nav{height:62px;padding:0 20px}.brand{font-size:27px}.brand svg{width:25px;height:25px}.market-badge{border:0;padding:0;font-size:8px}
+ .page,.nearby-page,.beer-board{padding:24px 20px 36px}
+ .page-heading,.nearby-page .page-heading,.beer-board .page-heading{gap:12px;margin-bottom:20px}
+ .page-heading h1,.nearby-page .page-heading h1,.beer-board .page-heading h1{font-size:32px;line-height:1.1;letter-spacing:-1.1px;margin:8px 0}
+ .page-heading p,.beer-board .page-heading p{font-size:13px;line-height:1.5}
+ .page-heading>.button,.beer-board .page-heading>.button{min-height:40px;padding:9px 13px}
+ .discovery-nav{justify-content:space-between;gap:12px;margin-bottom:16px}.discovery-nav a{font-size:13px;gap:6px;padding:11px 2px}
+ .location-toolbar{flex-wrap:wrap;gap:10px;margin-bottom:14px}.location-toolbar .fine{flex:1;min-width:140px;font-size:11px}.location-toolbar .button{padding:10px 12px;font-size:12px}
+ .location-toolbar>.text-link{width:100%;text-align:left}.nearby-radius{flex:1}.nearby-radius select{font-size:12px;width:100%}
+ .location-card{grid-template-columns:1fr}.location-card>a>.photo{height:160px;min-height:160px}.location-content{padding:18px}
+ .location-content h3{font-size:24px}.location-content .eyebrow{font-size:9px}.address{font-size:12px}.badges{margin:12px 0}
+ .card-actions{flex-direction:row;align-items:center;gap:16px;margin-top:12px}.card-actions .button{min-height:40px;padding:9px 12px;font-size:12px}
+ .photo-fallback span{font-size:38px}.photo-fallback small{font-size:10px}
+ .beer-card h3{font-size:25px}.beer-card{padding:20px}.beer-card>p{font-size:13px}
+ .beer-search{padding:14px!important}.beer-refinements select{font-size:12px}
+ .detail-heading h1{font-size:34px;letter-spacing:-1.2px}.detail-heading{margin-top:20px}.detail-heading>.photo{border-radius:12px}
+ .bottom-nav{height:calc(64px + env(safe-area-inset-bottom));padding:0 8px env(safe-area-inset-bottom);background:#fffefa;border-top:1px solid var(--line)}
+ .bottom-nav a{font-size:10px;min-height:52px;gap:4px;padding:6px 12px;color:var(--muted);border-radius:8px}
+ .bottom-nav a[aria-current=page]{color:var(--copper);background:#f2eadf;font-weight:600}
+ footer{padding:20px;flex-direction:row;align-items:center;gap:12px}footer>div{display:none}footer>p{font-size:10px;margin:0}
+ .home-hero{height:430px}.hero-content{padding:28px 20px}.hero-content h1{font-size:51px}.hero-actions{gap:20px}.hero-actions a{font-size:12px}
+ .new-drops{padding-left:20px;padding-right:20px}.feature-card h3{font-size:24px}.feature-card>div:last-child{padding:18px}
+}
+
+.discovery-search,.beer-board .discovery-search{display:flex;align-items:center;gap:12px;padding:8px 10px 8px 14px!important;border:1px solid var(--line);border-radius:8px;background:var(--white);margin:0 0 10px}
+.discovery-search input,.discovery-search label input:not([type=hidden]){border:0;margin:0;padding:0;min-height:40px;font-size:14px;background:transparent}
+.discovery-search label{flex:1;min-width:0}.discovery-search>.button{min-height:40px;padding:8px 14px;font-size:12px}
+.explore-filters .filter-row{margin-top:0}.explore-filters .beer-refinements{padding:16px;gap:14px}.beer-refinements label{flex:1;min-width:140px}.beer-refinements select{width:100%;min-width:0}
+@media(max-width:760px){.discovery-search input,.discovery-search label input:not([type=hidden]){font-size:13px}.beer-refinements label{min-width:0}.beer-refinements{grid-template-columns:1fr 1fr}.beer-refinements .open-filter{min-height:44px}.beer-board .results-bar{font-size:11px;gap:8px}.beer-board .results-bar .text-link{font-size:11px}.filter-row>label:nth-child(2){display:block}}
+.planner-layout>*{min-width:0}.preferences select,.preferences input{min-width:0;max-width:100%}.preferences>.button{white-space:normal;width:100%}.field-pair{grid-template-columns:repeat(2,minmax(0,1fr))}

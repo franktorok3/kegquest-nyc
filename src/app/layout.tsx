@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Compass, Route, GlassWater, Bookmark } from "lucide-react";
+import {ArrowUpRight} from "lucide-react";
+import SiteNav from "../components/navigation/site-nav";
 import "./globals.css";
+import "./interface.css";
 export const metadata: Metadata = {
   title: {
     default: "Tapbound — Find the pour. Plan the crawl.",
@@ -10,34 +12,22 @@ export const metadata: Metadata = {
   description:
     "Discover real brewery tap lists, explore New York neighborhoods, and build a brewery trail worth sharing.",
 };
-const links = [
-  ["/explore", "Explore", Compass],
-  ["/taplists", "On Tap", GlassWater],
-  ["/planner", "Plan", Route],
-  ["/trails", "My Trails", Bookmark],
-] as const;
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
         <header className="nav">
           <Link href="/" className="brand">
-            tapbound<span className="brand-dot">↗</span>
+            tapbound<ArrowUpRight className="brand-dot" size={28} aria-hidden="true"/>
           </Link>
-          <nav aria-label="Main navigation">
-            {links.map(([href, label]) => (
-              <Link key={href} href={href}>
-                {label}
-              </Link>
-            ))}
-          </nav>
+          <SiteNav/>
           <span className="market-badge">NEW YORK CITY</span>
         </header>
         {children}
         <footer>
           <div>
             <Link className="brand" href="/">
-              tapbound↗
+              tapbound<ArrowUpRight size={24} aria-hidden="true"/>
             </Link>
             <p>Find the pour. Plan the crawl.</p>
           </div>
@@ -48,14 +38,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Link href="/about">About Tapbound</Link>
           </p>
         </footer>
-        <nav className="bottom-nav" aria-label="Mobile navigation">
-          {links.map(([href, label, Icon]) => (
-            <Link href={href} key={href}>
-              <Icon size={20} />
-              {label}
-            </Link>
-          ))}
-        </nav>
+        <SiteNav mobile/>
+
       </body>
     </html>
   );

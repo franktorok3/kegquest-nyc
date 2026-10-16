@@ -376,7 +376,7 @@ export default function Planner() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Directions ↗
+                      Directions ↗︎
                     </a>
                     <label className="replace">
                       Replace
@@ -513,7 +513,7 @@ export default function Planner() {
                 {copied ? "Copied" : "Copy link"}
               </button>
               <a href={share} className="text-link">
-                Open shared trail ↗
+                Open shared trail ↗︎
               </a>
             </div>
           )}
