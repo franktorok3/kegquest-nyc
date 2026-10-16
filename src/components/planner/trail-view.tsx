@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import Photo from "../brewery/photo";
 import { Trail } from "../../lib/planner";
 import { locations, directions } from "../../lib/catalog";
 const Map = dynamic(() => import("../map/brewery-map"), {
@@ -11,6 +12,7 @@ export default function TrailView({ trail }: { trail: Trail }) {
   const places = trail.stops
     .map((s) => locations.find((l) => l.id === s.locationId))
     .filter((l) => !!l);
+  if(trail.format==="stops")return <><div className="page-heading"><div><span className="eyebrow">A FEW GOOD STOPS</span><h1>{trail.name}</h1><p>{places.length} taproom{places.length===1?"":"s"}, in your chosen order.</p></div><Link href="/planner" className="button">Plan your own</Link></div><div className="simple-shared-stops">{places.map((b,i)=><article className="stop simple-stop" key={b.id}><span className="stop-number">{i+1}</span><Photo src={b.image} name={b.name} className="stop-photo"/><div className="stop-main"><h3><Link href={"/breweries/"+b.id}>{b.name}</Link></h3><p>{b.address}</p><a className="text-link" href={directions(b)} target="_blank" rel="noreferrer">Directions ↗︎</a></div></article>)}</div><p className="fine">Check each taproom’s hours before heading out.</p><details className="shared-map"><summary>Show route map</summary><Map locations={places} route/></details></>;
   return (
     <>
       <div className="page-heading">

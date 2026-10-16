@@ -23,6 +23,7 @@ export type Stop = {
   reason?: string;
 };
 export type Trail = {
+  format?: "stops";
   name: string;
   cityId: string;
   mode: Preferences["mode"];

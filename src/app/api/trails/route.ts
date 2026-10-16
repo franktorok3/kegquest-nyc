@@ -39,6 +39,7 @@ export async function POST(req: Request) {
         input.name,
       ),
       token = randomBytes(24).toString("hex");
+    if(input.format === "stops") trail.format="stops";
     const ip =
       req.headers.get("x-vercel-forwarded-for") ||
       req.headers.get("x-forwarded-for")?.split(",")[0] ||

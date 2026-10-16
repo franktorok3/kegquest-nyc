@@ -25,6 +25,7 @@ export const preferencesSchema = z
 export const saveTrailSchema = z
   .object({
     name: z.string().trim().min(1).max(80),
+    format: z.literal("stops").optional(),
     preferences: preferencesSchema,
     locationIds: z
       .array(z.string().min(1).max(100))

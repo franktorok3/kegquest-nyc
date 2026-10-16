@@ -1,4 +1,10 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
+
+async function addPlannerBrewery(page: Page, name: string) {
+  await page.getByRole("textbox", { name: "Look up a brewery" }).fill(name);
+  await page.getByRole("button", { name: `Add ${name} to trail`, exact: true }).click();
+}
+
 test("beer discovery, persistent draft, reorder and source details", async ({
   page,
 }) => {
@@ -20,10 +26,7 @@ test("beer discovery, persistent draft, reorder and source details", async ({
     .click();
   await page.goto("/planner");
   await expect(page.locator(".stop")).toHaveCount(1);
-  await page
-    .getByLabel("Add brewery", { exact: true })
-    .selectOption("other-half-centre");
-  await page.locator(".add-stop button").click();
+  await addPlannerBrewery(page, "Other Half");
   await expect(page.locator(".stop")).toHaveCount(2);
   const before = await page.locator(".stop h3").allTextContents();
   await page
@@ -81,12 +84,12 @@ test("save and reopen in an independent browser", async ({ page, browser }) => {
     "Requires the live database to be publicly reachable",
   );
   await page.goto("/planner");
+  await expect(page.getByLabel("Trail name")).toHaveCount(0);
+  await addPlannerBrewery(page, "Other Half");
   await page.getByLabel("Trail name").fill("Tapbound verified trail");
-  await page
-    .getByLabel("Add brewery", { exact: true })
-    .selectOption("other-half-centre");
-  await page.locator(".add-stop button").click();
+  const savedRequest=page.waitForRequest(request=>request.url().endsWith("/api/trails")&&request.method()==="POST");
   await page.getByRole("button", { name: /Save.*share/i }).click();
+  expect((await savedRequest).postDataJSON()).toMatchObject({format:"stops",locationIds:["other-half-centre"]});
   const input = page.getByLabel("Public trail link");
   await expect(input).toBeVisible({ timeout: 25000 });
   const url = await input.inputValue();
@@ -96,12 +99,16 @@ test("save and reopen in an independent browser", async ({ page, browser }) => {
   await expect(
     visitor.getByRole("heading", { name: "Tapbound verified trail" }),
   ).toBeVisible();
-  await expect(visitor.locator(".stop")).toHaveCount(1);
+  await expect(visitor.locator(".simple-shared-stops .stop")).toHaveCount(1);
+  await expect(visitor.locator(".stop h3")).toHaveText("Other Half");
+  await expect(visitor.getByRole("link",{name:/Directions/})).toHaveAttribute("href",/google.com\/maps/);
+  await expect(visitor.getByText(/1 taprooms?, in your chosen order\./)).toBeVisible();
+  expect(await visitor.locator("main").innerText()).not.toMatch(/\b\d{1,2}:\d{2}\s*(?:AM|PM)?|\b\d{4}-\d{2}-\d{2}\b|planning allowance|minutes including visits/);
   await fresh.close();
 });
 
-test("map toggle and recommendation builder remain usable", async ({
-  page,
+test("map, neighborhood suggestions and city-wide brewery lookup remain usable", async ({
+  page, context,
 }) => {
   await page.goto("/explore");
   await page.getByRole("button", { name: "Map", exact: true }).click();
@@ -115,11 +122,27 @@ test("map toggle and recommendation builder remain usable", async ({
   await page.getByRole("button", { name: "List", exact: true }).click();
   await expect(page.locator(".location-card").first()).toBeVisible();
   await page.goto("/planner");
-  await page.getByLabel("Planned date").fill("2026-10-17");
-  await page.getByLabel("Start time", { exact: true }).fill("14:00");
-  await page.getByRole("button", { name: /Generate recommended/ }).click();
-  await expect(page.locator(".stop").first()).toBeVisible();
-  expect(await page.locator(".stop").count()).toBeLessThanOrEqual(3);
+  await expect(page.getByRole("combobox",{name:"Starting neighborhood"})).toHaveValue("Gowanus");
+  // Looking up a known Queens taproom must work from a Brooklyn starting area.
+  await page.getByRole("textbox",{name:"Look up a brewery"}).fill("Fifth Hammer");
+  await expect(page.getByRole("button",{name:"Add Fifth Hammer Brewing to trail",exact:true})).toBeVisible();
+  await page.getByRole("button",{name:"Clear brewery search"}).click();
+  await page.getByRole("combobox",{name:"Starting neighborhood"}).selectOption("Long Island City");
+  await expect(page.locator(".suggestion-heading")).toContainText("AROUND LONG ISLAND CITY");
+  await page.getByRole("button",{name:"Add 3 suggested stops",exact:true}).click();
+  await expect(page.locator(".stop")).toHaveCount(3);
+  const ids=await page.locator(".stop").evaluateAll(stops=>stops.map(stop=>stop.getAttribute("data-location-id")));
+  expect(new Set(ids).size).toBe(3);
+  await context.grantPermissions(["geolocation"]);
+  await context.setGeolocation({latitude:40.673,longitude:-73.990});
+  await page.getByRole("button",{name:"Use my location",exact:true}).click();
+  await expect(page.getByRole("combobox",{name:"Starting neighborhood"})).toHaveValue("nearby");
+  await expect(page.locator(".suggestion-heading")).toContainText("CLOSE TO YOU");
+  const miles=(await page.locator(".suggestion p").allTextContents()).map(value=>Number(value.match(/([\d.]+) mi/)?.[1]));
+  expect(miles.length).toBeGreaterThan(0);
+  expect(miles.every(Number.isFinite)).toBe(true);
+  expect(miles).toEqual([...miles].sort((a,b)=>a-b));
+  await expect(page.locator(".stop")).toHaveCount(3);
 });
 
 test("new beer section leads the homepage with traceable discoveries", async ({page}) => {
@@ -265,4 +288,63 @@ test("discovery puts real places and beers before setup, with one active navigat
    await expect(page.getByRole("button",{name:"Filter taprooms"})).toBeFocused();
   }
  }
+});
+
+
+test("dragging a trail stop changes its order and persists after reload", async ({page})=>{
+ await page.goto("/planner");
+ await page.getByRole("button",{name:"Add 3 suggested stops",exact:true}).click();
+ const stops=page.locator(".simple-stops .stop");
+ await expect(stops).toHaveCount(3);
+ const before=await stops.locator("h3").allTextContents();
+ await stops.first().scrollIntoViewIfNeeded();
+ await stops.last().scrollIntoViewIfNeeded();
+ const source=await stops.first().getByRole("button",{name:/^Drag /}).boundingBox();
+ const target=await stops.last().getByRole("button",{name:/^Drag /}).boundingBox();
+ expect(source).not.toBeNull();expect(target).not.toBeNull();
+ await page.mouse.move(source!.x+source!.width/2,source!.y+source!.height/2);
+ await page.mouse.down();
+ await page.mouse.move(source!.x+source!.width/2,source!.y+source!.height/2+10,{steps:3});
+ await expect(page.locator(".stop-drag-preview")).toBeVisible();
+ await page.mouse.move(target!.x+target!.width/2,target!.y+target!.height/2,{steps:16});
+ await expect(page.locator('[role="status"]').filter({hasText:/over stop 3 of 3/})).toHaveCount(1);
+ await page.mouse.up();
+ const reordered=[before[1],before[2],before[0]];
+ await expect(stops.locator("h3")).toHaveText(reordered);
+ await expect(page.locator(".stop-drag-preview")).toHaveCount(0);
+ await page.reload();
+ await expect(page.locator(".simple-stops .stop h3")).toHaveText(reordered);
+});
+
+test("keyboard drag reorders a trail, cancels safely and persists",async({page})=>{
+ await page.goto("/planner");
+ await page.getByRole("button",{name:"Add 3 suggested stops",exact:true}).click();
+ const stops=page.locator(".simple-stops .stop");
+ await expect(stops).toHaveCount(3);
+ const before=await stops.locator("h3").allTextContents();
+ const handle=stops.first().getByRole("button",{name:/^Drag /});
+ await handle.focus();
+ await page.keyboard.press("Space");
+ await expect(page.locator(".stop-drag-preview")).toBeVisible();
+ // Keyboard coordinates depend on the overlay's measured layout after pickup.
+ await page.evaluate(()=>new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve()))));
+ await page.keyboard.press("ArrowDown");
+ await expect(page.locator('[role="status"]').filter({hasText:/over stop 2 of 3/})).toHaveCount(1);
+ await page.keyboard.press("Space");
+ const reordered=[before[1],before[0],before[2]];
+ await expect(stops.locator("h3")).toHaveText(reordered);
+ await expect(page.locator(".stop-drag-preview")).toHaveCount(0);
+ await page.reload();
+ await expect(page.locator(".simple-stops .stop h3")).toHaveText(reordered);
+ await stops.first().getByRole("button",{name:/^Drag /}).focus();
+ await page.keyboard.press("Space");
+ await expect(page.locator(".stop-drag-preview")).toBeVisible();
+ await page.evaluate(()=>new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve()))));
+ await page.keyboard.press("ArrowDown");
+ await expect(page.locator('[role="status"]').filter({hasText:/over stop 2 of 3/})).toHaveCount(1);
+ await page.keyboard.press("Escape");
+ await expect(page.locator(".stop-drag-preview")).toHaveCount(0);
+ await expect(stops.locator("h3")).toHaveText(reordered);
+ await page.reload();
+ await expect(page.locator(".simple-stops .stop h3")).toHaveText(reordered);
 });

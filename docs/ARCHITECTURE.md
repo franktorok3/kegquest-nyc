@@ -13,3 +13,7 @@ The server validates inputs with Zod, rejects duplicate and unknown stops, recom
 Style matching normalizes families without overwriting original source text. Recommendations score style coverage, menu freshness, opening status and distance, then fit a greedy geographic sequence within the time budget. They are deterministic; no language model invents beers or geography. Travel uses straight-line distance with mode multipliers and buffers, visibly labeled as planning allowances. Dashed map lines are not routed paths.
 
 Regular hours support cross-midnight intervals and explicit dated exceptions. Hours older than seven days become unknown. Holiday exceptions require evidence. Arrival/departure checks warn about closing conflicts. A recommendation cannot guarantee service or tap availability.
+
+## Simple location-based planner
+
+The primary planner uses `suggestStops` for geographic suggestions within 3 km, with explicit NYC-wide search. The UI has a neighborhood/location choice, lookup and an ordered list. `@dnd-kit` provides handle-based pointer/touch and keyboard sorting; arrows remain available. New saves carry `format: "stops"` and the shared view renders order and directions without schedule estimates. The historical scoring and timing helpers remain for backward-compatible older saved itineraries. Coordinates used for suggestions are held only in component state.
