@@ -1,10 +1,10 @@
 "use client";
 import { useState, useMemo } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Search, LocateFixed, MapPin, ArrowUpRight } from "lucide-react";
-import { locations, currentMenu } from "../../lib/catalog";
+import { locations, currentMenu, directions } from "../../lib/catalog";
 import { styleFamilies, matchesStyle } from "../../lib/matching/styles";
 import { openingStatus } from "../../lib/hours";
 import { Coordinates, distanceKm } from "../../lib/geography";
@@ -14,9 +14,10 @@ const Map = dynamic(() => import("../../components/map/brewery-map"), {
   ssr: false,
   loading: () => <div className="map-skeleton">Loading map…</div>,
 });
-export default function Explore() {
-  const params = useSearchParams(),
-    router = useRouter();
+export default function Explore({nearby=false}:{nearby?:boolean}) {
+  const params = useSearchParams();
+  const basePath=nearby?"/nearby":"/explore";
+  const [locating,setLocating]=useState(false), [radius,setRadius]=useState("5");
   const [selected, setSelected] = useState(""),
     [view, setView] = useState("list"),
     [coords, setCoords] = useState<Coordinates | null>(null),
@@ -27,29 +28,32 @@ export default function Explore() {
     style = params.get("style") || "",
     city = params.get("city") || "nyc";
   function update(key: string, value: string) {
-    const next = new URLSearchParams(params.toString());
+    const next = new URLSearchParams(window.location.search);
     if (value) next.set(key, value);
     else next.delete(key);
-    router.push("/explore?" + next.toString(), { scroll: false });
+    window.history.pushState(null,"",basePath+"?"+next.toString());
   }
   function locate() {
     if (!navigator.geolocation) {
       setGeoNote("Location is unavailable. Explore the selected city instead.");
       return;
     }
+    setLocating(true);
     setGeoNote("Finding your location…");
     navigator.geolocation.getCurrentPosition(
       (p) => {
+        setLocating(false);
         setCoords({ lat: p.coords.latitude, lng: p.coords.longitude });
-        setGeoNote("Sorted by straight-line distance from your location.");
+        setGeoNote(`Nearest first · straight-line distances, not walking routes.${p.coords.accuracy>1000?" Your location is approximate; results may be less precise.":""}`);
       },
-      () =>
-        setGeoNote(
-          "Location permission is unavailable. You can still explore New York by neighborhood.",
-        ),
-      { timeout: 10000, maximumAge: 60000 },
+      (error) => {
+        setLocating(false);
+        setGeoNote(error.code===1?"Location access is blocked. Allow location for this site in your browser settings, or browse by borough below.":error.code===3?"Finding your location took too long. Try again or browse by borough.":"Your location could not be found. Try again or browse by borough.");
+      },
+      { timeout: 10000, maximumAge: 0 },
     );
   }
+
   const results = useMemo(
     () =>
       locations
@@ -70,34 +74,38 @@ export default function Explore() {
                 .toLowerCase()
                 .includes(q.toLowerCase())) &&
             (!coords ||
-              !params.get("distance") ||
+              !radius ||
               (b.lat !== null &&
                 b.lng !== null &&
                 distanceKm(coords, { lat: b.lat, lng: b.lng }) <=
-                  Number(params.get("distance")))),
+                  Number(radius)*1.609344)),
         )
-        .sort((a, b) =>
-          coords && a.lat && a.lng && b.lat && b.lng
-            ? distanceKm(coords, { lat: a.lat, lng: a.lng }) -
-              distanceKm(coords, { lat: b.lat, lng: b.lng })
-            : Number(b.visitable) - Number(a.visitable),
-        ),
-    [params, q, borough, neighborhood, style, city, coords],
+        .sort((a, b) => {
+          if(!coords)return 0;
+          const distance=(x:typeof a)=>x.lat!==null&&x.lng!==null?distanceKm(coords,{lat:x.lat,lng:x.lng}):Infinity;
+          return distance(a)-distance(b);
+        }),
+    [params, q, borough, neighborhood, style, city, coords, radius],
   );
+
   return (
-    <main className="page explore-page">
+    <main className={"page explore-page"+(nearby?" nearby-page":"")}>
       <div className="page-heading">
         <div>
           <span className="eyebrow muted">EXPLORE / NEW YORK CITY</span>
-          <h1>Find your next stop.</h1>
-          <p>Find your corner of the city. We’ll bring the beer.</p>
+          <h1>{nearby?"Good beer, near you.":"Find your next stop."}</h1>
+          <p>{nearby?"Find nearby NYC taprooms and see what’s pouring.":"Find your corner of the city. We’ll bring the beer."}</p>
         </div>
-        <button className="button secondary" onClick={locate}>
-          <LocateFixed size={17} /> Near me
+        <button className="button secondary" onClick={locate} disabled={locating}>
+          <LocateFixed size={17} /> {locating?"Finding you…":coords?"Update location":nearby?"Use my location":"Near me"}
         </button>
       </div>
+      {(nearby||coords)&&<div className="nearby-note"><p>Your location is used in this browser to sort taprooms. We don’t save it to your profile or database.</p>{coords&&<button className="text-link" onClick={()=>{setCoords(null);setGeoNote("");}}>Stop using my location</button>}{nearby&&!coords&&<Link href="/explore" className="text-link">Browse by borough instead ↗</Link>}</div>}
+      {nearby&&coords&&<label className="nearby-radius">Show taprooms<select aria-label="Nearby radius" value={radius} onChange={e=>setRadius(e.target.value)}><option value="">All NYC taprooms</option>{[1,3,5,10,25].map(n=><option key={n} value={n}>Within {n} miles</option>)}</select></label>}
+      {geoNote&&<p className="fine nearby-status" role="status">{geoNote}</p>}
+      <details className="explore-filters" open={nearby?undefined:true}><summary hidden={!nearby}>Refine results · style, hours & more</summary>
       <div className="filter-panel">
-        <form className="search" action="/explore">
+        <form className="search" action={basePath} onSubmit={e=>{e.preventDefault();const data=new FormData(e.currentTarget);update("q",String(data.get("q")||""));}}>
           {Array.from(params.entries())
             .filter(([k]) => k !== "q")
             .map(([k, v]) => (
@@ -169,17 +177,18 @@ export default function Explore() {
               ))}
             </select>
           </label>
-          {coords && (
+          {coords && !nearby && (
             <label>
               Distance
               <select
-                value={params.get("distance") || ""}
-                onChange={(e) => update("distance", e.target.value)}
+                aria-label="Nearby radius"
+                value={radius}
+                onChange={(e) => setRadius(e.target.value)}
               >
-                <option value="">Any distance</option>
+                <option value="">All NYC taprooms</option>
                 {[1, 3, 5, 10, 25].map((n) => (
                   <option value={n} key={n}>
-                    Within {n} km
+                    Within {n} miles
                   </option>
                 ))}
               </select>
@@ -202,19 +211,16 @@ export default function Explore() {
               {label}
             </label>
           ))}
-          <Link href="/explore" className="text-link">
+          <Link href={basePath} className="text-link">
             Reset
           </Link>
         </div>
-        {geoNote && (
-          <p className="fine" role="status">
-            {geoNote}
-          </p>
-        )}
       </div>
+      </details>
+      {(!nearby||coords)&&<>
       <div className="results-bar">
         <p>
-          {results.length} taproom{results.length === 1 ? "" : "s"}
+          {results.length} taproom{results.length === 1 ? "" : "s"}{coords?radius?` within ${radius} miles · nearest first`:" · nearest first":""}
         </p>
         <div className="segmented">
           <button
@@ -267,12 +273,12 @@ export default function Explore() {
                       ? openingStatus(b, new Date())
                       : b.visitStatus.replaceAll("_", " ")}
                   </span>
-                  {coords && b.lat && b.lng && (
+                  {coords && b.lat !== null && b.lng !== null && (
                     <span className="badge">
-                      {distanceKm(coords, { lat: b.lat, lng: b.lng }).toFixed(
+                      {(distanceKm(coords, { lat: b.lat, lng: b.lng })/1.609344).toFixed(
                         1,
                       )}{" "}
-                      km away
+                      mi away
                     </span>
                   )}
                 </div>
@@ -280,6 +286,7 @@ export default function Explore() {
                   <Link href={"/breweries/" + b.id} className="text-link">
                     View details
                   </Link>
+                  <a href={directions(b)} target="_blank" rel="noreferrer" className="text-link">Directions ↗</a>
                   {b.visitable && <AddToTrail id={b.id} />}
                 </div>
               </div>
@@ -289,7 +296,7 @@ export default function Explore() {
             <div className="empty">
               <h3>No verified matches for these filters.</h3>
               <p>
-                Try another neighborhood or remove a filter.
+                {coords?"Widen the distance or remove a filter. Tapbound currently covers NYC only.":"Try another neighborhood or remove a filter."}
               </p>
               <Link className="button" href="/explore">
                 Reset filters
@@ -311,6 +318,7 @@ export default function Explore() {
           />
         </aside>
       </div>
+      </>}
     </main>
   );
 }

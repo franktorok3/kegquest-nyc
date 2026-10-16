@@ -14,3 +14,7 @@
 .saved-beer-entry{margin:0 0 25px}
 
 @media(max-width:760px){.beer-board{padding-top:24px}.beer-board .page-heading{gap:14px;margin-bottom:18px}.beer-board .page-heading h1{font-size:32px;letter-spacing:-1px;margin:9px 0}.beer-board .page-heading p{font-size:12px}.beer-board .page-heading>.button{min-height:36px;padding:8px 12px}.beer-board .taste-tabs{margin-bottom:14px}.beer-board .beer-search{padding:12px;margin-bottom:12px}.beer-board .beer-refinements{padding-bottom:12px}.beer-board .results-bar{padding-top:6px;padding-bottom:12px}}
+
+.nearby-note{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:-12px 0 22px}.nearby-note p{font-size:12px;color:var(--muted)}.nearby-note button{background:none;border:0;padding:0;color:var(--ink)}.hero-actions{flex-wrap:wrap}
+
+.explore-filters>summary{cursor:pointer;font-size:13px;padding:12px 0;color:var(--copper)}.nearby-radius{display:flex;align-items:center;gap:12px;font-size:12px}.nearby-radius select{padding:10px;border:1px solid var(--line);border-radius:4px;background:var(--white)}.nearby-status{margin:12px 0}.nearby-page .page-heading h1{font-size:36px;letter-spacing:-1.4px}.nearby-page .page-heading{margin-bottom:20px}.nearby-page .nearby-note{margin:0 0 16px}.nearby-page .results-bar{padding:14px 0}@media(max-width:760px){.nearby-page{padding-top:24px}.nearby-page .page-heading{gap:12px}.nearby-page .page-heading h1{font-size:32px}.nearby-page .nearby-note p{font-size:11px}.nearby-page .nearby-note{gap:8px}}

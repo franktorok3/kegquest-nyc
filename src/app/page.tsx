@@ -44,6 +44,7 @@ export default function Home() {
             </button>
           </form>
           <div className="hero-actions">
+            <Link href="/nearby">Near me <ArrowUpRight size={16}/></Link>
             <Link href="/taplists">
               Find My Beer <ArrowUpRight size={16} />
             </Link>

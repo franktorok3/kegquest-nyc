@@ -178,3 +178,39 @@ test("beer shortlist persists and combined practical filters survive reload",asy
  await page.goto("/saved-beers");await page.getByRole("button",{name:/Remove .* from want to try/}).click();
  await expect(page.getByText("Your next favorite belongs here.")).toBeVisible();
 });
+
+
+test("nearby discovery requests permission, sorts by distance and handles coverage",async({page,context})=>{
+ await context.grantPermissions(["geolocation"]);
+ await context.setGeolocation({latitude:40.673,longitude:-73.990});
+ await page.goto("/");await page.getByRole("link",{name:"Near me",exact:true}).click();
+ await expect(page.getByRole("heading",{name:"Good beer, near you."})).toBeVisible();
+ await expect(page.locator(".location-card")).toHaveCount(0);
+ await page.getByRole("button",{name:"Use my location",exact:true}).click();
+ await expect(page.getByRole("combobox",{name:"Nearby radius"})).toHaveValue("5");
+ await expect(page.locator(".location-card").first()).toBeVisible();
+ const distances=await page.locator(".location-card .badge").allTextContents();
+ const miles=distances.filter(x=>x.includes("mi away")).map(parseFloat);
+ expect(miles.length).toBeGreaterThan(0);expect(miles).toEqual([...miles].sort((a,b)=>a-b));expect(miles.every(x=>x<=5)).toBe(true);
+ await expect(page.locator(".location-card").first().getByRole("link",{name:"Directions"})).toHaveAttribute("href",/maps/);
+ await page.getByText("Refine results · style, hours & more").click();
+ await page.getByRole("textbox",{name:"Search breweries"}).fill("Threes");
+ await page.getByRole("button",{name:"Search",exact:true}).click();
+ await expect(page.getByRole("combobox",{name:"Nearby radius"})).toBeVisible();
+ await expect(page.locator(".location-card").first()).toContainText("Threes");
+ await context.setGeolocation({latitude:34.05,longitude:-118.24});
+ await page.getByRole("button",{name:"Update location"}).click();
+ await expect(page.getByText("Widen the distance or remove a filter.",{exact:false})).toBeVisible();
+ await page.getByRole("button",{name:"Stop using my location"}).click();
+ await expect(page.getByRole("button",{name:"Use my location"})).toBeVisible();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
+
+test("denied location keeps borough browsing available",async({page})=>{
+ await page.addInitScript(()=>{Object.defineProperty(navigator,"geolocation",{value:{getCurrentPosition:(_success:unknown,error:(e:{code:number})=>void)=>error({code:1})}});});
+ await page.goto("/nearby");await page.getByRole("button",{name:"Use my location"}).click();
+ await expect(page.getByRole("status")).toContainText("Location access is blocked");
+ await page.getByRole("link",{name:"Browse by borough instead"}).click();
+ await expect(page.getByRole("combobox",{name:"Borough",exact:true})).toBeVisible();
+ await expect(page.locator(".location-card").first()).toBeVisible();
+});

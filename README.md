@@ -16,6 +16,8 @@ Unknown hours and amenities are never treated as confirmed. Event-only or closed
 
 Beer discovery includes combined borough, ABV and open-now filters, plus a browser-local **Want to try** list. Saved beers are rechecked against the current catalog before showing availability. See [customer research and decisions](docs/CUSTOMER_RESEARCH.md) for the evidence, limitations and proposed user testing.
 
+The homepage **Near me** link opens permission-based nearby discovery, defaulting to five miles with nearest-first straight-line distances, adjustable radius and directions. Coordinates stay in component memory and are not sent to our database or stored in URLs. Denied, unavailable and timed-out location requests offer manual borough browsing; coverage remains NYC only.
+
 ## Development
 
 Requires Node 22+.
