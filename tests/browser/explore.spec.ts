@@ -213,6 +213,7 @@ test("denied location keeps borough browsing available",async({page})=>{
  await page.goto("/nearby");await page.getByRole("button",{name:"Use my location"}).click();
  await expect(page.getByRole("status")).toContainText("Location access is blocked");
  await page.getByRole("link",{name:"Browse by borough instead"}).click();
+ await expect(page.getByRole("heading",{level:1,name:"Find your next stop."})).toBeVisible();
  await page.locator(".explore-filters summary").click();
  await expect(page.getByRole("combobox",{name:"Borough",exact:true})).toBeVisible();
  await expect(page.locator(".location-card").first()).toBeVisible();
