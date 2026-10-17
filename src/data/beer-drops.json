@@ -2,7 +2,7 @@
   "other-half-centre": {
     "source": "https://otherhalfbrewing.com/location/centre-street/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-10-16T14:51:54.023Z",
+    "checkedAt": "2026-10-17T13:43:45.464Z",
     "beers": {
       "double citra daydream": {
         "firstSeen": "2026-10-15T22:36:31.264Z",
@@ -83,13 +83,17 @@
       "tdh space ghost": {
         "firstSeen": "2026-10-15T22:36:31.264Z",
         "kind": "baseline"
+      },
+      "western exhibition": {
+        "firstSeen": "2026-10-17T13:43:45.464Z",
+        "kind": "addition"
       }
     }
   },
   "other-half-rockefeller": {
     "source": "https://otherhalfbrewing.com/location/rockefeller-center/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-10-16T14:51:58.131Z",
+    "checkedAt": "2026-10-17T13:43:47.951Z",
     "beers": {
       "snaps": {
         "firstSeen": "2026-10-15T22:36:33.470Z",
@@ -170,13 +174,17 @@
       "pink guava passion fruit": {
         "firstSeen": "2026-10-15T22:36:33.470Z",
         "kind": "baseline"
+      },
+      "ba mister softee cookies and cream split": {
+        "firstSeen": "2026-10-17T13:43:47.951Z",
+        "kind": "addition"
       }
     }
   },
   "eckhartbeer": {
     "source": "https://eckhartbeer.com/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-10-16T14:52:16.563Z",
+    "checkedAt": "2026-10-17T13:44:02.591Z",
     "beers": {
       "helles lager": {
         "firstSeen": "2026-10-15T22:36:40.044Z",
@@ -223,7 +231,7 @@
   "threes-gowanus": {
     "source": "https://www.beermenus.com/places/18430-threes-brewing-gowanus",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-16T14:57:16.763Z",
+    "checkedAt": "2026-10-17T13:48:44.473Z",
     "beers": {
       "threes + cellarmaker grey area": {
         "firstSeen": "2026-10-15T23:16:51.643Z",
@@ -296,13 +304,21 @@
       "wayward lane merlin in berlin tart cherry lime": {
         "firstSeen": "2026-10-15T23:16:51.643Z",
         "kind": "baseline"
+      },
+      "threes beautiful friction": {
+        "firstSeen": "2026-10-17T13:48:44.473Z",
+        "kind": "addition"
+      },
+      "threes volition": {
+        "firstSeen": "2026-10-17T13:48:44.473Z",
+        "kind": "addition"
       }
     }
   },
   "flagship": {
     "source": "https://flagshipbrewery.nyc/taproom-draft-list/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-16T14:56:55.860Z",
+    "checkedAt": "2026-10-17T13:48:23.881Z",
     "beers": {
       "flagship + porterhouse wolf hound nitro": {
         "firstSeen": "2026-10-15T23:14:05.463Z",
@@ -343,13 +359,17 @@
       "sloop juice bomb": {
         "firstSeen": "2026-10-15T23:14:05.463Z",
         "kind": "baseline"
+      },
+      "threes hereafter": {
+        "firstSeen": "2026-10-17T13:48:23.881Z",
+        "kind": "addition"
       }
     }
   },
   "fifth-hammer": {
     "source": "https://www.fifthhammerbrewing.com/beer-menu",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-16T14:56:59.994Z",
+    "checkedAt": "2026-10-17T13:48:27.897Z",
     "beers": {
       "paddy neverpat": {
         "firstSeen": "2026-10-15T23:14:10.209Z",
@@ -412,7 +432,7 @@
   "evil-twin": {
     "source": "https://eviltwin.nyc/location/ridgewood-taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-16T14:53:59.979Z",
+    "checkedAt": "2026-10-17T13:45:29.790Z",
     "beers": {
       "tgi oktober ’26": {
         "firstSeen": "2026-10-15T23:14:36.944Z",
@@ -493,13 +513,17 @@
       "greenhouse festbier leicht conditioned on american oak foudre": {
         "firstSeen": "2026-10-15T23:14:36.944Z",
         "kind": "baseline"
+      },
+      "make it fruity halloween edition": {
+        "firstSeen": "2026-10-17T13:45:29.790Z",
+        "kind": "addition"
       }
     }
   },
   "grimm": {
     "source": "https://grimmales.com/location/taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-16T14:54:04.304Z",
+    "checkedAt": "2026-10-17T13:45:33.699Z",
     "beers": {
       "grimm weisse": {
         "firstSeen": "2026-10-15T23:14:42.903Z",
@@ -590,7 +614,7 @@
   "kills-boro": {
     "source": "https://killsboro.com/online-menu",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-16T14:57:04.264Z",
+    "checkedAt": "2026-10-17T13:48:31.817Z",
     "beers": {
       "protect ya' czech": {
         "firstSeen": "2026-10-15T23:14:45.429Z",
@@ -657,7 +681,7 @@
   "gunhillbrewing": {
     "source": "https://www.gunhillpublickhouse.com/drinks-menu",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-16T14:57:12.222Z",
+    "checkedAt": "2026-10-17T13:48:39.758Z",
     "beers": {
       "gun hill ipa": {
         "firstSeen": "2026-10-15T23:16:06.761Z",
@@ -728,7 +752,7 @@
   "evil-twin-dumbo": {
     "source": "https://eviltwin.nyc/location/dumbo-taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-16T14:56:21.394Z",
+    "checkedAt": "2026-10-17T13:47:50.847Z",
     "beers": {
       "greenhouse west coast pils conditioned on american oak foudre": {
         "firstSeen": "2026-10-15T23:14:40.647Z",
@@ -801,6 +825,22 @@
       "sheridan's stout": {
         "firstSeen": "2026-10-15T23:14:40.647Z",
         "kind": "baseline"
+      },
+      "greenhouse festbier leicht conditioned on american oak foudre": {
+        "firstSeen": "2026-10-17T13:47:50.847Z",
+        "kind": "addition"
+      },
+      "your hazy phase was cute while it lasted": {
+        "firstSeen": "2026-10-17T13:47:50.847Z",
+        "kind": "addition"
+      },
+      "chopping wood": {
+        "firstSeen": "2026-10-17T13:47:50.847Z",
+        "kind": "addition"
+      },
+      "even more straight outta the marshmallow laboratory": {
+        "firstSeen": "2026-10-17T13:47:50.847Z",
+        "kind": "addition"
       }
     }
   }

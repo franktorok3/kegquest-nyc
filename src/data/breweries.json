@@ -8,12 +8,17 @@
     "addressEvidence": "195 Centre Street",
     "displayAddress": "195 Centre Street, Brooklyn, NY 11231",
     "hoursEvidence": "Monday 12pm – 10pm Tuesday 12pm – 10pm Wednesday 12pm – 10pm Thursday 12pm – 10pm Friday 12pm – 12am Saturday 10am – 12am Sunday 11am – 9pm",
-    "checkedAt": "2026-10-16T14:51:54.023Z",
-    "verifiedAt": "2026-10-16T14:51:54.023Z",
-    "menuVerifiedAt": "2026-10-16T14:51:54.023Z",
+    "checkedAt": "2026-10-17T13:43:45.464Z",
+    "verifiedAt": "2026-10-17T13:43:45.464Z",
+    "menuVerifiedAt": "2026-10-17T13:43:45.464Z",
     "status": "verified",
     "image": "https://craftpeak-cooler-images.imgix.net/other-half-brewing/Other-Half-Brewing-Brooklyn-NY.jpg?auto=compress%2Cformat&fit=scale&h=1366&ixlib=php-3.3.1&w=2048&wpsize=2048x2048&s=aad27d3ffbff78272a8bd505c49c8ab4",
     "beers": [
+      {
+        "name": "Western Exhibition",
+        "style": "IPA - New England / Hazy",
+        "abv": 7.2
+      },
       {
         "name": "Double Citra Daydream",
         "style": "IPA - Imperial / Double New England / Hazy",
@@ -70,11 +75,6 @@
         "abv": 10.2
       },
       {
-        "name": "Trash Panda",
-        "style": "IPA - New England / Hazy",
-        "abv": 6.8
-      },
-      {
         "name": "Automated Terp Machine",
         "style": "IPA - Imperial / Double New England / Hazy",
         "abv": 8.2
@@ -92,11 +92,6 @@
       {
         "name": "Escapist: Painkiller",
         "style": "Hard Seltzer",
-        "abv": 6
-      },
-      {
-        "name": "Ivy City Festbier",
-        "style": "Festbier",
         "abv": 6
       },
       {
@@ -120,7 +115,7 @@
     "address": "195 Centre Street, Brooklyn, NY 11231",
     "note": "Extracted from an explicitly labeled draft section.",
     "parserVersion": "tapbound-2",
-    "contentChecksum": "8b4823be7c9478bd89fa8657f04ea8235093f67ef7e50122e021870e495d3d0f",
+    "contentChecksum": "1024535e528234959381c1900ee88761f3643db25aadbb4ca6950dfe170ac019",
     "menuSource": "https://otherhalfbrewing.com/location/centre-street/",
     "description": null
   },
@@ -133,9 +128,9 @@
     "addressEvidence": "333 Douglass Street",
     "displayAddress": "333 Douglass Street, Brooklyn, NY 11217",
     "hoursEvidence": "MONDAY\n\n12 - Midnight\n(Kitchen 5-10pm)\n\nTUESDAY\n\n12 - Midnight\n(Kitchen 5-10pm)\n\nWEDNESDAY\n\n12 - Midnight\n(Kitchen 5-10pm)\n\nTHURSDAY\n\n12 - Midnight\n(Kitchen 5-11pm)\n\nFRIDAY\n\n12 - Midnight\n(Kitchen 4-10pm)\n\nSATURDAY\n\n12 - Midnight\n(Kitchen 12-11pm)\n\nSUNDAY\n\n12 - 11pm\n(Kitchen 12-10pm)",
-    "checkedAt": "2026-10-16T14:53:33.585Z",
-    "verifiedAt": "2026-10-16T14:53:33.585Z",
-    "menuVerifiedAt": "2026-10-16T14:57:16.763Z",
+    "checkedAt": "2026-10-17T13:45:04.962Z",
+    "verifiedAt": "2026-10-17T13:45:04.962Z",
+    "menuVerifiedAt": "2026-10-17T13:48:44.473Z",
     "status": "verified",
     "image": null,
     "beers": [
@@ -149,6 +144,12 @@
         "name": "Threes All Or Nothing",
         "style": "IPA",
         "abv": 6.8,
+        "price": "5oz Draft $4"
+      },
+      {
+        "name": "Threes Beautiful Friction",
+        "style": "NE/Hazy IPA",
+        "abv": 7,
         "price": "5oz Draft $4"
       },
       {
@@ -236,16 +237,16 @@
         "price": "5oz Draft $4"
       },
       {
+        "name": "Threes Volition",
+        "style": "Schwarzbier",
+        "abv": 4.5,
+        "price": "5oz Draft $4"
+      },
+      {
         "name": "Threes Within Reach",
         "style": "Imperial IPA",
         "abv": 8,
         "price": "5oz Draft $5"
-      },
-      {
-        "name": "Wayward Lane Merlin In Berlin Tart Cherry Lime",
-        "style": "Berliner Weisse",
-        "abv": 4,
-        "price": "5oz Draft $4"
       }
     ],
     "tapStatus": "verified",
@@ -253,10 +254,10 @@
     "address": "333 Douglass Street, Brooklyn, NY 11217",
     "note": "Verified from the rendered, location-specific draft menu with Playwright. Packaged drinks are excluded.",
     "parserVersion": "tapbound-browser-3",
-    "contentChecksum": "c090e7788db644e9def954d395f74c8f8d22e84f2bca1e71c6c0f618f3c70cbb",
+    "contentChecksum": "3d3fe5d26e7266e09893bc76bcb7fbc6d2191eecae02f9895169246f052d314a",
     "menuSource": "https://www.beermenus.com/places/18430-threes-brewing-gowanus",
     "description": "Gowanus brewery, coffee shop, beer shop, beer garden, and music venue. The linked BeerMenus draft list includes guest breweries.",
-    "browserVerifiedAt": "2026-10-16T14:53:33.585Z",
+    "browserVerifiedAt": "2026-10-17T13:45:04.962Z",
     "detailEvidence": "https://threesbrewing.com/pages/gowanus"
   },
   {
@@ -268,8 +269,8 @@
     "addressEvidence": "7801 77th ave",
     "displayAddress": "78-01 77th Avenue, Glendale, NY",
     "hoursEvidence": "mon: closed tue-thu: 5pm-10pm fri: 5pm-11pm sat: 12pm-11pm sun: 12pm-8pm",
-    "checkedAt": "2026-10-16T14:53:38.050Z",
-    "verifiedAt": "2026-10-16T14:53:38.050Z",
+    "checkedAt": "2026-10-17T13:45:10.111Z",
+    "verifiedAt": "2026-10-17T13:45:10.111Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://freight.cargo.site/w/1200/i/F1856499129424979032945058861447/Taproom_BK_02.jpg",
@@ -282,7 +283,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://finbackbrewery.com/spaces",
     "description": "Finback’s original production brewery and barrel-program taproom. Weekend food pop-ups vary. Published beer menus are dated 7/9 without a confirmed year; current draft availability is unverified.",
-    "browserVerifiedAt": "2026-10-16T14:53:38.050Z",
+    "browserVerifiedAt": "2026-10-17T13:45:10.111Z",
     "detailEvidence": "https://finbackbrewery.com/spaces"
   },
   {
@@ -294,9 +295,9 @@
     "addressEvidence": "40 Minthorne St",
     "displayAddress": "40 Minthorne Street, Staten Island, NY 10301",
     "hoursEvidence": "Monday: Closed Tuesday: Closed Wednesday: 5PM - 11PM Thursday: 12PM – 12AM Friday: 12PM – 12AM Saturday: 12PM – 12AM Sunday: 12PM – 8 PM",
-    "checkedAt": "2026-10-16T14:53:42.275Z",
-    "verifiedAt": "2026-10-16T14:53:42.275Z",
-    "menuVerifiedAt": "2026-10-16T14:56:55.860Z",
+    "checkedAt": "2026-10-17T13:45:13.721Z",
+    "verifiedAt": "2026-10-17T13:45:13.721Z",
+    "menuVerifiedAt": "2026-10-17T13:48:23.881Z",
     "status": "verified",
     "image": null,
     "beers": [
@@ -359,6 +360,12 @@
         "style": "Hazy IPA",
         "abv": 6.5,
         "price": "$8.50"
+      },
+      {
+        "name": "Threes Hereafter",
+        "style": "Oktoberfest",
+        "abv": 5.5,
+        "price": "$8.50"
       }
     ],
     "tapStatus": "verified",
@@ -366,10 +373,10 @@
     "address": "40 Minthorne Street, Staten Island, NY 10301",
     "note": "Verified from the rendered, location-specific draft menu with Playwright. Packaged drinks are excluded.",
     "parserVersion": "tapbound-browser-3",
-    "contentChecksum": "f55ab04057a2317d04471e1514c7b21cc7634e9f60c1e041a02e034cb3b6e577",
+    "contentChecksum": "181c7b7eb449ef357e6eb3c18da2a7c95b4006cc8625a9bc503f5210268f973e",
     "menuSource": "https://flagshipbrewery.nyc/taproom-draft-list/",
     "description": "A spacious Tompkinsville taproom with outdoor seating and a dog-friendly policy.",
-    "browserVerifiedAt": "2026-10-16T14:53:42.275Z",
+    "browserVerifiedAt": "2026-10-17T13:45:13.721Z",
     "detailEvidence": "https://flagshipbrewery.nyc/tap-room-2/"
   },
   {
@@ -381,8 +388,8 @@
     "addressEvidence": "856 East",
     "displayAddress": "856 East 136th Street, Bronx, NY",
     "hoursEvidence": "At this time, The Bronx Brewery Backyard will not be open for daily service.",
-    "checkedAt": "2026-10-16T14:51:57.584Z",
-    "verifiedAt": "2026-10-16T14:51:57.584Z",
+    "checkedAt": "2026-10-17T13:43:47.516Z",
+    "verifiedAt": "2026-10-17T13:43:47.516Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -405,9 +412,9 @@
     "addressEvidence": "600 5th Avenue",
     "displayAddress": "600 5th Avenue, New York, NY 10020",
     "hoursEvidence": "Monday 12pm – 8pm Tuesday 12pm – 10pm Wednesday 12pm – 10pm Thursday 12pm – 10pm Friday 12pm – 10pm Saturday 12pm – 10pm Sunday 12pm – 8pm",
-    "checkedAt": "2026-10-16T14:51:58.131Z",
-    "verifiedAt": "2026-10-16T14:51:58.131Z",
-    "menuVerifiedAt": "2026-10-16T14:51:58.131Z",
+    "checkedAt": "2026-10-17T13:43:47.951Z",
+    "verifiedAt": "2026-10-17T13:43:47.951Z",
+    "menuVerifiedAt": "2026-10-17T13:43:47.951Z",
     "status": "verified",
     "image": "https://craftpeak-cooler-images.imgix.net/other-half-brewing/rockcenter_hero.jpg?auto=compress%2Cformat&ixlib=php-3.3.1&s=b8d8dbbd05a24fc55bbbdc82ead5e70c",
     "beers": [
@@ -492,7 +499,7 @@
         "abv": 10
       },
       {
-        "name": "BA Bananaverse (2026)",
+        "name": "BA Mister Softee Cookies And Cream Split",
         "style": "Stout - Imperial / Double Pastry",
         "abv": 12.5
       },
@@ -517,7 +524,7 @@
     "address": "600 5th Avenue, New York, NY 10020",
     "note": "Extracted from an explicitly labeled draft section.",
     "parserVersion": "tapbound-2",
-    "contentChecksum": "11b8f631f7f88ae1ad4a660ac4b333aa6310cb97dc5c579077f404b4bba94a53",
+    "contentChecksum": "769d642f9c2b9a9ad5832b00b469c0ea2c4599685fe4169c80720bd7dbc35227",
     "menuSource": "https://otherhalfbrewing.com/location/rockefeller-center/",
     "description": null
   },
@@ -530,9 +537,9 @@
     "addressEvidence": "10-28 46th Ave",
     "displayAddress": "10-28 46th Avenue, Long Island City, NY 11101",
     "hoursEvidence": "Monday: 2pm -10pm Tuesday: 2pm -11pm Wednesday 2pm -11pm Thursday: 2pm - 12am Friday: 12pm - 1am Saturday: 12pm - 1am Sunday: 12pm - 10pm",
-    "checkedAt": "2026-10-16T14:53:55.585Z",
-    "verifiedAt": "2026-10-16T14:53:55.585Z",
-    "menuVerifiedAt": "2026-10-16T14:56:59.994Z",
+    "checkedAt": "2026-10-17T13:45:25.915Z",
+    "verifiedAt": "2026-10-17T13:45:25.915Z",
+    "menuVerifiedAt": "2026-10-17T13:48:27.897Z",
     "status": "verified",
     "image": null,
     "beers": [
@@ -629,7 +636,7 @@
     "contentChecksum": "850869a62a2a56e84e45aa957f3f87706013d20fc94014b802c90072a943fb8e",
     "menuSource": "https://www.fifthhammerbrewing.com/beer-menu",
     "description": null,
-    "browserVerifiedAt": "2026-10-16T14:53:55.585Z",
+    "browserVerifiedAt": "2026-10-17T13:45:25.915Z",
     "detailEvidence": "https://www.fifthhammerbrewing.com/"
   },
   {
@@ -641,9 +648,9 @@
     "addressEvidence": "1616 George St",
     "displayAddress": "1616 George Street, Ridgewood, NY 11385",
     "hoursEvidence": "Monday 4pm – 9pm Tuesday 4pm – 9pm Wednesday 4pm – 9pm Thursday 4pm – 9pm Friday 12pm – 12am Saturday 12pm – 12am Sunday 12pm – 10pm",
-    "checkedAt": "2026-10-16T14:53:59.979Z",
-    "verifiedAt": "2026-10-16T14:53:59.979Z",
-    "menuVerifiedAt": "2026-10-16T14:53:59.979Z",
+    "checkedAt": "2026-10-17T13:45:29.790Z",
+    "verifiedAt": "2026-10-17T13:45:29.790Z",
+    "menuVerifiedAt": "2026-10-17T13:45:29.790Z",
     "status": "verified",
     "image": "https://craftpeak-cooler-images.imgix.net/evil-twin-brewing-nyc/676958F2-D69E-4FA3-990A-45EF28FD3D9F-scaled.jpeg?auto=compress%2Cformat&ixlib=php-3.3.1&s=67fffd85c84750410d6bffcbb904f0d3",
     "beers": [
@@ -713,9 +720,9 @@
         "abv": 8
       },
       {
-        "name": "TINA, COME GET YOUR KIEF",
-        "style": "IPA - New England / Hazy",
-        "abv": 7
+        "name": "MAKE IT FRUITY HALLOWEEN EDITION",
+        "style": "Sour - Fruited",
+        "abv": 4.5
       },
       {
         "name": "EVIL MOON - TANGERINE",
@@ -753,10 +760,10 @@
     "address": "1616 George Street, Ridgewood, NY 11385",
     "note": "Verified from the rendered, location-specific draft menu with Playwright. Packaged drinks are excluded.",
     "parserVersion": "tapbound-browser-3",
-    "contentChecksum": "d46f2e1ef348f2acd2366d021f8eb2de9784e6262c9aef57840e7b336206ae00",
+    "contentChecksum": "9b3eea2a4e5a18f3a3847dd143b0a9f850116aafa3ae647611d6ac4ebcb59ffd",
     "menuSource": "https://eviltwin.nyc/location/ridgewood-taproom/",
     "description": null,
-    "browserVerifiedAt": "2026-10-16T14:53:59.979Z",
+    "browserVerifiedAt": "2026-10-17T13:45:29.790Z",
     "detailEvidence": "https://eviltwin.nyc/location/ridgewood-taproom/"
   },
   {
@@ -768,9 +775,9 @@
     "addressEvidence": "990 Metropolitan Ave",
     "displayAddress": "990 Metropolitan Avenue, Brooklyn, NY 11211",
     "hoursEvidence": "Monday 2pm – 10pm Tuesday 2pm – 10pm Wednesday 2pm – 10pm Thursday 2pm – 10pm Friday 12pm – 12am Saturday 12pm – 12am Sunday 12pm – 8pm",
-    "checkedAt": "2026-10-16T14:54:04.304Z",
-    "verifiedAt": "2026-10-16T14:54:04.304Z",
-    "menuVerifiedAt": "2026-10-16T14:54:04.304Z",
+    "checkedAt": "2026-10-17T13:45:33.699Z",
+    "verifiedAt": "2026-10-17T13:45:33.699Z",
+    "menuVerifiedAt": "2026-10-17T13:45:33.699Z",
     "status": "verified",
     "image": "https://craftpeak-cooler-images.imgix.net/grimm-artisanal-ales/Taproom-Downstairs-Space_Private-Event_Setelin-2024-14-1.jpg?auto=compress%2Cformat&fit=scale&h=1463&ixlib=php-3.3.1&w=2048&wpsize=2048x2048&s=37b642429694ccec0e71762d2ec2d2ff",
     "beers": [
@@ -825,19 +832,9 @@
         "abv": 7
       },
       {
-        "name": "Crown Kolsch",
-        "style": "Ale",
-        "abv": 5
-      },
-      {
         "name": "Today's Special Extra Citra",
         "style": "American Pale Ale",
         "abv": 5.5
-      },
-      {
-        "name": "Tesseract",
-        "style": "Double IPA",
-        "abv": 8
       },
       {
         "name": "Wild Blueberry Pop!",
@@ -848,16 +845,6 @@
         "name": "Shiny Side",
         "style": "IPA",
         "abv": 7.3
-      },
-      {
-        "name": "Gold Standard",
-        "style": "Nitro Cream Ale",
-        "abv": 5
-      },
-      {
-        "name": "Lumen",
-        "style": "IPA",
-        "abv": 6.4
       },
       {
         "name": "Zero Coast",
@@ -885,10 +872,10 @@
     "address": "990 Metropolitan Avenue, Brooklyn, NY 11211",
     "note": "Verified from the rendered, location-specific draft menu with Playwright. Packaged drinks are excluded.",
     "parserVersion": "tapbound-browser-3",
-    "contentChecksum": "8919c8f463b496ca2867254fef6702c0067a8514ad0f3eadfccd260f7e0eb8c7",
+    "contentChecksum": "8f97a5e25d52e875a0f884249f02de857c6765c392b41a7734f7ea4b030df8bd",
     "menuSource": "https://grimmales.com/location/taproom/",
     "description": "Production-brewery taproom with Grimm beers, Physica wines, Lala’s apizza, and a separate rooftop bar.",
-    "browserVerifiedAt": "2026-10-16T14:54:04.304Z",
+    "browserVerifiedAt": "2026-10-17T13:45:33.699Z",
     "detailEvidence": "https://grimmales.com/location/taproom/"
   },
   {
@@ -900,8 +887,8 @@
     "addressEvidence": "623 Sackett St.",
     "displayAddress": "623 Sackett Street, Brooklyn, NY 11217",
     "hoursEvidence": "Mon-Thurs: 2-10pm Friday: 2pm-midnight Saturday: 12-midnight Sunday: 12-9pm",
-    "checkedAt": "2026-10-16T14:54:08.910Z",
-    "verifiedAt": "2026-10-16T14:54:08.910Z",
+    "checkedAt": "2026-10-17T13:45:37.830Z",
+    "verifiedAt": "2026-10-17T13:45:37.830Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://images.squarespace-cdn.com/content/v1/5784fb8829687fbea45f08d1/eecd26e7-9dff-4a86-ad86-4c6c873a90f3/Wild+East+Taproom?format=1500w",
@@ -914,7 +901,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.wildeastbrewing.com/",
     "description": "European-inspired lagers, hop-forward beers, and mixed fermentation, with indoor and outdoor seating. Food pop-ups generally run Friday–Sunday.",
-    "browserVerifiedAt": "2026-10-16T14:54:08.910Z",
+    "browserVerifiedAt": "2026-10-17T13:45:37.830Z",
     "detailEvidence": "https://www.wildeastbrewing.com/"
   },
   {
@@ -926,9 +913,9 @@
     "addressEvidence": "814 Richmond Terrace",
     "displayAddress": "814 Richmond Terrace, Staten Island, NY 10301",
     "hoursEvidence": "Mon 12-10 p.m. Tue Closed Wed 12-10 p.m. Thu 12-10 p.m. Fri 12-11 p.m. Sat 12-11 p.m. Sun 12-10 p.m.",
-    "checkedAt": "2026-10-16T14:54:13.310Z",
-    "verifiedAt": "2026-10-16T14:54:13.310Z",
-    "menuVerifiedAt": "2026-10-16T14:57:04.264Z",
+    "checkedAt": "2026-10-17T13:45:41.840Z",
+    "verifiedAt": "2026-10-17T13:45:41.840Z",
+    "menuVerifiedAt": "2026-10-17T13:48:31.817Z",
     "status": "verified",
     "image": "https://killsboro.com/images/kills-boro-taproom-celebration-share.jpg",
     "beers": [
@@ -1015,7 +1002,7 @@
     "contentChecksum": "e7255a059fa7ce30fd45689870c1a24b1b5bc96b7acefde558f38cc2167b3452",
     "menuSource": "https://killsboro.com/online-menu",
     "description": "Brewery taproom and Knead restaurant under one roof, with Czech side-pull pours and a live draft menu.",
-    "browserVerifiedAt": "2026-10-16T14:54:13.310Z",
+    "browserVerifiedAt": "2026-10-17T13:45:41.840Z",
     "detailEvidence": "https://killsboro.com/"
   },
   {
@@ -1024,8 +1011,8 @@
     "borough": "Manhattan",
     "neighborhood": "Harlem",
     "source": "https://www.harlembrewing.com/",
-    "checkedAt": "2026-10-16T14:52:01.193Z",
-    "verifiedAt": "2026-10-16T14:52:01.193Z",
+    "checkedAt": "2026-10-17T13:43:49.656Z",
+    "verifiedAt": "2026-10-17T13:43:49.656Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://d3ciwvs59ifrt8.cloudfront.net/a02e5a7a-d7d4-4460-b933-6a0c761e7ef1/f09c9e82-545a-461a-bbe9-3a7e2d32fdba.jpg",
@@ -1046,11 +1033,11 @@
     "neighborhood": "Manhattan",
     "source": "https://www.browngirlsbrew.com/",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:01.754Z",
-    "verifiedAt": "2026-10-16T14:52:01.754Z",
+    "checkedAt": "2026-10-17T13:43:50.356Z",
+    "verifiedAt": "2026-10-17T13:43:50.356Z",
     "menuVerifiedAt": null,
     "status": "verified",
-    "image": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tNojJDQj7YUiy1gvYbyjzpFSExwiA60cktCmTnDyYmnH0eQZr3ginZ4pzyqrlKT-vP3qelzAVi_-tTLuEZWiSGiuvwM_ULCl2sI5mSbscedr9Q6W9ZZLcHg3BwxEVVfFdVmG4d64Du-wj_V0SbjDifuO3Tx6bUB9RCgYu-t-8DmwHnRiKY2NqaBrIAV5Y=w16383",
+    "image": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vqM1EcDcw73pqO5TKttjzO-t9Bila_sPT9RrBV6GZhjfcBobEX-m6kd1EQuXa-aAajFnbncXBPbEYnd_pcWcYMbQl-VEnVrZUPeGGWDq57UV2hh85ZfKetWMqYnSkS9Hk7lP8yM1PxelTqZf8gYK9KU9ha58yak6yHRY9jpPvsjhgl-j8ETwAeEn66WIo=w16383",
     "beers": [],
     "tapStatus": "unavailable",
     "hours": null,
@@ -1071,8 +1058,8 @@
     "addressEvidence": "424-426 W 54th St",
     "displayAddress": "424-426 West 54th Street, New York, NY 10019",
     "hoursEvidence": "Monday Closed Tuesday Closed Wednesday Closed Thursday 4:00pm - 10:00pm Friday 4:00pm - 10:00pm Saturday 2:00pm - 8:00pm Sunday 2:00pm - 8:00pm",
-    "checkedAt": "2026-10-16T14:54:25.542Z",
-    "verifiedAt": "2026-10-16T14:54:25.542Z",
+    "checkedAt": "2026-10-17T13:45:54.163Z",
+    "verifiedAt": "2026-10-17T13:45:54.163Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1085,7 +1072,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.simplebrewingcompany.org/",
     "description": "A community-focused taproom inside Prime Produce with writing groups, open mic nights, and locally brewed beers.",
-    "browserVerifiedAt": "2026-10-16T14:54:25.542Z",
+    "browserVerifiedAt": "2026-10-17T13:45:54.163Z",
     "detailEvidence": "https://www.simplebrewingcompany.org/"
   },
   {
@@ -1095,7 +1082,7 @@
     "neighborhood": "Manhattan",
     "source": "https://www.spicymoonnyc.com/locations",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:02.481Z",
+    "checkedAt": "2026-10-17T13:43:51.487Z",
     "verifiedAt": null,
     "menuVerifiedAt": null,
     "status": "unavailable",
@@ -1117,8 +1104,8 @@
     "neighborhood": "Staten Island",
     "source": "https://madlovebeer.com/",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:03.102Z",
-    "verifiedAt": "2026-10-16T14:52:03.102Z",
+    "checkedAt": "2026-10-17T13:43:51.666Z",
+    "verifiedAt": "2026-10-17T13:43:51.666Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1139,8 +1126,8 @@
     "neighborhood": "Queens",
     "source": "https://www.adaptbeerco.com/meet-the-founders",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:03.417Z",
-    "verifiedAt": "2026-10-16T14:52:03.417Z",
+    "checkedAt": "2026-10-17T13:43:51.949Z",
+    "verifiedAt": "2026-10-17T13:43:51.949Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1164,8 +1151,8 @@
     "addressEvidence": "1535 Decatur Street",
     "displayAddress": "1535 Decatur Street, Ridgewood, Queens, NY 11385",
     "hoursEvidence": "QUEENS: Wed.-Friday: 5pm-11pmSaturday: 1pm-12amSunday: 1pm-10pm",
-    "checkedAt": "2026-10-16T14:52:04.143Z",
-    "verifiedAt": "2026-10-16T14:52:04.143Z",
+    "checkedAt": "2026-10-17T13:43:52.300Z",
+    "verifiedAt": "2026-10-17T13:43:52.300Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1186,8 +1173,8 @@
     "neighborhood": "Queens",
     "source": "https://www.focalpoint.beer",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:04.549Z",
-    "verifiedAt": "2026-10-16T14:52:04.549Z",
+    "checkedAt": "2026-10-17T13:43:52.450Z",
+    "verifiedAt": "2026-10-17T13:43:52.450Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1208,7 +1195,7 @@
     "neighborhood": "Queens",
     "source": "https://rockawaybrewco.com",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:05.074Z",
+    "checkedAt": "2026-10-17T13:43:52.579Z",
     "verifiedAt": null,
     "menuVerifiedAt": null,
     "status": "unavailable",
@@ -1230,7 +1217,7 @@
     "neighborhood": "Queens",
     "source": "https://singlecut.com",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:11.538Z",
+    "checkedAt": "2026-10-17T13:43:59.311Z",
     "verifiedAt": null,
     "menuVerifiedAt": null,
     "status": "unavailable",
@@ -1252,8 +1239,8 @@
     "neighborhood": "Brooklyn",
     "source": "https://www.18thwardbrewing.com",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:11.761Z",
-    "verifiedAt": "2026-10-16T14:52:11.761Z",
+    "checkedAt": "2026-10-17T13:43:59.414Z",
+    "verifiedAt": "2026-10-17T13:43:59.414Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1274,8 +1261,8 @@
     "neighborhood": "Brooklyn",
     "source": "https://www.backhomebeer.com",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:12.093Z",
-    "verifiedAt": "2026-10-16T14:52:12.093Z",
+    "checkedAt": "2026-10-17T13:43:59.541Z",
+    "verifiedAt": "2026-10-17T13:43:59.541Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1299,8 +1286,8 @@
     "addressEvidence": "1 Wythe Ave",
     "displayAddress": "1 Wythe Avenue, Brooklyn, NY 11249",
     "hoursEvidence": "Our Williamsburg home is temporarily closed while we get everything into place at 1 Wythe Ave.",
-    "checkedAt": "2026-10-16T14:52:12.846Z",
-    "verifiedAt": "2026-10-16T14:52:12.846Z",
+    "checkedAt": "2026-10-17T13:43:59.846Z",
+    "verifiedAt": "2026-10-17T13:43:59.846Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://brooklynbrewery.com/wp-content/uploads/2019/12/bb_defender_launch_2904-scaled.jpg",
@@ -1321,8 +1308,8 @@
     "neighborhood": "Brooklyn",
     "source": "https://www.brooklynkura.com?gclid=CjwKCAjw5MOlBhBTEiwAAJ8e1tFTQS3SlSWYo_ocVkFdWTc8RHDg60sJFysbiRqKJPfcW116IcLa5xoCMSwQAvD_BwE",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:13.456Z",
-    "verifiedAt": "2026-10-16T14:52:13.456Z",
+    "checkedAt": "2026-10-17T13:44:00.168Z",
+    "verifiedAt": "2026-10-17T13:44:00.168Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1343,8 +1330,8 @@
     "neighborhood": "Brooklyn",
     "source": "https://lovedykebeer.com#",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:13.919Z",
-    "verifiedAt": "2026-10-16T14:52:13.919Z",
+    "checkedAt": "2026-10-17T13:44:00.663Z",
+    "verifiedAt": "2026-10-17T13:44:00.663Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1368,9 +1355,9 @@
     "addressEvidence": "545 Johnson Ave",
     "displayAddress": "545 Johnson Avenue, Brooklyn, NY 11237",
     "hoursEvidence": "Mon & Tue Closed Wed & Thu 4 - 11pm Friday 2pm - midnight Saturday 12pm - midnight Sunday 12pm -10pm",
-    "checkedAt": "2026-10-16T14:52:16.563Z",
-    "verifiedAt": "2026-10-16T14:52:16.563Z",
-    "menuVerifiedAt": "2026-10-16T14:52:16.563Z",
+    "checkedAt": "2026-10-17T13:44:02.591Z",
+    "verifiedAt": "2026-10-17T13:44:02.591Z",
+    "menuVerifiedAt": "2026-10-17T13:44:02.591Z",
     "status": "verified",
     "image": "https://eckhartbeer.com/wp-content/uploads/2025/12/eckhart_web-prev-1-scaled.jpg",
     "beers": [
@@ -1444,8 +1431,8 @@
     "addressEvidence": "52 34th St",
     "displayAddress": "52 34th Street, Brooklyn, NY 11232",
     "hoursEvidence": "Tue-Thur 1pm-9pm Fri 1pm-10pm Sat noon-10pm Sun noon-9pm Monday closed except for holidays",
-    "checkedAt": "2026-10-16T14:55:02.712Z",
-    "verifiedAt": "2026-10-16T14:55:02.712Z",
+    "checkedAt": "2026-10-17T13:46:29.752Z",
+    "verifiedAt": "2026-10-17T13:46:29.752Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1458,7 +1445,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.endlesslifebrewing.com/",
     "description": "Endless Life now makes and pours its beers at Gun Hill Publick House in Industry City.",
-    "browserVerifiedAt": "2026-10-16T14:55:02.712Z",
+    "browserVerifiedAt": "2026-10-17T13:46:29.752Z",
     "detailEvidence": "https://www.endlesslifebrewing.com/"
   },
   {
@@ -1468,7 +1455,7 @@
     "neighborhood": "Brooklyn",
     "source": "https://www.farm.one/brew-lab",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:18.213Z",
+    "checkedAt": "2026-10-17T13:44:02.877Z",
     "verifiedAt": null,
     "menuVerifiedAt": null,
     "status": "unavailable",
@@ -1490,8 +1477,8 @@
     "neighborhood": "Brooklyn",
     "source": "https://fiveboroughs.com",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:24.353Z",
-    "verifiedAt": "2026-10-16T14:52:24.353Z",
+    "checkedAt": "2026-10-17T13:44:08.937Z",
+    "verifiedAt": "2026-10-17T13:44:08.937Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1515,8 +1502,8 @@
     "addressEvidence": "574 President Street",
     "displayAddress": "574 President Street, Brooklyn, NY 11215",
     "hoursEvidence": "Mondays: Closed Tuesday-Thursday: 10am - 10pm Friday & Saturday: 12pm - 11pm Sunday: 12pm - 8pm",
-    "checkedAt": "2026-10-16T14:55:23.109Z",
-    "verifiedAt": "2026-10-16T14:55:23.109Z",
+    "checkedAt": "2026-10-17T13:46:49.737Z",
+    "verifiedAt": "2026-10-17T13:46:49.737Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1529,7 +1516,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://foreverhomebrewing.com/?srsltid=AfmBOopsFUD9BVtzrm1rdygAlnYIxvm4gsHI4QiLPjOcenjcOSSZSNWu",
     "description": "A New York farm brewery, microbrewery, and homebrewing shop sharing one location. Published hours are the shared shop hours; confirm taproom service before visiting.",
-    "browserVerifiedAt": "2026-10-16T14:55:23.109Z",
+    "browserVerifiedAt": "2026-10-17T13:46:49.737Z",
     "detailEvidence": "https://foreverhomebrewing.com/?srsltid=AfmBOopsFUD9BVtzrm1rdygAlnYIxvm4gsHI4QiLPjOcenjcOSSZSNWu"
   },
   {
@@ -1541,9 +1528,9 @@
     "directorySource": "https://www.nycbrewed.com/breweries",
     "addressEvidence": "52 34th Street",
     "displayAddress": "52 34th Street, Brooklyn, NY 11232",
-    "checkedAt": "2026-10-16T14:55:27.221Z",
-    "verifiedAt": "2026-10-16T14:55:27.221Z",
-    "menuVerifiedAt": "2026-10-16T14:57:12.222Z",
+    "checkedAt": "2026-10-17T13:46:54.341Z",
+    "verifiedAt": "2026-10-17T13:46:54.341Z",
+    "menuVerifiedAt": "2026-10-17T13:48:39.758Z",
     "status": "verified",
     "image": null,
     "beers": [
@@ -1636,7 +1623,7 @@
     "contentChecksum": "471e5b34a95c10cbf9cbf661615eeee4d9f59ee03106c12a9c06a95db5817df6",
     "menuSource": "https://www.gunhillpublickhouse.com/drinks-menu",
     "description": "Gun Hill’s Brooklyn Publick House in Industry City; the brewery confirms it is no longer based in the Bronx.",
-    "browserVerifiedAt": "2026-10-16T14:55:27.221Z",
+    "browserVerifiedAt": "2026-10-17T13:46:54.341Z",
     "detailEvidence": "https://www.gunhillbrewing.com/"
   },
   {
@@ -1646,8 +1633,8 @@
     "neighborhood": "Brooklyn",
     "source": "https://www.katosakeworks.com",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:25.750Z",
-    "verifiedAt": "2026-10-16T14:52:25.750Z",
+    "checkedAt": "2026-10-17T13:44:09.757Z",
+    "verifiedAt": "2026-10-17T13:44:09.757Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1668,8 +1655,8 @@
     "neighborhood": "Brooklyn",
     "source": "https://www.kegandlanternbrooklyn.com",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:26.349Z",
-    "verifiedAt": "2026-10-16T14:52:26.349Z",
+    "checkedAt": "2026-10-17T13:44:09.907Z",
+    "verifiedAt": "2026-10-17T13:44:09.907Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://images.getbento.com/accounts/cf863db0e243bac78adbc3504006eb47/media/images/36769KL_1.png?w=1200&fit=fill&auto=compress,format&cs=origin&h=600&bg=EDEDF1&pad=100",
@@ -1690,7 +1677,7 @@
     "neighborhood": "Brooklyn",
     "source": "https://www.kcbcbeer.com",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:26.551Z",
+    "checkedAt": "2026-10-17T13:44:10.016Z",
     "verifiedAt": null,
     "menuVerifiedAt": null,
     "status": "unavailable",
@@ -1712,8 +1699,8 @@
     "neighborhood": "Brooklyn",
     "source": "https://momentumbrew.com/",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:32.773Z",
-    "verifiedAt": "2026-10-16T14:52:32.773Z",
+    "checkedAt": "2026-10-17T13:44:16.145Z",
+    "verifiedAt": "2026-10-17T13:44:16.145Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1737,8 +1724,8 @@
     "addressEvidence": "8 WILSON AVE",
     "displayAddress": "8 Wilson Avenue, Brooklyn, NY 11237",
     "hoursEvidence": "HOURS: 11 -11 DAILY",
-    "checkedAt": "2026-10-16T14:55:44.935Z",
-    "verifiedAt": "2026-10-16T14:55:44.935Z",
+    "checkedAt": "2026-10-17T13:47:13.150Z",
+    "verifiedAt": "2026-10-17T13:47:13.150Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1751,7 +1738,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://niteglowbeer.com/pages/locations",
     "description": "An all-day brewery taproom at 8 Wilson Avenue.",
-    "browserVerifiedAt": "2026-10-16T14:55:44.935Z",
+    "browserVerifiedAt": "2026-10-17T13:47:13.150Z",
     "detailEvidence": "https://niteglowbeer.com/pages/locations"
   },
   {
@@ -1761,8 +1748,8 @@
     "neighborhood": "Brooklyn",
     "source": "https://noirbrewing.com/",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:33.932Z",
-    "verifiedAt": "2026-10-16T14:52:33.932Z",
+    "checkedAt": "2026-10-17T13:44:17.529Z",
+    "verifiedAt": "2026-10-17T13:44:17.529Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1783,7 +1770,7 @@
     "neighborhood": "Brooklyn",
     "source": "https://www.randolphbeer.com",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:37.438Z",
+    "checkedAt": "2026-10-17T13:44:18.181Z",
     "verifiedAt": null,
     "menuVerifiedAt": null,
     "status": "unavailable",
@@ -1808,8 +1795,8 @@
     "addressEvidence": "245 S 1st St",
     "displayAddress": "245 South 1st Street, Brooklyn, NY 11211",
     "hoursEvidence": "Monday | 3–11 PM Tuesday | 3–11 PM Wednesday | 3–11 PM Thursday | 3–11 PM Friday | 3 PM–12 AM Saturday | 1 PM–12 AM Sunday | 1–9 PM",
-    "checkedAt": "2026-10-16T14:55:59.928Z",
-    "verifiedAt": "2026-10-16T14:55:59.928Z",
+    "checkedAt": "2026-10-17T13:47:30.119Z",
+    "verifiedAt": "2026-10-17T13:47:30.119Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://images.squarespace-cdn.com/content/v1/66b2828fc6f9774940383b6b/c221b8a8-f451-4c9c-9636-e90150b6fc9f/RTB+Logo-01.png?format=1500w",
@@ -1822,7 +1809,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.roundtablebrewery.com/brooklyn",
     "description": "A Williamsburg taproom featuring traditional and mixed-fermentation beers. Its public beer menu does not consistently label serving format, so it is not treated as a verified draft list.",
-    "browserVerifiedAt": "2026-10-16T14:55:59.928Z",
+    "browserVerifiedAt": "2026-10-17T13:47:30.119Z",
     "detailEvidence": "https://www.roundtablebrewery.com/brooklyn"
   },
   {
@@ -1832,8 +1819,8 @@
     "neighborhood": "Brooklyn",
     "source": "https://saltfieldsbrewing.com/",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:44.416Z",
-    "verifiedAt": "2026-10-16T14:52:44.416Z",
+    "checkedAt": "2026-10-17T13:44:24.438Z",
+    "verifiedAt": "2026-10-17T13:44:24.438Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://saltfieldsbrewing.com/og-image.png",
@@ -1854,8 +1841,8 @@
     "neighborhood": "Brooklyn",
     "source": "https://sixpoint.com",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:44.688Z",
-    "verifiedAt": "2026-10-16T14:52:44.688Z",
+    "checkedAt": "2026-10-17T13:44:24.545Z",
+    "verifiedAt": "2026-10-17T13:44:24.545Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1876,7 +1863,7 @@
     "neighborhood": "Brooklyn",
     "source": "https://www.circabrewing.co",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:45.211Z",
+    "checkedAt": "2026-10-17T13:44:24.893Z",
     "verifiedAt": null,
     "menuVerifiedAt": null,
     "status": "unavailable",
@@ -1901,8 +1888,8 @@
     "addressEvidence": "185 VAN DYKE STREET",
     "displayAddress": "185 Van Dyke Street, Brooklyn, NY 11231",
     "hoursEvidence": "Monday-Thursday 2-10 pm Friday-Saturday 12-11 pm Sunday 12-9 pm",
-    "checkedAt": "2026-10-16T14:56:11.340Z",
-    "verifiedAt": "2026-10-16T14:56:11.340Z",
+    "checkedAt": "2026-10-17T13:47:40.224Z",
+    "verifiedAt": "2026-10-17T13:47:40.224Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://images.squarespace-cdn.com/content/v1/6406349731f96111d7d4c951/afa88bcc-d3a1-46b8-a884-c251554cef30/strong+rope.png?format=1500w",
@@ -1915,7 +1902,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.strongropebrewery.com/taproom",
     "description": "Waterfront Red Hook brewery and patio using New York State ingredients. Its former Gowanus taproom closed March 28, 2026. Closed October 16, 2026 for a private event.",
-    "browserVerifiedAt": "2026-10-16T14:56:11.340Z",
+    "browserVerifiedAt": "2026-10-17T13:47:40.224Z",
     "detailEvidence": "https://www.strongropebrewery.com/taproom"
   },
   {
@@ -1925,8 +1912,8 @@
     "neighborhood": "Brooklyn",
     "source": "https://www.taleabeer.com",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:51.204Z",
-    "verifiedAt": "2026-10-16T14:52:51.204Z",
+    "checkedAt": "2026-10-17T13:44:25.856Z",
+    "verifiedAt": "2026-10-17T13:44:25.856Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1947,8 +1934,8 @@
     "neighborhood": "Brooklyn",
     "source": "https://www.thetestbrewery.com/",
     "directorySource": "https://www.nycbrewed.com/breweries",
-    "checkedAt": "2026-10-16T14:52:51.583Z",
-    "verifiedAt": "2026-10-16T14:52:51.583Z",
+    "checkedAt": "2026-10-17T13:44:26.246Z",
+    "verifiedAt": "2026-10-17T13:44:26.246Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": null,
@@ -1971,8 +1958,8 @@
     "addressEvidence": "545 President St",
     "displayAddress": "545 President Street, Brooklyn, NY",
     "hoursEvidence": "mon-tue: 2pm-10pm wed-thu: 12pm-10pm fri-sat: 12pm-12am sun: 12pm-8pm",
-    "checkedAt": "2026-10-16T14:53:38.050Z",
-    "verifiedAt": "2026-10-16T14:53:38.050Z",
+    "checkedAt": "2026-10-17T13:45:10.111Z",
+    "verifiedAt": "2026-10-17T13:45:10.111Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://freight.cargo.site/w/1200/i/F1856499129424979032945058861447/Taproom_BK_02.jpg",
@@ -1985,7 +1972,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://finbackbrewery.com/spaces",
     "description": "Pilot brewing, in-house Halftone spirits, coffee roasting, and Dumpling Up Asian pub food. Published beer menus are dated 7/9 without a confirmed year; current draft availability is unverified.",
-    "browserVerifiedAt": "2026-10-16T14:53:38.050Z",
+    "browserVerifiedAt": "2026-10-17T13:45:10.111Z",
     "detailEvidence": "https://finbackbrewery.com/spaces"
   },
   {
@@ -1997,8 +1984,8 @@
     "addressEvidence": "29-37 41st Ave",
     "displayAddress": "29-37 41st Avenue, Long Island City, NY",
     "hoursEvidence": "mon-wed: 3pm-10pm thu: 12pm-10pm fri-sat: 12pm-12am sun: 12pm-8pm",
-    "checkedAt": "2026-10-16T14:53:38.050Z",
-    "verifiedAt": "2026-10-16T14:53:38.050Z",
+    "checkedAt": "2026-10-17T13:45:10.111Z",
+    "verifiedAt": "2026-10-17T13:45:10.111Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://freight.cargo.site/w/1200/i/F1856499129424979032945058861447/Taproom_BK_02.jpg",
@@ -2011,7 +1998,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://finbackbrewery.com/spaces",
     "description": "A mixed-culture fermentation studio with natural wines, cocktails, and Dumpling Up LIC. Published beer menus are dated 7/9 without a confirmed year; current draft availability is unverified.",
-    "browserVerifiedAt": "2026-10-16T14:53:38.050Z",
+    "browserVerifiedAt": "2026-10-17T13:45:10.111Z",
     "detailEvidence": "https://finbackbrewery.com/spaces"
   },
   {
@@ -2023,12 +2010,17 @@
     "addressEvidence": "43 Main St",
     "displayAddress": "43 Main Street, Brooklyn, NY 11201",
     "hoursEvidence": "Monday 12pm – 11pm Tuesday 12pm – 11pm Wednesday 12pm – 11pm Thursday 12pm – 11pm Friday 12pm – 1am Saturday 12pm – 1am Sunday 12pm – 10pm",
-    "checkedAt": "2026-10-16T14:56:21.394Z",
-    "verifiedAt": "2026-10-16T14:56:21.394Z",
-    "menuVerifiedAt": "2026-10-16T14:56:21.394Z",
+    "checkedAt": "2026-10-17T13:47:50.847Z",
+    "verifiedAt": "2026-10-17T13:47:50.847Z",
+    "menuVerifiedAt": "2026-10-17T13:47:50.847Z",
     "status": "verified",
     "image": "https://craftpeak-cooler-images.imgix.net/evil-twin-brewing-nyc/DSC03743.jpg?auto=compress%2Cformat&ixlib=php-3.3.1&s=fc6bd45ca18e7d8c1e3a49f3f4fa0987",
     "beers": [
+      {
+        "name": "GREENHOUSE FESTBIER LEICHT CONDITIONED ON AMERICAN OAK FOUDRE",
+        "style": "Festbier",
+        "abv": 4.5
+      },
       {
         "name": "GREENHOUSE WEST COAST PILS CONDITIONED ON AMERICAN OAK FOUDRE",
         "style": "Pilsner - American",
@@ -2050,19 +2042,19 @@
         "abv": 6.5
       },
       {
-        "name": "EVEN MORE HIPSTERISH",
-        "style": "IPA - New England / Hazy",
-        "abv": 7
-      },
-      {
-        "name": "TIAODONGWHOBUTNOWIT’SEVENHAZIERTHANYOUREMEMBER",
-        "style": "IPA - New England / Hazy",
-        "abv": 6.5
+        "name": "YOUR HAZY PHASE WAS CUTE WHILE IT LASTED",
+        "style": "IPA - American",
+        "abv": 6.8
       },
       {
         "name": "WHY DON’T WE JUST TAKE THE SUBWAY TO JFK INSTEAD?",
         "style": "IPA - Imperial / Double New England / Hazy",
         "abv": 8
+      },
+      {
+        "name": "CHOPPING WOOD",
+        "style": "IPA - Imperial / Double New England / Hazy",
+        "abv": 8.5
       },
       {
         "name": "I WISH DUMBO HAD MORE TOURISTS, IT’S WAY TOO QUIET UNDER THE BRIDGE",
@@ -2073,6 +2065,11 @@
         "name": "TICKETS TO THE SUNSET",
         "style": "IPA - Triple New England / Hazy",
         "abv": 10
+      },
+      {
+        "name": "Even More Straight Outta the Marshmallow Laboratory",
+        "style": "IPA - Triple New England / Hazy",
+        "abv": 10.2
       },
       {
         "name": "COMRADE MARLON",
@@ -2125,10 +2122,10 @@
     "address": "43 Main Street, Brooklyn, NY 11201",
     "note": "Verified from the rendered, location-specific draft menu with Playwright. Packaged drinks are excluded.",
     "parserVersion": "tapbound-browser-3",
-    "contentChecksum": "7baaf0e5039c63ddb62311bf41a20060d0cd664a05fc1cdccb98c24500914176",
+    "contentChecksum": "2a7566c4d67f5f5cdffb142f1540443c5ec05e442f2a42f974abcec22f11764a",
     "menuSource": "https://eviltwin.nyc/location/dumbo-taproom/",
     "description": null,
-    "browserVerifiedAt": "2026-10-16T14:56:21.394Z",
+    "browserVerifiedAt": "2026-10-17T13:47:50.847Z",
     "detailEvidence": "https://eviltwin.nyc/location/dumbo-taproom/"
   },
   {
@@ -2140,8 +2137,8 @@
     "addressEvidence": "97 Nassau Ave",
     "displayAddress": "97 Nassau Avenue, Brooklyn, NY 11222",
     "hoursEvidence": "Sunday: 11:00 AM – 2:00 AM Monday: 11:00 AM – 2:00 AM Tuesday: 11:00 AM – 2:00 AM Wednesday: 11:00 AM – 2:00 AM Thursday: 11:00 AM – 2:00 AM Friday: 11:00 AM – 4:00 AM Saturday: 11:00 AM – 4:00 AM",
-    "checkedAt": "2026-10-16T14:56:25.259Z",
-    "verifiedAt": "2026-10-16T14:56:25.259Z",
+    "checkedAt": "2026-10-17T13:47:54.553Z",
+    "verifiedAt": "2026-10-17T13:47:54.553Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://images.getbento.com/accounts/cf863db0e243bac78adbc3504006eb47/media/MmMtaizJQA2KnwwhIPR8_Keg_Lantern_Greenpoint_3375.jpg?w=1200&fit=crop&auto=compress,format&cs=origin&h=600",
@@ -2154,7 +2151,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.kegandlanternbrooklyn.com/location/the-keg-and-lantern-greenpoint/",
     "description": "Neighborhood brewpub with food and rotating draft beer.",
-    "browserVerifiedAt": "2026-10-16T14:56:25.259Z",
+    "browserVerifiedAt": "2026-10-17T13:47:54.553Z",
     "detailEvidence": "https://www.kegandlanternbrooklyn.com/location/the-keg-and-lantern-greenpoint/"
   },
   {
@@ -2166,8 +2163,8 @@
     "addressEvidence": "104 South 4th St",
     "displayAddress": "104 South 4th Street, Brooklyn, NY 11249",
     "hoursEvidence": "Sunday: 11:00 AM – 12:00 AM Monday: 12:00 PM – 12:00 AM Tuesday: 3:00 PM – 12:00 AM Wednesday: 3:00 PM – 12:00 AM Thursday: 3:00 PM – 12:00 AM Friday: 12:00 PM – 2:00 AM Saturday: 11:00 AM – 2:00 AM",
-    "checkedAt": "2026-10-16T14:56:28.994Z",
-    "verifiedAt": "2026-10-16T14:56:28.994Z",
+    "checkedAt": "2026-10-17T13:47:58.302Z",
+    "verifiedAt": "2026-10-17T13:47:58.302Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://images.getbento.com/accounts/cf863db0e243bac78adbc3504006eb47/media/images/88390image_6483441_4.JPG?w=1200&fit=crop&auto=compress,format&cs=origin&h=600",
@@ -2180,7 +2177,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.kegandlanternbrooklyn.com/location/southside-williamsburg/",
     "description": "Neighborhood brewpub with food and rotating draft beer.",
-    "browserVerifiedAt": "2026-10-16T14:56:28.994Z",
+    "browserVerifiedAt": "2026-10-17T13:47:58.302Z",
     "detailEvidence": "https://www.kegandlanternbrooklyn.com/location/southside-williamsburg/"
   },
   {
@@ -2192,8 +2189,8 @@
     "addressEvidence": "29 7th Ave S",
     "displayAddress": "29 7th Avenue South, New York, NY 10014",
     "hoursEvidence": "Monday: CLOSED Tuesday through Thursday 12:00 PM – 12:00 AM Friday & Saturday 12:00 PM – 1:00 AM Sunday: 12:00 PM – 10:00 PM",
-    "checkedAt": "2026-10-16T14:56:32.677Z",
-    "verifiedAt": "2026-10-16T14:56:32.677Z",
+    "checkedAt": "2026-10-17T13:48:01.985Z",
+    "verifiedAt": "2026-10-17T13:48:01.985Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://images.getbento.com/accounts/cf863db0e243bac78adbc3504006eb47/media/images/66660DSC03232.jpg?w=1200&fit=crop&auto=compress,format&cs=origin&h=600",
@@ -2206,7 +2203,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.kegandlanternbrooklyn.com/location/west-village/",
     "description": "Neighborhood brewpub with food and rotating draft beer.",
-    "browserVerifiedAt": "2026-10-16T14:56:32.677Z",
+    "browserVerifiedAt": "2026-10-17T13:48:01.985Z",
     "detailEvidence": "https://www.kegandlanternbrooklyn.com/location/west-village/"
   },
   {
@@ -2217,8 +2214,8 @@
     "source": "https://www.kegandlanternbrooklyn.com/location/the-keg-and-lantern-red-hook/",
     "addressEvidence": "158 Beard St",
     "displayAddress": "158 Beard Street, Brooklyn, NY 11231",
-    "checkedAt": "2026-10-16T14:56:36.351Z",
-    "verifiedAt": "2026-10-16T14:56:36.351Z",
+    "checkedAt": "2026-10-17T13:48:05.643Z",
+    "verifiedAt": "2026-10-17T13:48:05.643Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://images.getbento.com/accounts/cf863db0e243bac78adbc3504006eb47/media/2fPPyQiVQe6Eb0Jdv4GD_Keg_Lantern_RedHook_3275.jpg?w=1200&fit=crop&auto=compress,format&cs=origin&h=600",
@@ -2231,7 +2228,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.kegandlanternbrooklyn.com/location/the-keg-and-lantern-red-hook/",
     "description": "Red Hook brewpub with food specials and published kitchen hours.",
-    "browserVerifiedAt": "2026-10-16T14:56:36.351Z",
+    "browserVerifiedAt": "2026-10-17T13:48:05.643Z",
     "detailEvidence": "https://www.kegandlanternbrooklyn.com/location/the-keg-and-lantern-red-hook/"
   },
   {
@@ -2243,8 +2240,8 @@
     "addressEvidence": "87 RICHARDSON STREET",
     "displayAddress": "87 Richardson Street, Brooklyn, NY 11211",
     "hoursEvidence": "MONDAY-WEDNESDAY 10AM-9PM THURSDAY-SATURDAY 10AM-10PM SUNDAY: 11AM - 9PM",
-    "checkedAt": "2026-10-16T14:56:40.036Z",
-    "verifiedAt": "2026-10-16T14:56:40.036Z",
+    "checkedAt": "2026-10-17T13:48:09.332Z",
+    "verifiedAt": "2026-10-17T13:48:09.332Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://www.taleabeer.com/cdn/shop/files/Full_Taproom_2.jpg?crop=center&height=640&v=1744904064&width=640",
@@ -2257,7 +2254,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.taleabeer.com/pages/visit-us",
     "description": "TALEA taproom with beer, wine, cocktails, and food. Published opening hours may include coffee service before beer service.",
-    "browserVerifiedAt": "2026-10-16T14:56:40.036Z",
+    "browserVerifiedAt": "2026-10-17T13:48:09.332Z",
     "detailEvidence": "https://www.taleabeer.com/pages/visit-us"
   },
   {
@@ -2269,8 +2266,8 @@
     "addressEvidence": "441 AMSTERDAM AVENUE",
     "displayAddress": "441 Amsterdam Avenue, New York, NY 10024",
     "hoursEvidence": "MONDAY- WEDNESDAY: 10AM-10PM THURSDAY: 10AM-11PM FIRDAY-SATURDAY: 10AM-12AM",
-    "checkedAt": "2026-10-16T14:56:40.036Z",
-    "verifiedAt": "2026-10-16T14:56:40.036Z",
+    "checkedAt": "2026-10-17T13:48:09.332Z",
+    "verifiedAt": "2026-10-17T13:48:09.332Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://www.taleabeer.com/cdn/shop/files/Full_Taproom_2.jpg?crop=center&height=640&v=1744904064&width=640",
@@ -2283,7 +2280,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.taleabeer.com/pages/visit-us",
     "description": "TALEA taproom with beer, wine, cocktails, and food. Published opening hours may include coffee service before beer service.",
-    "browserVerifiedAt": "2026-10-16T14:56:40.036Z",
+    "browserVerifiedAt": "2026-10-17T13:48:09.332Z",
     "detailEvidence": "https://www.taleabeer.com/pages/visit-us"
   },
   {
@@ -2295,8 +2292,8 @@
     "addressEvidence": "61 BERGEN STREET",
     "displayAddress": "61 Bergen Street, Brooklyn, NY 11201",
     "hoursEvidence": "MONDAY- THURSDAY 10AM-10PM FRIDAY 10AM-11PM SATURDAY: 11AM - 11PM SUNDAY: 11AM - 9PM",
-    "checkedAt": "2026-10-16T14:56:40.036Z",
-    "verifiedAt": "2026-10-16T14:56:40.036Z",
+    "checkedAt": "2026-10-17T13:48:09.332Z",
+    "verifiedAt": "2026-10-17T13:48:09.332Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://www.taleabeer.com/cdn/shop/files/Full_Taproom_2.jpg?crop=center&height=640&v=1744904064&width=640",
@@ -2309,7 +2306,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.taleabeer.com/pages/visit-us",
     "description": "TALEA taproom with beer, wine, cocktails, and food. Published opening hours may include coffee service before beer service.",
-    "browserVerifiedAt": "2026-10-16T14:56:40.036Z",
+    "browserVerifiedAt": "2026-10-17T13:48:09.332Z",
     "detailEvidence": "https://www.taleabeer.com/pages/visit-us"
   },
   {
@@ -2321,8 +2318,8 @@
     "addressEvidence": "102 CHRISTOPHER STREET",
     "displayAddress": "102 Christopher Street, New York, NY 10014",
     "hoursEvidence": "MONDAY - THURSDAY: 12PM - 10PM FRIDAY & SATURDAY: 12PM - 12AM SUNDAY: 12PM - 10PM",
-    "checkedAt": "2026-10-16T14:56:40.036Z",
-    "verifiedAt": "2026-10-16T14:56:40.036Z",
+    "checkedAt": "2026-10-17T13:48:09.332Z",
+    "verifiedAt": "2026-10-17T13:48:09.332Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://www.taleabeer.com/cdn/shop/files/Full_Taproom_2.jpg?crop=center&height=640&v=1744904064&width=640",
@@ -2335,7 +2332,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.taleabeer.com/pages/visit-us",
     "description": "TALEA taproom with beer, wine, cocktails, and food. Published opening hours may include coffee service before beer service.",
-    "browserVerifiedAt": "2026-10-16T14:56:40.036Z",
+    "browserVerifiedAt": "2026-10-17T13:48:09.332Z",
     "detailEvidence": "https://www.taleabeer.com/pages/visit-us"
   },
   {
@@ -2347,8 +2344,8 @@
     "addressEvidence": "22 WEST 40TH STREET",
     "displayAddress": "22 West 40th Street, New York, NY 10018",
     "hoursEvidence": "MONDAY & TUESDAY: 7:30AM - 9PM WEDNESDAY & THURSDAY: 7:30AM - 10PM FRIDAY: 7:30AM - 9PM SATURDAY: 7:30AM - 9PM SUNDAY: 7:30AM - 8PM",
-    "checkedAt": "2026-10-16T14:56:40.036Z",
-    "verifiedAt": "2026-10-16T14:56:40.036Z",
+    "checkedAt": "2026-10-17T13:48:09.332Z",
+    "verifiedAt": "2026-10-17T13:48:09.332Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://www.taleabeer.com/cdn/shop/files/Full_Taproom_2.jpg?crop=center&height=640&v=1744904064&width=640",
@@ -2361,7 +2358,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.taleabeer.com/pages/visit-us",
     "description": "TALEA taproom with beer, wine, cocktails, and food. Published opening hours may include coffee service before beer service.",
-    "browserVerifiedAt": "2026-10-16T14:56:40.036Z",
+    "browserVerifiedAt": "2026-10-17T13:48:09.332Z",
     "detailEvidence": "https://www.taleabeer.com/pages/visit-us"
   },
   {
@@ -2373,8 +2370,8 @@
     "addressEvidence": "160 W 32ND STREET",
     "displayAddress": "160 West 32nd Street, New York, NY 10001",
     "hoursEvidence": "MONDAY - SATURDAY: 3PM - 9PM",
-    "checkedAt": "2026-10-16T14:56:40.036Z",
-    "verifiedAt": "2026-10-16T14:56:40.036Z",
+    "checkedAt": "2026-10-17T13:48:09.332Z",
+    "verifiedAt": "2026-10-17T13:48:09.332Z",
     "menuVerifiedAt": null,
     "status": "verified",
     "image": "https://www.taleabeer.com/cdn/shop/files/Full_Taproom_2.jpg?crop=center&height=640&v=1744904064&width=640",
@@ -2387,7 +2384,7 @@
     "contentChecksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "menuSource": "https://www.taleabeer.com/pages/visit-us",
     "description": "TALEA taproom with beer, wine, cocktails, and food. Published opening hours may include coffee service before beer service.",
-    "browserVerifiedAt": "2026-10-16T14:56:40.036Z",
+    "browserVerifiedAt": "2026-10-17T13:48:09.332Z",
     "detailEvidence": "https://www.taleabeer.com/pages/visit-us"
   }
 ]
