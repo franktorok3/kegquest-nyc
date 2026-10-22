@@ -2,7 +2,7 @@
   "other-half-centre": {
     "source": "https://otherhalfbrewing.com/location/centre-street/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-10-21T15:14:33.598Z",
+    "checkedAt": "2026-10-22T15:17:07.090Z",
     "beers": {
       "double citra daydream": {
         "firstSeen": "2026-10-15T22:36:31.264Z",
@@ -137,7 +137,7 @@
   "other-half-rockefeller": {
     "source": "https://otherhalfbrewing.com/location/rockefeller-center/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-10-21T15:14:36.698Z",
+    "checkedAt": "2026-10-22T15:17:09.973Z",
     "beers": {
       "snaps": {
         "firstSeen": "2026-10-15T22:36:33.470Z",
@@ -234,13 +234,17 @@
       "escapist: mai tai": {
         "firstSeen": "2026-10-21T15:14:36.698Z",
         "kind": "addition"
+      },
+      "mini pils": {
+        "firstSeen": "2026-10-22T15:17:09.973Z",
+        "kind": "addition"
       }
     }
   },
   "eckhartbeer": {
     "source": "https://eckhartbeer.com/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-10-21T15:14:56.091Z",
+    "checkedAt": "2026-10-22T15:17:29.269Z",
     "beers": {
       "helles lager": {
         "firstSeen": "2026-10-15T22:36:40.044Z",
@@ -287,7 +291,7 @@
   "threes-gowanus": {
     "source": "https://www.beermenus.com/places/18430-threes-brewing-gowanus",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-21T15:20:12.164Z",
+    "checkedAt": "2026-10-22T15:33:00.953Z",
     "beers": {
       "threes + cellarmaker grey area": {
         "firstSeen": "2026-10-15T23:16:51.643Z",
@@ -374,7 +378,7 @@
   "flagship": {
     "source": "https://flagshipbrewery.nyc/taproom-draft-list/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-21T15:19:50.620Z",
+    "checkedAt": "2026-10-22T15:32:39.973Z",
     "beers": {
       "flagship + porterhouse wolf hound nitro": {
         "firstSeen": "2026-10-15T23:14:05.463Z",
@@ -419,13 +423,17 @@
       "threes hereafter": {
         "firstSeen": "2026-10-17T13:48:23.881Z",
         "kind": "addition"
+      },
+      "birra locale": {
+        "firstSeen": "2026-10-22T15:32:39.973Z",
+        "kind": "addition"
       }
     }
   },
   "fifth-hammer": {
     "source": "https://www.fifthhammerbrewing.com/beer-menu",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-21T15:19:55.319Z",
+    "checkedAt": "2026-10-22T15:32:44.147Z",
     "beers": {
       "paddy neverpat": {
         "firstSeen": "2026-10-15T23:14:10.209Z",
@@ -488,7 +496,7 @@
   "evil-twin": {
     "source": "https://eviltwin.nyc/location/ridgewood-taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-21T15:16:43.558Z",
+    "checkedAt": "2026-10-22T15:29:40.944Z",
     "beers": {
       "tgi oktober ’26": {
         "firstSeen": "2026-10-15T23:14:36.944Z",
@@ -579,7 +587,7 @@
   "grimm": {
     "source": "https://grimmales.com/location/taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-21T15:16:47.852Z",
+    "checkedAt": "2026-10-22T15:29:45.326Z",
     "beers": {
       "grimm weisse": {
         "firstSeen": "2026-10-15T23:14:42.903Z",
@@ -678,7 +686,7 @@
   "kills-boro": {
     "source": "https://killsboro.com/online-menu",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-21T15:19:59.636Z",
+    "checkedAt": "2026-10-22T15:32:48.422Z",
     "beers": {
       "protect ya' czech": {
         "firstSeen": "2026-10-15T23:14:45.429Z",
@@ -749,7 +757,7 @@
   "gunhillbrewing": {
     "source": "https://www.gunhillpublickhouse.com/drinks-menu",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-21T15:20:07.496Z",
+    "checkedAt": "2026-10-22T15:32:56.337Z",
     "beers": {
       "gun hill ipa": {
         "firstSeen": "2026-10-15T23:16:06.761Z",
@@ -820,7 +828,7 @@
   "evil-twin-dumbo": {
     "source": "https://eviltwin.nyc/location/dumbo-taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-21T15:19:16.824Z",
+    "checkedAt": "2026-10-22T15:32:05.798Z",
     "beers": {
       "greenhouse west coast pils conditioned on american oak foudre": {
         "firstSeen": "2026-10-15T23:14:40.647Z",
