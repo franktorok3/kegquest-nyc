@@ -2,7 +2,7 @@
   "other-half-centre": {
     "source": "https://otherhalfbrewing.com/location/centre-street/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-10-29T16:56:01.649Z",
+    "checkedAt": "2026-10-30T16:42:17.876Z",
     "beers": {
       "double citra daydream": {
         "firstSeen": "2026-10-15T22:36:31.264Z",
@@ -171,13 +171,17 @@
       "digital beams": {
         "firstSeen": "2026-10-26T16:48:02.175Z",
         "kind": "addition"
+      },
+      "shroomies": {
+        "firstSeen": "2026-10-30T16:42:17.876Z",
+        "kind": "addition"
       }
     }
   },
   "other-half-rockefeller": {
     "source": "https://otherhalfbrewing.com/location/rockefeller-center/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-10-29T16:56:04.863Z",
+    "checkedAt": "2026-10-30T16:42:21.820Z",
     "beers": {
       "snaps": {
         "firstSeen": "2026-10-15T22:36:33.470Z",
@@ -344,7 +348,7 @@
   "eckhartbeer": {
     "source": "https://eckhartbeer.com/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-10-29T16:56:27.115Z",
+    "checkedAt": "2026-10-30T16:42:43.081Z",
     "beers": {
       "helles lager": {
         "firstSeen": "2026-10-15T22:36:40.044Z",
@@ -391,7 +395,7 @@
   "threes-gowanus": {
     "source": "https://www.beermenus.com/places/18430-threes-brewing-gowanus",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-29T17:01:26.747Z",
+    "checkedAt": "2026-10-30T16:47:52.540Z",
     "beers": {
       "threes + cellarmaker grey area": {
         "firstSeen": "2026-10-15T23:16:51.643Z",
@@ -533,7 +537,7 @@
   "fifth-hammer": {
     "source": "https://www.fifthhammerbrewing.com/beer-menu",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-29T17:01:09.232Z",
+    "checkedAt": "2026-10-30T16:47:35.491Z",
     "beers": {
       "paddy neverpat": {
         "firstSeen": "2026-10-15T23:14:10.209Z",
@@ -596,7 +600,7 @@
   "evil-twin": {
     "source": "https://eviltwin.nyc/location/ridgewood-taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-29T16:58:04.974Z",
+    "checkedAt": "2026-10-30T16:44:34.756Z",
     "beers": {
       "tgi oktober ’26": {
         "firstSeen": "2026-10-15T23:14:36.944Z",
@@ -701,13 +705,29 @@
       "chopping wood": {
         "firstSeen": "2026-10-29T16:58:04.974Z",
         "kind": "addition"
+      },
+      "greenhouse mexican lager - conditioned on american oak": {
+        "firstSeen": "2026-10-30T16:44:34.756Z",
+        "kind": "addition"
+      },
+      "your hazy phase was cute while it lasted": {
+        "firstSeen": "2026-10-30T16:44:34.756Z",
+        "kind": "addition"
+      },
+      "make it fruity raspberry pomegranate": {
+        "firstSeen": "2026-10-30T16:44:34.756Z",
+        "kind": "addition"
+      },
+      "make it fruity red grape, hawthorn, pomegranate": {
+        "firstSeen": "2026-10-30T16:44:34.756Z",
+        "kind": "addition"
       }
     }
   },
   "grimm": {
     "source": "https://grimmales.com/location/taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-29T16:58:08.978Z",
+    "checkedAt": "2026-10-30T16:44:38.979Z",
     "beers": {
       "grimm weisse": {
         "firstSeen": "2026-10-15T23:14:42.903Z",
@@ -806,7 +826,7 @@
   "kills-boro": {
     "source": "https://killsboro.com/online-menu",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-29T17:01:13.868Z",
+    "checkedAt": "2026-10-30T16:47:39.754Z",
     "beers": {
       "protect ya' czech": {
         "firstSeen": "2026-10-15T23:14:45.429Z",
@@ -877,7 +897,7 @@
   "gunhillbrewing": {
     "source": "https://www.gunhillpublickhouse.com/drinks-menu",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-29T17:01:22.034Z",
+    "checkedAt": "2026-10-30T16:47:47.956Z",
     "beers": {
       "gun hill ipa": {
         "firstSeen": "2026-10-15T23:16:06.761Z",
@@ -948,7 +968,7 @@
   "evil-twin-dumbo": {
     "source": "https://eviltwin.nyc/location/dumbo-taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-10-29T17:00:28.966Z",
+    "checkedAt": "2026-10-30T16:46:57.426Z",
     "beers": {
       "greenhouse west coast pils conditioned on american oak foudre": {
         "firstSeen": "2026-10-15T23:14:40.647Z",
