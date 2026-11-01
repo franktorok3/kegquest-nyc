@@ -1,6 +1,6 @@
 {
   "source": "https://www.nycbrewed.com/breweries",
-  "checkedAt": "2026-10-15T22:42:13.807Z",
+  "checkedAt": "2026-11-01T17:14:36.917Z",
   "status": "review_required",
   "note": "Untrusted outbound directory links; review brewery identity, location and official source before promotion. Nothing is automatically added to the crawler or public catalog.",
   "candidates": [
