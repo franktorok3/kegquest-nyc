@@ -2,7 +2,7 @@
   "other-half-centre": {
     "source": "https://otherhalfbrewing.com/location/centre-street/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-11-12T18:19:54.838Z",
+    "checkedAt": "2026-11-13T17:44:49.646Z",
     "beers": {
       "double citra daydream": {
         "firstSeen": "2026-10-15T22:36:31.264Z",
@@ -247,13 +247,25 @@
       "tdh all citra everything": {
         "firstSeen": "2026-11-12T18:19:54.838Z",
         "kind": "addition"
+      },
+      "enchanted forest": {
+        "firstSeen": "2026-11-13T17:44:49.646Z",
+        "kind": "addition"
+      },
+      "potato potahto": {
+        "firstSeen": "2026-11-13T17:44:49.646Z",
+        "kind": "addition"
+      },
+      "short, dark & handsome (with peanut butter and milk chocolate)": {
+        "firstSeen": "2026-11-13T17:44:49.646Z",
+        "kind": "addition"
       }
     }
   },
   "other-half-rockefeller": {
     "source": "https://otherhalfbrewing.com/location/rockefeller-center/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-11-12T18:19:56.730Z",
+    "checkedAt": "2026-11-13T17:44:52.554Z",
     "beers": {
       "snaps": {
         "firstSeen": "2026-10-15T22:36:33.470Z",
@@ -498,13 +510,17 @@
       "escapists: hurricane": {
         "firstSeen": "2026-11-12T18:19:56.730Z",
         "kind": "addition"
+      },
+      "peach silhouette": {
+        "firstSeen": "2026-11-13T17:44:52.554Z",
+        "kind": "addition"
       }
     }
   },
   "eckhartbeer": {
     "source": "https://eckhartbeer.com/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-11-12T18:20:12.322Z",
+    "checkedAt": "2026-11-13T17:45:13.077Z",
     "beers": {
       "helles lager": {
         "firstSeen": "2026-10-15T22:36:40.044Z",
@@ -551,7 +567,7 @@
   "threes-gowanus": {
     "source": "https://www.beermenus.com/places/18430-threes-brewing-gowanus",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-11-12T18:25:02.782Z",
+    "checkedAt": "2026-11-13T17:50:08.536Z",
     "beers": {
       "threes + cellarmaker grey area": {
         "firstSeen": "2026-10-15T23:16:51.643Z",
@@ -638,7 +654,7 @@
   "flagship": {
     "source": "https://flagshipbrewery.nyc/taproom-draft-list/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-11-12T18:24:43.495Z",
+    "checkedAt": "2026-11-13T17:49:47.050Z",
     "beers": {
       "flagship + porterhouse wolf hound nitro": {
         "firstSeen": "2026-10-15T23:14:05.463Z",
@@ -760,7 +776,7 @@
   "evil-twin": {
     "source": "https://eviltwin.nyc/location/ridgewood-taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-11-12T18:21:55.318Z",
+    "checkedAt": "2026-11-13T17:46:46.690Z",
     "beers": {
       "tgi oktober ’26": {
         "firstSeen": "2026-10-15T23:14:36.944Z",
@@ -897,13 +913,17 @@
       "even more straight outta the marshmallow laboratory": {
         "firstSeen": "2026-11-08T16:42:49.115Z",
         "kind": "addition"
+      },
+      "continental breakfast sour - raspberry, cranberry yoghurt version": {
+        "firstSeen": "2026-11-13T17:46:46.690Z",
+        "kind": "addition"
       }
     }
   },
   "grimm": {
     "source": "https://grimmales.com/location/taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-11-12T18:21:59.826Z",
+    "checkedAt": "2026-11-13T17:46:51.071Z",
     "beers": {
       "grimm weisse": {
         "firstSeen": "2026-10-15T23:14:42.903Z",
@@ -1010,7 +1030,7 @@
   "kills-boro": {
     "source": "https://killsboro.com/online-menu",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-11-12T18:24:51.006Z",
+    "checkedAt": "2026-11-13T17:49:55.684Z",
     "beers": {
       "protect ya' czech": {
         "firstSeen": "2026-10-15T23:14:45.429Z",
@@ -1081,7 +1101,7 @@
   "gunhillbrewing": {
     "source": "https://www.gunhillpublickhouse.com/drinks-menu",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-11-12T18:24:58.451Z",
+    "checkedAt": "2026-11-13T17:50:03.971Z",
     "beers": {
       "gun hill ipa": {
         "firstSeen": "2026-10-15T23:16:06.761Z",
@@ -1146,13 +1166,25 @@
       "endless life staves": {
         "firstSeen": "2026-10-15T23:16:06.761Z",
         "kind": "baseline"
+      },
+      "artillery devices": {
+        "firstSeen": "2026-11-13T17:50:03.971Z",
+        "kind": "addition"
+      },
+      "endless life sleepless lullabies": {
+        "firstSeen": "2026-11-13T17:50:03.971Z",
+        "kind": "addition"
+      },
+      "endless life arms raised in a": {
+        "firstSeen": "2026-11-13T17:50:03.971Z",
+        "kind": "addition"
       }
     }
   },
   "evil-twin-dumbo": {
     "source": "https://eviltwin.nyc/location/dumbo-taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-11-12T18:24:11.398Z",
+    "checkedAt": "2026-11-13T17:49:11.091Z",
     "beers": {
       "greenhouse west coast pils conditioned on american oak foudre": {
         "firstSeen": "2026-10-15T23:14:40.647Z",
