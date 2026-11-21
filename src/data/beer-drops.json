@@ -2,7 +2,7 @@
   "other-half-centre": {
     "source": "https://otherhalfbrewing.com/location/centre-street/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-11-20T18:37:16.450Z",
+    "checkedAt": "2026-11-21T17:32:35.598Z",
     "beers": {
       "double citra daydream": {
         "firstSeen": "2026-10-15T22:36:31.264Z",
@@ -273,7 +273,7 @@
   "other-half-rockefeller": {
     "source": "https://otherhalfbrewing.com/location/rockefeller-center/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-11-20T18:37:17.658Z",
+    "checkedAt": "2026-11-21T17:32:38.593Z",
     "beers": {
       "snaps": {
         "firstSeen": "2026-10-15T22:36:33.470Z",
@@ -568,7 +568,7 @@
   "eckhartbeer": {
     "source": "https://eckhartbeer.com/",
     "parser": "tapbound-2",
-    "checkedAt": "2026-11-20T18:37:32.100Z",
+    "checkedAt": "2026-11-21T17:32:57.913Z",
     "beers": {
       "helles lager": {
         "firstSeen": "2026-10-15T22:36:40.044Z",
@@ -615,7 +615,7 @@
   "threes-gowanus": {
     "source": "https://www.beermenus.com/places/18430-threes-brewing-gowanus",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-11-20T18:42:02.369Z",
+    "checkedAt": "2026-11-21T17:37:49.881Z",
     "beers": {
       "threes + cellarmaker grey area": {
         "firstSeen": "2026-10-15T23:16:51.643Z",
@@ -704,13 +704,37 @@
       "threes the divided line": {
         "firstSeen": "2026-11-16T20:35:09.297Z",
         "kind": "addition"
+      },
+      "threes + west kill return path": {
+        "firstSeen": "2026-11-21T17:37:49.881Z",
+        "kind": "addition"
+      },
+      "threes dare to know": {
+        "firstSeen": "2026-11-21T17:37:49.881Z",
+        "kind": "addition"
+      },
+      "threes nothing is forever (barrel aged imperial stout conditioned on madagascar vanilla and coffee)": {
+        "firstSeen": "2026-11-21T17:37:49.881Z",
+        "kind": "addition"
+      },
+      "threes small hours": {
+        "firstSeen": "2026-11-21T17:37:49.881Z",
+        "kind": "addition"
+      },
+      "threes thought experiment raspberry": {
+        "firstSeen": "2026-11-21T17:37:49.881Z",
+        "kind": "addition"
+      },
+      "threes visual sounds": {
+        "firstSeen": "2026-11-21T17:37:49.881Z",
+        "kind": "addition"
       }
     }
   },
   "flagship": {
     "source": "https://flagshipbrewery.nyc/taproom-draft-list/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-11-20T18:41:43.161Z",
+    "checkedAt": "2026-11-21T17:37:29.034Z",
     "beers": {
       "flagship + porterhouse wolf hound nitro": {
         "firstSeen": "2026-10-15T23:14:05.463Z",
@@ -832,7 +856,7 @@
   "evil-twin": {
     "source": "https://eviltwin.nyc/location/ridgewood-taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-11-20T18:39:02.774Z",
+    "checkedAt": "2026-11-21T17:34:33.772Z",
     "beers": {
       "tgi oktober ’26": {
         "firstSeen": "2026-10-15T23:14:36.944Z",
@@ -991,7 +1015,7 @@
   "grimm": {
     "source": "https://grimmales.com/location/taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-11-20T18:39:06.716Z",
+    "checkedAt": "2026-11-21T17:34:38.022Z",
     "beers": {
       "grimm weisse": {
         "firstSeen": "2026-10-15T23:14:42.903Z",
@@ -1092,13 +1116,17 @@
       "two dollar pistol": {
         "firstSeen": "2026-11-07T16:29:06.116Z",
         "kind": "addition"
+      },
+      "super spruce": {
+        "firstSeen": "2026-11-21T17:34:38.022Z",
+        "kind": "addition"
       }
     }
   },
   "kills-boro": {
     "source": "https://killsboro.com/online-menu",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-11-20T18:41:50.478Z",
+    "checkedAt": "2026-11-21T17:37:37.231Z",
     "beers": {
       "protect ya' czech": {
         "firstSeen": "2026-10-15T23:14:45.429Z",
@@ -1173,7 +1201,7 @@
   "gunhillbrewing": {
     "source": "https://www.gunhillpublickhouse.com/drinks-menu",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-11-20T18:41:57.890Z",
+    "checkedAt": "2026-11-21T17:37:45.242Z",
     "beers": {
       "gun hill ipa": {
         "firstSeen": "2026-10-15T23:16:06.761Z",
@@ -1256,7 +1284,7 @@
   "evil-twin-dumbo": {
     "source": "https://eviltwin.nyc/location/dumbo-taproom/",
     "parser": "tapbound-browser-3",
-    "checkedAt": "2026-11-20T18:41:11.026Z",
+    "checkedAt": "2026-11-21T17:36:55.527Z",
     "beers": {
       "greenhouse west coast pils conditioned on american oak foudre": {
         "firstSeen": "2026-10-15T23:14:40.647Z",
